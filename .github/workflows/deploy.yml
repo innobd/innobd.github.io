@@ -11,49 +11,12 @@ concurrency:
   group: pages
   cancel-in-progress: false
 jobs:
-  initialize:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-      - name: Unpack initial website upload
-        run: |
-          if [ ! -f repository-source.zip ]; then exit 0; fi
-          python - <<'PY'
-          from pathlib import Path
-          from zipfile import ZipFile
-          root = Path.cwd().resolve()
-          allowed = {'src', 'public', 'docs', 'scripts', '.env.example', '.gitignore', '.pages.yml', 'astro.config.mjs', 'package.json', 'pnpm-lock.yaml', 'README.md', 'tsconfig.json'}
-          with ZipFile('repository-source.zip') as archive:
-              for item in archive.infolist():
-                  path = Path(item.filename)
-                  target = (root / path).resolve()
-                  if not path.parts or path.parts[0] not in allowed or not target.is_relative_to(root):
-                      raise ValueError('Unexpected archive path')
-                  if item.is_dir():
-                      target.mkdir(parents=True, exist_ok=True)
-                  else:
-                      target.parent.mkdir(parents=True, exist_ok=True)
-                      target.write_bytes(archive.read(item))
-          PY
-          rm repository-source.zip
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "Initialize InnoBD website source"
-          git push origin HEAD:main
   build:
-    needs: initialize
     runs-on: ubuntu-latest
     env:
       ASTRO_TELEMETRY_DISABLED: '1'
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: main
       - uses: pnpm/action-setup@v4
         with:
           version: 11.19.0
@@ -63,7 +26,7 @@ jobs:
           cache: pnpm
       - uses: actions/configure-pages@v5
         id: pages
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install --frozen-lockfile --ignore-scripts
       - run: pnpm run build
         env:
           SITE_URL: ${{ steps.pages.outputs.origin }}
