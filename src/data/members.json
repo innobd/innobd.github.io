@@ -22,10 +22,10 @@
     }
   },
   {
-    "id": "jiyoon-park",
+    "id": "jeeyoon-park",
     "role": "phd",
     "name": {
-      "en": "Jiyoon Park",
+      "en": "Jeeyoon Park",
       "ko": "박지윤"
     },
     "title": {
@@ -35,11 +35,11 @@
     "photo": ""
   },
   {
-    "id": "miram-eltohamy",
+    "id": "miram-altohamy",
     "role": "phd",
     "name": {
-      "en": "Miram Eltohamy",
-      "ko": "Miram Eltohamy"
+      "en": "Miram Altohamy",
+      "ko": "Miram Altohamy"
     },
     "title": {
       "en": "Ph.D. student",
@@ -48,24 +48,24 @@
     "photo": ""
   },
   {
-    "id": "yoonji-shin",
-    "role": "ms",
+    "id": "taejin-lee",
+    "role": "phd",
     "name": {
-      "en": "Yoonji Shin",
-      "ko": "신윤지"
+      "en": "Taejin Lee",
+      "ko": "이태진"
     },
     "title": {
-      "en": "M.S. student",
-      "ko": "석사과정"
+      "en": "Ph.D. student",
+      "ko": "박사과정"
     },
     "photo": ""
   },
   {
-    "id": "taejin-lee",
+    "id": "yunji-shin",
     "role": "ms",
     "name": {
-      "en": "Taejin Lee",
-      "ko": "이태진"
+      "en": "Yunji Shin",
+      "ko": "신윤지"
     },
     "title": {
       "en": "M.S. student",
@@ -87,10 +87,10 @@
     "photo": ""
   },
   {
-    "id": "hahyun-park",
+    "id": "hahyeon-park",
     "role": "ms",
     "name": {
-      "en": "Hahyun Park",
+      "en": "Hahyeon Park",
       "ko": "박하현"
     },
     "title": {
@@ -109,6 +109,84 @@
     "title": {
       "en": "Undergraduate researcher",
       "ko": "학부연구생"
+    },
+    "photo": ""
+  },
+  {
+    "id": "soyi-kim",
+    "role": "alumni",
+    "name": {
+      "en": "Soyi Kim",
+      "ko": "김소이"
+    },
+    "title": {
+      "en": "Former undergraduate researcher",
+      "ko": "학부연구생 (수료)"
+    },
+    "photo": ""
+  },
+  {
+    "id": "siyeong-lee",
+    "role": "alumni",
+    "name": {
+      "en": "Siyeong Lee",
+      "ko": "이시영"
+    },
+    "title": {
+      "en": "Former undergraduate researcher",
+      "ko": "학부연구생 (수료)"
+    },
+    "photo": ""
+  },
+  {
+    "id": "seonah-lee",
+    "role": "alumni",
+    "name": {
+      "en": "Seonah Lee",
+      "ko": "이선아"
+    },
+    "title": {
+      "en": "Former undergraduate researcher",
+      "ko": "학부연구생 (수료)"
+    },
+    "photo": ""
+  },
+  {
+    "id": "eunsoo-song",
+    "role": "alumni",
+    "name": {
+      "en": "Eunsoo Song",
+      "ko": "송은수"
+    },
+    "title": {
+      "en": "Former undergraduate researcher",
+      "ko": "학부연구생 (수료)"
+    },
+    "photo": ""
+  },
+  {
+    "id": "suhyeon-kim",
+    "role": "alumni",
+    "name": {
+      "en": "Suhyeon Kim",
+      "ko": "김수현"
+    },
+    "title": {
+      "en": "Former undergraduate researcher",
+      "ko": "학부연구생 (수료)"
+    },
+    "photo": ""
+  },
+  {
+    "id": "kyungyeon-kim",
+    "role": "alumni",
+    "name": {
+      "en": "Kyungyeon Kim",
+      "ko": "김경연"
+    },
+    "title": {
+      "en": "Former undergraduate researcher",
+      "ko": "학부연구생 (수료)"
     },
     "photo": ""
   }
