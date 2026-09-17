@@ -1,0 +1,258 @@
+# Pages CMS 설정 (app.pagescms.org)
+# GitHub로 로그인하면 아래 항목들이 Google Sites처럼 입력 폼으로 나타납니다.
+# 저장을 누르면 GitHub에 커밋되고 몇 분 뒤 사이트에 반영됩니다.
+
+media:
+  input: public/images
+  output: /images
+  categories: [image]
+
+components:
+  text_ko_en:
+    type: object
+    fields:
+      - name: ko
+        label: 한국어
+        type: string
+      - name: en
+        label: English
+        type: string
+  para_ko_en:
+    type: object
+    fields:
+      - name: ko
+        label: 한국어
+        type: text
+      - name: en
+        label: English
+        type: text
+
+content:
+  - name: news
+    label: 소식
+    type: file
+    path: src/data/news.json
+    format: json
+    list: true
+    fields:
+      - name: date
+        label: 날짜
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: datePrecision
+        label: 날짜 표시 범위
+        type: select
+        options:
+          values:
+            - { name: year, label: 연도만 표시 }
+            - { name: day, label: 연월일 표시 }
+      - name: type
+        label: 종류
+        type: select
+        options:
+          values:
+            - { name: grant, label: 과제 선정 }
+            - { name: honor, label: 수상 / 위촉 }
+            - { name: talk, label: 학회 발표 }
+            - { name: paper, label: 논문 게재 }
+            - { name: news, label: 일반 소식 }
+      - name: text
+        label: 내용
+        component: para_ko_en
+      - name: link
+        label: 관련 링크 (선택)
+        type: string
+      - name: image
+        label: 사진 (선택)
+        type: image
+      - name: id
+        label: 고유 ID (선택, 영문 소문자와 하이픈)
+        type: string
+
+  - name: members
+    label: 구성원
+    type: file
+    path: src/data/members.json
+    format: json
+    list: true
+    fields:
+      - name: name
+        label: 이름
+        component: text_ko_en
+      - name: role
+        label: 구분
+        type: select
+        options:
+          values:
+            - { name: pi, label: 연구책임자 }
+            - { name: postdoc, label: 박사후연구원 }
+            - { name: phd, label: 박사과정 }
+            - { name: ms, label: 석사과정 }
+            - { name: undergrad, label: 학부연구생 }
+            - { name: alumni, label: 졸업생 }
+      - name: title
+        label: 직함 표시
+        component: text_ko_en
+      - name: photo
+        label: 사진
+        type: image
+      - name: email
+        label: 이메일
+        type: string
+      - name: bio
+        label: 소개 (교수만)
+        component: para_ko_en
+      - name: id
+        label: 고유 ID (영문 소문자, 예 jiyoon-park)
+        type: string
+        required: true
+
+  - name: publications
+    label: 논문
+    type: file
+    path: src/data/publications.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: 제목
+        type: string
+        required: true
+      - name: authors
+        label: 저자 (Byun J 형식, 쉼표 구분)
+        type: text
+      - name: journal
+        label: 저널
+        type: string
+      - name: year
+        label: 연도
+        type: number
+      - name: volume
+        label: 권
+        type: string
+      - name: pages
+        label: 페이지
+        type: string
+      - name: doi
+        label: DOI (10.xxxx/... 부분만)
+        type: string
+      - name: pdf
+        label: PDF 링크
+        type: string
+      - name: selected
+        label: 홈 화면 대표 논문으로 표시
+        type: boolean
+      - name: id
+        label: 고유 ID (선택)
+        type: string
+      - name: pmid
+        label: PubMed ID (자동)
+        type: string
+        hidden: true
+
+  - name: research
+    label: 연구 주제
+    type: file
+    path: src/data/research.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: 주제명
+        component: text_ko_en
+      - name: track
+        label: 분류
+        type: select
+        options:
+          values:
+            - { name: platform, label: 전달 플랫폼 }
+            - { name: method, label: 평가 기술 }
+      - name: summary
+        label: 설명
+        component: para_ko_en
+      - name: keywords
+        label: 키워드
+        type: string
+        list: true
+      - name: id
+        label: 고유 ID (영문 소문자)
+        type: string
+        required: true
+
+  - name: lab
+    label: 연구실 기본정보
+    type: file
+    path: src/data/lab.json
+    format: json
+    fields:
+      - name: shortName
+        label: 짧은 이름 (헤더 표시)
+        type: string
+      - name: name
+        label: 연구실 정식 명칭
+        component: text_ko_en
+      - name: pi
+        label: 연구책임자
+        component: text_ko_en
+      - name: affiliation
+        label: 소속
+        component: text_ko_en
+      - name: address
+        label: 주소
+        component: para_ko_en
+      - name: email
+        label: 대표 이메일
+        type: string
+      - name: phone
+        label: 전화
+        type: string
+      - name: hero
+        label: 홈 화면 문구
+        type: object
+        fields:
+          - name: headline
+            label: 큰 제목
+            component: para_ko_en
+          - name: sub
+            label: 소개 문장
+            component: para_ko_en
+      - name: links
+        label: 외부 링크
+        type: object
+        fields:
+          - { name: scholar, label: Google Scholar, type: string }
+          - { name: orcid, label: ORCID, type: string }
+          - { name: github, label: GitHub, type: string }
+          - { name: linkedin, label: LinkedIn, type: string }
+
+  - name: join
+    label: 모집 안내
+    type: file
+    path: src/data/join.json
+    format: json
+    fields:
+      - name: intro
+        label: 소개 문장
+        component: para_ko_en
+      - name: positions
+        label: 모집 구분
+        type: object
+        list:
+          collapsible:
+            summary: "{title.ko}"
+        fields:
+          - name: id
+            label: 고유 ID
+            type: string
+          - name: title
+            label: 제목
+            component: text_ko_en
+          - name: text
+            label: 내용
+            component: para_ko_en
+      - name: howToApply
+        label: 지원 방법
+        component: para_ko_en
+

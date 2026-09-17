@@ -1,0 +1,21 @@
+---
+// 히어로용 나노입자 일러스트. 32개의 지질(점)이 링을 이루고 안쪽에 mRNA 가닥이 그려집니다.
+const n = 32;
+const cx = 200, cy = 200, r = 156;
+const dots = Array.from({ length: n }, (_, i) => {
+  const a = (i / n) * Math.PI * 2;
+  return { x: cx + r * Math.cos(a), y: cy + r * Math.sin(a), delay: (i * 22) };
+});
+---
+<svg class="particle" viewBox="0 0 400 400" role="img" aria-label="Lipid nanoparticle carrying an mRNA strand">
+  <circle cx={cx} cy={cy} r={r} fill="#fff" opacity="0.6" />
+  <circle cx={cx} cy={cy} r={r - 26} fill="var(--lipid-soft)" opacity="0.55" />
+  {dots.map((d) => (
+    <g class="lipid" style={`animation-delay:${d.delay}ms`}>
+      <circle cx={d.x} cy={d.y} r="9" fill="var(--lipid)" />
+      <line x1={d.x} y1={d.y} x2={cx + (r - 24) * (d.x - cx) / r} y2={cy + (r - 24) * (d.y - cy) / r} stroke="var(--lipid)" stroke-width="2.5" stroke-linecap="round" opacity="0.8" />
+    </g>
+  ))}
+  <path class="strand" d="M92 208 C110 160 130 260 150 208 S190 160 210 208 S250 260 270 208 S300 160 310 200" fill="none" stroke="var(--payload)" stroke-width="7" stroke-linecap="round" />
+  <path class="strand" d="M110 232 C128 190 148 274 168 232 S208 190 228 232 S268 274 288 232" fill="none" stroke="var(--payload)" stroke-width="4" stroke-linecap="round" opacity="0.5" />
+</svg>

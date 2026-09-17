@@ -1,0 +1,21 @@
+---
+import lab from '@/data/lab.json';
+import { pick, t, href, type Lang } from '@/i18n/ui';
+const { lang } = Astro.props as { lang: Lang };
+const tr = t(lang);
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <strong>{pick(lang, lab.name)}</strong><br />
+      {pick(lang, lab.affiliation)}
+    </div>
+    <div>
+      {lab.email && <a href={`mailto:${lab.email}`}>{lab.email}</a>}
+      {lab.links.scholar && <><br /><a href={lab.links.scholar}>Google Scholar</a></>}
+    </div>
+    <a class="admin-link" href={href(lang, "/admin")}>{lang === "ko" ? "관리자 편집 ↗" : "Edit website ↗"}</a>
+    <div class="copy">© {year} {lab.shortName}. {tr('footer.rights')}</div>
+  </div>
+</footer>

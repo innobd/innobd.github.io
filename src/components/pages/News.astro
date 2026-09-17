@@ -1,0 +1,17 @@
+---
+import Base from '@/layouts/Base.astro';
+import NewsList from '@/components/NewsList.astro';
+import news from '@/data/news.json';
+import { t, type Lang } from '@/i18n/ui';
+const { lang } = Astro.props as { lang: Lang };
+const tr = t(lang);
+const sorted = [...news].sort((a, b) => b.date.localeCompare(a.date));
+---
+<Base lang={lang} current="news" title={tr('news.title')}>
+  <section class="section">
+    <div class="wrap">
+      <h1 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:40px">{tr('news.title')}</h1>
+      <NewsList lang={lang} items={sorted} />
+    </div>
+  </section>
+</Base>

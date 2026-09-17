@@ -1,0 +1,23 @@
+---
+import Base from '@/layouts/Base.astro';
+import PubList from '@/components/PubList.astro';
+import pubs from '@/data/publications.json';
+import { t, type Lang } from '@/i18n/ui';
+const { lang } = Astro.props as { lang: Lang };
+const tr = t(lang);
+const years = [...new Set(pubs.map((p: any) => p.year))].sort((a: any, b: any) => b - a);
+---
+<Base lang={lang} current="publications" title={tr('pubs.title')}>
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head"><div><h1 style="font-size:clamp(2rem,4vw,3rem)">{tr('pubs.title')}</h1><p class="lead">{tr('pubs.lead')}</p></div></div>
+      {pubs.length === 0 && <div class="empty">{tr('pubs.empty')}<p style="margin-top:16px"><a href="https://sites.google.com/view/byun-lab/publications">{lang === "ko" ? "기존 논문 목록 보기 ↗" : "View existing publications ↗"}</a></p></div>}
+      {years.map((y: any) => (
+        <div class="pub-year">
+          <h2>{y}</h2>
+          <PubList lang={lang} items={pubs.filter((p: any) => p.year === y)} />
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,20 @@
+---
+import { t, type Lang } from '@/i18n/ui';
+const { lang, items } = Astro.props as { lang: Lang; items: any[] };
+const tr = t(lang);
+---
+<ol class="pub-list">
+  {items.map((p) => (
+    <li id={p.id}>
+      <div class="title">{p.doi ? <a href={`https://doi.org/${p.doi}`}>{p.title}</a> : p.title}</div>
+      <div class="authors">{p.authors}</div>
+      <div class="venue"><em>{p.journal}</em> {p.year}{p.volume && `, ${p.volume}`}{p.pages && `, ${p.pages}`}</div>
+      {(p.doi || p.pdf) && (
+        <div class="links">
+          {p.doi && <a href={`https://doi.org/${p.doi}`}>{tr('pubs.doi')}</a>}
+          {p.pdf && <a href={p.pdf}>{tr('pubs.pdf')}</a>}
+        </div>
+      )}
+    </li>
+  ))}
+</ol>

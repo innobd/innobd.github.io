@@ -1,0 +1,24 @@
+---
+import Base from '@/layouts/Base.astro';
+import lab from '@/data/lab.json';
+import { t, pick, type Lang } from '@/i18n/ui';
+const { lang } = Astro.props as { lang: Lang };
+const tr = t(lang);
+const q = encodeURIComponent('Sookmyung Women\'s University College of Pharmacy');
+---
+<Base lang={lang} current="contact" title={tr('contact.title')}>
+  <section class="section">
+    <div class="wrap">
+      <h1 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:32px">{tr('contact.title')}</h1>
+      <div class="contact-grid">
+        <dl>
+          <dt>{pick(lang, lab.name)}</dt><dd>{pick(lang, lab.pi)}</dd>
+          <dt>{tr('contact.address')}</dt><dd>{pick(lang, lab.address)}</dd>
+          {lab.email && <><dt>{tr('contact.email')}</dt><dd><a href={`mailto:${lab.email}`}>{lab.email}</a></dd></>}
+          {lab.phone && <><dt>{tr('contact.phone')}</dt><dd>{lab.phone}</dd></>}
+        </dl>
+        <iframe class="map" loading="lazy" title="Map" src={`https://www.google.com/maps?q=${q}&output=embed`}></iframe>
+      </div>
+    </div>
+  </section>
+</Base>

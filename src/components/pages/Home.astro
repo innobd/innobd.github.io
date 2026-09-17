@@ -1,0 +1,80 @@
+---
+import Base from '@/layouts/Base.astro';
+import Particle from '@/components/Particle.astro';
+import NewsList from '@/components/NewsList.astro';
+import PubList from '@/components/PubList.astro';
+import lab from '@/data/lab.json';
+import research from '@/data/research.json';
+import news from '@/data/news.json';
+import pubs from '@/data/publications.json';
+import join from '@/data/join.json';
+import { t, pick, href, type Lang } from '@/i18n/ui';
+const { lang } = Astro.props as { lang: Lang };
+const tr = t(lang);
+const recentNews = [...news].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 4);
+const selectedPubs = pubs.filter((p: any) => p.selected).sort((a, b) => b.year - a.year).slice(0, 5);
+---
+<Base lang={lang} current="home">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">INNOBD LAB / BIOPHARMACEUTICAL DELIVERY</p>
+        <h1>{pick(lang, lab.hero.headline)}</h1>
+        <p class="lead">{pick(lang, lab.hero.sub)}</p>
+        <div class="actions">
+          <a class="btn" href={href(lang, '/research')}>{tr('home.explore')}</a>
+          <a class="btn ghost" href={href(lang, '/join')}>{tr('home.openings')}</a>
+        </div>
+        <p class="affil">{pick(lang, lab.name)}<br />{pick(lang, lab.affiliation)}</p>
+      </div>
+      <Particle />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div><p class="eyebrow">01 / RESEARCH</p><h2>{tr('home.researchTitle')}</h2><p class="lead">{tr('home.researchLead')}</p></div>
+        <a href={href(lang, '/research')}>{tr('home.seeAll')}</a>
+      </div>
+      <ul class="research-list">
+        {research.map((r) => (
+          <li>
+            <h3><span class={`swatch ${r.track}`}></span><a href={href(lang, `/research#${r.id}`)} style="text-decoration:none">{pick(lang, r.title)}</a></h3>
+            <p>{pick(lang, r.summary)}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div><p class="eyebrow">02 / NEWS</p><h2>{tr('home.newsTitle')}</h2></div>
+        <a href={href(lang, '/news')}>{tr('home.seeAll')}</a>
+      </div>
+      <NewsList lang={lang} items={recentNews} />
+    </div>
+  </section>
+
+  {selectedPubs.length > 0 && (
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>{tr('home.pubsTitle')}</h2>
+          <a href={href(lang, '/publications')}>{tr('home.seeAll')}</a>
+        </div>
+        <PubList lang={lang} items={selectedPubs} />
+      </div>
+    </section>
+  )}
+
+  <section class="section">
+    <div class="wrap">
+      <h2>{tr('home.joinTitle')}</h2>
+      <p class="lead" style="margin-top:12px">{pick(lang, join.intro)}</p>
+      <p style="margin-top:28px"><a class="btn" href={href(lang, '/join')}>{tr('home.openings')}</a></p>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "mrna-lnp",
+    "track": "platform",
+    "title": { "en": "mRNA lipid nanoparticles", "ko": "mRNA 지질나노입자(LNP)" },
+    "summary": {
+      "en": "Designing ionizable lipids and formulations that release mRNA efficiently from the endosome, and testing them in models of aging, pulmonary fibrosis and psoriasis.",
+      "ko": "엔도솜 탈출 효율이 높은 이온화 지질과 제형을 설계하고, 노화, 폐섬유화, 건선 모델에서 검증합니다."
+    },
+    "keywords": ["ionizable lipid", "endosomal escape", "mRNA"]
+  },
+  {
+    "id": "carrier-free-mrna",
+    "track": "platform",
+    "title": { "en": "Carrier-free mRNA delivery", "ko": "나노전달체 없는 mRNA 전달" },
+    "summary": {
+      "en": "Next-generation mRNA delivery that does not depend on nanocarriers, supported by the Outstanding Early-Career Researcher Program (Ministry of Science and ICT, 2025).",
+      "ko": "나노전달체에 의존하지 않는 차세대 mRNA 전달 기술을 개발합니다 (2025 과학기술정보통신부 우수신진연구 과제)."
+    },
+    "keywords": ["nanocarrier-free", "mRNA"]
+  },
+  {
+    "id": "hydrogel-immunotherapy",
+    "track": "platform",
+    "title": { "en": "Hydrogels for local cancer immunotherapy", "ko": "국소 항암 면역치료용 하이드로젤" },
+    "summary": {
+      "en": "Injectable hydrogels that hold LNP-formulated mRNA at the tumor site and remodel the tumor immune microenvironment, with a focus on glioblastoma.",
+      "ko": "LNP 제형의 mRNA를 종양 부위에 머물게 하면서 종양 면역미세환경을 조절하는 주사형 하이드로젤을 개발하며, 특히 교모세포종을 대상으로 합니다."
+    },
+    "keywords": ["hydrogel", "glioblastoma", "tumor microenvironment"]
+  },
+  {
+    "id": "cell-selective",
+    "track": "platform",
+    "title": { "en": "Cell-selective biotherapeutic delivery", "ko": "세포 선택적 바이오의약품 전달" },
+    "summary": {
+      "en": "Targeting genes and mRNA to specific hematopoietic lineages and tissue cell types so that therapy acts where it is needed and nowhere else.",
+      "ko": "특정 조혈세포 계통과 조직 세포에만 유전자와 mRNA가 전달되도록 하여, 필요한 곳에서만 약효가 나타나게 합니다."
+    },
+    "keywords": ["targeting", "hematopoietic lineage", "gene therapy"]
+  },
+  {
+    "id": "photoporation",
+    "track": "platform",
+    "title": { "en": "Photoporation", "ko": "광천공(Photoporation)" },
+    "summary": {
+      "en": "Light-triggered nanoparticles that transiently open cell membranes for gene delivery into hard-to-transfect cells, applied to fibrotic disease with Ghent University.",
+      "ko": "빛으로 세포막을 일시적으로 열어 형질주입이 어려운 세포에 유전자를 전달하는 기술로, 겐트대학교와 함께 섬유화 질환에 적용합니다."
+    },
+    "keywords": ["photoporation", "fibrosis", "Ghent University"]
+  },
+  {
+    "id": "evaluation",
+    "track": "method",
+    "title": { "en": "Evaluation techniques for biotherapeutics", "ko": "바이오의약품 평가 기술" },
+    "summary": {
+      "en": "Reporter-cell screens, uptake and translation assays that tell us early whether a delivery system will work in the body.",
+      "ko": "리포터 세포 스크리닝, 세포 흡수 및 번역 분석을 통해 전달 시스템이 체내에서 작동할지 초기에 판단합니다."
+    },
+    "keywords": ["reporter assay", "screening"]
+  }
+]

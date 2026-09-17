@@ -1,0 +1,36 @@
+---
+import '@/styles/global.css';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import lab from '@/data/lab.json';
+import { pick, asset, switchPath, type Lang } from '@/i18n/ui';
+interface Props { lang: Lang; title?: string; description?: string; current: string }
+const { lang, title, description, current } = Astro.props;
+const siteName = pick(lang, lab.name);
+const fullTitle = title ? `${title} | ${lab.shortName}` : `${lab.shortName} | ${siteName}`;
+const desc = description ?? pick(lang, lab.hero.sub);
+const alt = switchPath(lang, Astro.url.pathname);
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={desc} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="icon" href={asset("favicon.svg")} type="image/svg+xml" />
+    <link rel="alternate" hreflang={lang === 'en' ? 'ko' : 'en'} href={new URL(alt, Astro.site)} />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{lang === "ko" ? "본문 바로가기" : "Skip to content"}</a>
+    <Header lang={lang} current={current} />
+    <main id="main"><slot /></main>
+    <Footer lang={lang} />
+  </body>
+</html>

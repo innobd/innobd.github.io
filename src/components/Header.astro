@@ -1,0 +1,48 @@
+---
+import Mark from './Mark.astro';
+import lab from '@/data/lab.json';
+import { t, href, switchPath, type Lang } from '@/i18n/ui';
+interface Props { lang: Lang; current: string }
+const { lang, current } = Astro.props;
+const tr = t(lang);
+const items = [
+  ['research', 'nav.research'],
+  ['team', 'nav.team'],
+  ['publications', 'nav.publications'],
+  ['news', 'nav.news'],
+  ['join', 'nav.join'],
+  ['contact', 'nav.contact'],
+] as const;
+const other = switchPath(lang, Astro.url.pathname);
+---
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href={href(lang, '/')} aria-label={lab.shortName}>
+      <Mark />
+      <span>{lab.shortName}</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      {items.map(([slug, key]) => (
+        <a href={href(lang, `/${slug}`)} aria-current={current === slug ? 'page' : undefined}>{tr(key)}</a>
+      ))}
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center">
+      <div class="lang" aria-label="Language">
+        {lang === 'en' ? <span>EN</span> : <a href={other} aria-label="Switch to English">EN</a>}
+        {lang === 'ko' ? <span>KO</span> : <a href={other} aria-label="한국어로 전환">KO</a>}
+      </div>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<script>
+  const btn = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('nav');
+  btn?.addEventListener('click', () => {
+    const open = nav?.getAttribute('data-open') === 'true';
+    nav?.setAttribute('data-open', String(!open));
+    btn.setAttribute('aria-expanded', String(!open));
+  });
+</script>

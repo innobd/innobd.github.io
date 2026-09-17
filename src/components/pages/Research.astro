@@ -1,0 +1,29 @@
+---
+import Base from '@/layouts/Base.astro';
+import research from '@/data/research.json';
+import { t, pick, type Lang } from '@/i18n/ui';
+const { lang } = Astro.props as { lang: Lang };
+const tr = t(lang);
+---
+<Base lang={lang} current="research" title={tr('research.title')}>
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head"><div><h1 style="font-size:clamp(2rem,4vw,3rem)">{tr('research.title')}</h1><p class="lead">{tr('research.lead')}</p></div></div>
+      <div class="research-legend">
+        <span><i></i>{tr('research.track.platform')}</span>
+        <span><i class="method"></i>{tr('research.track.method')}</span>
+      </div>
+      <ul class="research-list">
+        {research.map((r) => (
+          <li id={r.id}>
+            <h3><span class={`swatch ${r.track}`}></span>{pick(lang, r.title)}</h3>
+            <div>
+              <p>{pick(lang, r.summary)}</p>
+              {r.keywords?.length > 0 && <p class="kw">{r.keywords.join(', ')}</p>}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Base>

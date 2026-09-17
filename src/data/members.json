@@ -1,0 +1,115 @@
+[
+  {
+    "id": "junho-byun",
+    "role": "pi",
+    "name": {
+      "en": "Junho Byun",
+      "ko": "변준호"
+    },
+    "title": {
+      "en": "Assistant Professor, Principal Investigator",
+      "ko": "조교수, 연구책임자"
+    },
+    "bio": {
+      "en": "Ph.D., Seoul National University (advisor: Prof. Yu-Kyoung Oh). Postdoctoral training at Seoul National University (Prof. DaeDuk Kim) and Ghent University Nanomedicine Lab (Prof. Stefaan De Smedt) on cell-specific mRNA nanoparticles, LNP RNA delivery and photoporation. Editorial Board, Journal of Controlled Release.",
+      "ko": "서울대학교 약학대학 박사 (지도교수 오유경). 서울대학교(김대덕 교수)와 벨기에 겐트대학교 Nanomedicine Lab(Stefaan De Smedt 교수)에서 박사후연구원으로 세포 특이적 mRNA 나노입자, LNP RNA 전달, 광천공 연구를 수행했습니다. Journal of Controlled Release 편집위원."
+    },
+    "photo": "",
+    "email": "junho_byun@sookmyung.ac.kr",
+    "links": {
+      "scholar": "",
+      "orcid": ""
+    }
+  },
+  {
+    "id": "jiyoon-park",
+    "role": "phd",
+    "name": {
+      "en": "Jiyoon Park",
+      "ko": "박지윤"
+    },
+    "title": {
+      "en": "Ph.D. student",
+      "ko": "박사과정"
+    },
+    "photo": ""
+  },
+  {
+    "id": "miram-eltohamy",
+    "role": "phd",
+    "name": {
+      "en": "Miram Eltohamy",
+      "ko": "Miram Eltohamy"
+    },
+    "title": {
+      "en": "Ph.D. student",
+      "ko": "박사과정"
+    },
+    "photo": ""
+  },
+  {
+    "id": "yoonji-shin",
+    "role": "ms",
+    "name": {
+      "en": "Yoonji Shin",
+      "ko": "신윤지"
+    },
+    "title": {
+      "en": "M.S. student",
+      "ko": "석사과정"
+    },
+    "photo": ""
+  },
+  {
+    "id": "taejin-lee",
+    "role": "ms",
+    "name": {
+      "en": "Taejin Lee",
+      "ko": "이태진"
+    },
+    "title": {
+      "en": "M.S. student",
+      "ko": "석사과정"
+    },
+    "photo": ""
+  },
+  {
+    "id": "minhee-oh",
+    "role": "ms",
+    "name": {
+      "en": "Minhee Oh",
+      "ko": "오민희"
+    },
+    "title": {
+      "en": "M.S. student",
+      "ko": "석사과정"
+    },
+    "photo": ""
+  },
+  {
+    "id": "hahyun-park",
+    "role": "ms",
+    "name": {
+      "en": "Hahyun Park",
+      "ko": "박하현"
+    },
+    "title": {
+      "en": "M.S. student",
+      "ko": "석사과정"
+    },
+    "photo": ""
+  },
+  {
+    "id": "hyunseo-koo",
+    "role": "undergrad",
+    "name": {
+      "en": "Hyunseo Koo",
+      "ko": "구현서"
+    },
+    "title": {
+      "en": "Undergraduate researcher",
+      "ko": "학부연구생"
+    },
+    "photo": ""
+  }
+]

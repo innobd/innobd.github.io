@@ -1,0 +1,28 @@
+---
+import Base from '@/layouts/Base.astro';
+import join from '@/data/join.json';
+import lab from '@/data/lab.json';
+import { t, pick, type Lang } from '@/i18n/ui';
+const { lang } = Astro.props as { lang: Lang };
+const tr = t(lang);
+---
+<Base lang={lang} current="join" title={tr('join.title')}>
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head"><div><h1 style="font-size:clamp(2rem,4vw,3rem)">{tr('join.title')}</h1><p class="lead">{pick(lang, join.intro)}</p></div></div>
+      <ul class="positions">
+        {join.positions.map((p) => (
+          <li id={p.id}>
+            <h3>{pick(lang, p.title)}</h3>
+            <p>{pick(lang, p.text)}</p>
+          </li>
+        ))}
+      </ul>
+      <div class="how">
+        <h3>{tr('join.howTitle')}</h3>
+        <p style="margin-top:10px">{pick(lang, join.howToApply)}</p>
+        {lab.email && <p style="margin-top:14px"><a class="btn" href={`mailto:${lab.email}`}>{lab.email}</a></p>}
+      </div>
+    </div>
+  </section>
+</Base>
