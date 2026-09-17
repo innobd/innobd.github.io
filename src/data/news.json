@@ -1,145 +1,132 @@
 [
   {
-    "id": "2026-jcr-editorial-board",
     "date": "2026-01-15",
+    "datePrecision": "day",
     "type": "honor",
     "text": {
-      "en": "Prof. Junho Byun joined the Editorial Board of the Journal of Controlled Release.",
-      "ko": "변준호 교수가 Journal of Controlled Release 편집위원으로 위촉되었습니다."
+      "ko": "변준호 교수가 Journal of Controlled Release 편집위원으로 위촉되었습니다.",
+      "en": "Prof. Junho Byun joined the Editorial Board of the Journal of Controlled Release."
     },
-    "link": "",
-    "datePrecision": "year"
+    "id": "2026-jcr-editorial-board"
   },
   {
-    "id": "2025-glocal-lab",
     "date": "2025-06-01",
+    "datePrecision": "year",
     "type": "grant",
     "text": {
-      "en": "Glocal Lab Program (Ministry of Education): Establishment of the Han River Belt for Healthy Aging through the Control of Aging Gateways, with the Pharmaceutical Research Institute.",
-      "ko": "교육부 글로컬 랩 사업 선정: 노화 관문 조절을 통한 건강노화 한강벨트 구축 (약학연구소)."
+      "ko": "교육부 글로컬 랩 사업 선정: 노화 관문 조절을 통한 건강노화 한강벨트 구축 (약학연구소).",
+      "en": "Glocal Lab Program (Ministry of Education): Establishment of the Han River Belt for Healthy Aging through the Control of Aging Gateways, with the Pharmaceutical Research Institute."
     },
-    "link": "",
-    "datePrecision": "year"
+    "id": "2025-glocal-lab"
   },
   {
-    "id": "2025-korea-eu-education",
     "date": "2025-05-01",
+    "datePrecision": "year",
     "type": "grant",
     "text": {
-      "en": "Korea-EU Education Cooperation Promotion Program (Ministry of Education): a Korea-EU joint degree program for global talent in advanced biopharmaceutical gene therapy.",
-      "ko": "교육부 한-EU 교육협력 증진 사업 선정: 첨단 바이오의약품 유전자치료 글로벌 인재 양성을 위한 한-EU 공동학위 프로그램 개발."
+      "ko": "교육부 한-EU 교육협력 증진 사업 선정: 첨단 바이오의약품 유전자치료 글로벌 인재 양성을 위한 한-EU 공동학위 프로그램 개발.",
+      "en": "Korea-EU Education Cooperation Promotion Program (Ministry of Education): a Korea-EU joint degree program for global talent in advanced biopharmaceutical gene therapy."
     },
-    "link": "",
-    "datePrecision": "year"
+    "id": "2025-korea-eu-education"
   },
   {
-    "id": "2025-early-career",
     "date": "2025-03-01",
+    "datePrecision": "year",
     "type": "grant",
     "text": {
-      "en": "Outstanding Early-Career Researcher Program (Ministry of Science and ICT): next-generation mRNA delivery technology independent of nanocarriers.",
-      "ko": "과학기술정보통신부 우수신진연구 사업 선정: 나노전달체에 독립적인 차세대 mRNA 전달 기술 개발."
+      "ko": "과학기술정보통신부 우수신진연구 사업 선정: 나노전달체에 독립적인 차세대 mRNA 전달 기술 개발.",
+      "en": "Outstanding Early-Career Researcher Program (Ministry of Science and ICT): next-generation mRNA delivery technology independent of nanocarriers."
     },
-    "link": "",
-    "datePrecision": "year"
+    "id": "2025-early-career"
   },
   {
-    "id": "2024-global-rd-center",
     "date": "2024-09-01",
+    "datePrecision": "year",
     "type": "grant",
     "text": {
-      "en": "Advanced Bio Global R&D Center Program (Ministry of Science and ICT): Korea-EU international joint research centre for nucleic acid therapies, College of Pharmacy.",
-      "ko": "과학기술정보통신부 첨단바이오 글로벌 R&D 센터 사업 선정: 핵산치료제 한-EU 국제공동연구센터 (약학대학)."
+      "ko": "과학기술정보통신부 첨단바이오 글로벌 R&D 센터 사업 선정: 핵산치료제 한-EU 국제공동연구센터 (약학대학).",
+      "en": "Advanced Bio Global R&D Center Program (Ministry of Science and ICT): Korea-EU international joint research centre for nucleic acid therapies, College of Pharmacy."
     },
-    "link": "",
-    "datePrecision": "year"
+    "id": "2024-global-rd-center"
   },
   {
-    "id": "2024-korea-eu-cooperation",
     "date": "2024-07-01",
+    "datePrecision": "year",
     "type": "grant",
     "text": {
-      "en": "Korea-EU Cooperation Promotion Program (Ministry of Science and ICT) selected.",
-      "ko": "과학기술정보통신부 한-EU 협력증진 사업 선정."
+      "ko": "과학기술정보통신부 한-EU 협력증진 사업 선정.",
+      "en": "Korea-EU Cooperation Promotion Program (Ministry of Science and ICT) selected."
     },
-    "link": "",
-    "datePrecision": "year"
+    "id": "2024-korea-eu-cooperation"
   },
   {
-    "id": "2024-ekc",
     "date": "2024-07-15",
+    "datePrecision": "year",
     "type": "talk",
     "text": {
-      "en": "Invited speaker at EKC 2024, United Kingdom.",
-      "ko": "EKC 2024 (영국) 초청 강연."
+      "ko": "EKC 2024 (영국) 초청 강연.",
+      "en": "Invited speaker at EKC 2024, United Kingdom."
     },
-    "link": "",
-    "datePrecision": "year"
+    "id": "2024-ekc"
   },
   {
-    "id": "2024-crs",
     "date": "2024-07-08",
+    "datePrecision": "year",
     "type": "talk",
     "text": {
-      "en": "Oral presentation and poster pitch at CRS 2024, Italy.",
-      "ko": "CRS 2024 (이탈리아) 구두 발표 및 포스터 피치."
+      "ko": "CRS 2024 (이탈리아) 구두 발표 및 포스터 피치.",
+      "en": "Oral presentation and poster pitch at CRS 2024, Italy."
     },
-    "link": "",
-    "datePrecision": "year"
+    "id": "2024-crs"
   },
   {
-    "id": "2024-escdd",
     "date": "2024-04-10",
+    "datePrecision": "year",
     "type": "talk",
     "text": {
-      "en": "Invited speaker at ESCDD 2024, Netherlands.",
-      "ko": "ESCDD 2024 (네덜란드) 초청 강연."
+      "ko": "ESCDD 2024 (네덜란드) 초청 강연.",
+      "en": "Invited speaker at ESCDD 2024, Netherlands."
     },
-    "link": "",
-    "datePrecision": "year"
+    "id": "2024-escdd"
   },
   {
-    "id": "2024-esgct",
     "date": "2024-10-22",
+    "datePrecision": "year",
     "type": "talk",
     "text": {
-      "en": "Presentation at ESGCT 2024 (Gene and Cell Therapy), Belgium.",
-      "ko": "ESGCT 2024 유전자 및 세포치료 학회 (벨기에) 발표."
+      "ko": "ESGCT 2024 유전자 및 세포치료 학회 (벨기에) 발표.",
+      "en": "Presentation at ESGCT 2024 (Gene and Cell Therapy), Belgium."
     },
-    "link": "",
-    "datePrecision": "year"
+    "id": "2024-esgct"
   },
   {
-    "id": "2023-ghent",
     "date": "2023-09-01",
+    "datePrecision": "year",
     "type": "news",
     "text": {
-      "en": "Joined the Nanomedicine Lab at Ghent University as a postdoctoral fellow.",
-      "ko": "겐트대학교 Nanomedicine Lab 박사후연구원으로 합류."
+      "ko": "겐트대학교 Nanomedicine Lab 박사후연구원으로 합류.",
+      "en": "Joined the Nanomedicine Lab at Ghent University as a postdoctoral fellow."
     },
-    "link": "",
-    "datePrecision": "year"
+    "id": "2023-ghent"
   },
   {
-    "id": "2023-sejong",
     "date": "2023-06-01",
+    "datePrecision": "year",
     "type": "honor",
     "text": {
-      "en": "Selected for the Sejong Science Fellowship (Overseas).",
-      "ko": "세종과학펠로우십 국외연수 사업 선정."
+      "ko": "세종과학펠로우십 국외연수 사업 선정.",
+      "en": "Selected for the Sejong Science Fellowship (Overseas)."
     },
-    "link": "",
-    "datePrecision": "year"
+    "id": "2023-sejong"
   },
   {
-    "id": "2023-snu-fellow",
     "date": "2023-03-01",
+    "datePrecision": "year",
     "type": "honor",
     "text": {
-      "en": "Selected for the Ascending SNU Future Leader Fellowship.",
-      "ko": "SNU 미래신진연구자 지원사업 선정."
+      "ko": "SNU 미래신진연구자 지원사업 선정.",
+      "en": "Selected for the Ascending SNU Future Leader Fellowship."
     },
-    "link": "",
-    "datePrecision": "year"
+    "id": "2023-snu-fellow"
   }
 ]
