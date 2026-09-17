@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "id": "10-1002-adhm-71643",
+    "pmid": "42638266",
+    "title": "Light-Mediated Transfection of the Ocular Surface Using an Ophthalmic YAG Laser",
+    "authors": "Byun J, Wels M, Vanmeerhaeghe B, Paoletti L, Lu T, Harizaj A, Tavernier J, Roels D, Goemaere I, Remaut K, Raemdonck K, Braeckmans K, De Smedt SC, Sauvage F",
+    "journal": "Adv Healthc Mater",
+    "year": 2026,
+    "volume": "",
+    "pages": "e71643",
+    "doi": "10.1002/adhm.71643",
+    "pdf": "",
+    "selected": true
+  },
+  {
+    "id": "10-1002-advs-202511962",
+    "pmid": "41208290",
+    "title": "Cold Atmospheric Plasma-Activated In Situ Hydrogel Induces Hair Regeneration Via Immune Microenvironment Remodeling",
+    "authors": "Kim JS, Byun J, Choi J, Jin D, Li Q, Lee J, Choi HG, Oh YK",
+    "journal": "Adv Sci (Weinh)",
+    "year": 2025,
+    "volume": "13(5)",
+    "pages": "e11962",
+    "doi": "10.1002/advs.202511962",
+    "pdf": "",
+    "selected": true
+  },
+  {
+    "id": "10-1002-adma-202418445",
+    "pmid": "40751551",
+    "title": "Selective Lipolysis by Photoactivation of Chaperone-Mediated Autophagy Using Adipocyte Membrane-Coated Nanoparticle in Hydrogel",
+    "authors": "Choi J, Byun J, Kim D, Li Q, Jin D, Choi YJ, Jung HS, Lee J, Oh YK",
+    "journal": "Adv Mater",
+    "year": 2025,
+    "volume": "37(49)",
+    "pages": "e18445",
+    "doi": "10.1002/adma.202418445",
+    "pdf": "",
+    "selected": true
+  },
+  {
+    "id": "10-1016-j-jconrel-2025-114081",
+    "pmid": "40754109",
+    "title": "Targeted lipolysis for obesity treatment: Cold atmospheric plasma-responsive nanoparticles amplify reactive oxygen species generation in adipocytes",
+    "authors": "Choi J, Jin D, De Smedt SC, Oh YK, Lee J, Byun J",
+    "journal": "J Control Release",
+    "year": 2025,
+    "volume": "386",
+    "pages": "114081",
+    "doi": "10.1016/j.jconrel.2025.114081",
+    "pdf": "",
+    "selected": false
+  },
+  {
+    "id": "10-1016-j-jconrel-2025-01-027",
+    "pmid": "39800239",
+    "title": "Hybrid lipid nanoparticles with tumor antigen-primed dendritic cell membranes for post-surgical tumor immunotherapy",
+    "authors": "Kim D, Choi J, Jin D, Xu E, Lee J, Byun J, Oh YK",
+    "journal": "J Control Release",
+    "year": 2025,
+    "volume": "379",
+    "pages": "537-548",
+    "doi": "10.1016/j.jconrel.2025.01.027",
+    "pdf": "",
+    "selected": false
+  }
+]
