@@ -101,7 +101,7 @@ p { margin: 0; }
 /* hero */
 .hero { padding: clamp(56px, 9vw, 120px) 0 clamp(48px, 7vw, 96px); }
 .hero .wrap { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(32px, 6vw, 80px); align-items: center; }
-.hero h1 { max-width: 15ch; }
+.hero h1 { max-width: 15ch; font-size: clamp(1.9rem, 4.8vw, 3.7rem); }
 .hero .lead { margin-top: 24px; }
 .hero .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
 .hero .affil { margin-top: 44px; color: var(--ink-3); font-size: 0.95rem; }
