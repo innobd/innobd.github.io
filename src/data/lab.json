@@ -17,6 +17,7 @@
     "en": "Room 609, College of Pharmacy, Sookmyung Women's University, 99 Cheongpa-ro 47-gil, Yongsan-gu, Seoul, Republic of Korea"
   },
   "email": "junho_byun@sookmyung.ac.kr",
+  "phone": "",
   "hero": {
     "headline": {
       "ko": "핵산의 새로운 전달 방법과 시스템을 연구합니다.",
@@ -26,5 +27,11 @@
       "ko": "혁신적인 약물전달 시스템과 평가 기술을 통해 mRNA, 세포치료제와 같은 첨단 바이오의약품의 한계를 극복하는 것을 목표로 합니다.",
       "en": "We aim to overcome the limitations of advanced biotherapeutics, including mRNA and cell therapies, through innovative drug delivery systems and evaluation techniques."
     }
+  },
+  "links": {
+    "scholar": "",
+    "orcid": "",
+    "github": "",
+    "linkedin": ""
   }
 }

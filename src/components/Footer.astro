@@ -13,7 +13,7 @@ const year = new Date().getFullYear();
     </div>
     <div>
       {lab.email && <a href={`mailto:${lab.email}`}>{lab.email}</a>}
-      {lab.links.scholar && <><br /><a href={lab.links.scholar}>Google Scholar</a></>}
+      {lab.links?.scholar && <><br /><a href={lab.links.scholar}>Google Scholar</a></>}
     </div>
     <a class="admin-link" href={href(lang, "/admin")}>{lang === "ko" ? "관리자 편집 ↗" : "Edit website ↗"}</a>
     <div class="copy">© {year} {lab.shortName}. {tr('footer.rights')}</div>
