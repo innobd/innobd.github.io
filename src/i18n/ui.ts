@@ -1,6 +1,6 @@
 export const locales = ['en', 'ko'] as const;
 export type Lang = (typeof locales)[number];
-export const defaultLang: Lang = 'en';
+export const defaultLang: Lang = 'ko';
 
 export const ui = {
   en: {
@@ -127,11 +127,11 @@ export function asset(path: string): string {
 export function href(lang: Lang, path: string): string {
   const [route, hash] = path.split('#');
   const clean = route.replace(/^\/+|\/+$/g, '');
-  return asset(`${lang === 'ko' ? 'ko/' : ''}${clean ? clean + '/' : ''}`) + (hash ? `#${hash}` : '');
+  return asset(`${lang === 'en' ? 'en/' : ''}${clean ? clean + '/' : ''}`) + (hash ? `#${hash}` : '');
 }
 export function switchPath(lang: Lang, pathname: string): string {
   const local = base && (pathname === base || pathname.startsWith(base + '/')) ? pathname.slice(base.length) : pathname;
-  return href(lang === 'en' ? 'ko' : 'en', local.replace(/^\/ko(?=\/|$)/, '') || '/');
+  return href(lang === 'ko' ? 'en' : 'ko', local.replace(/^\/en(?=\/|$)/, '') || '/');
 }
 
 export function formatDate(lang: Lang, iso: string): string {

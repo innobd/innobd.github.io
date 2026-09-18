@@ -4,6 +4,6 @@ const site = process.env.SITE_URL || (owner ? `https://${owner.toLowerCase()}.gi
 const base = process.env.SITE_BASE ?? (owner && repo.toLowerCase() !== `${owner.toLowerCase()}.github.io` ? `/${repo}` : '/');
 export default defineConfig({
   site, base, output: 'static', trailingSlash: 'always',
-  i18n: { locales: ['en', 'ko'], defaultLocale: 'en', routing: { prefixDefaultLocale: false } },
+  i18n: { locales: ['en', 'ko'], defaultLocale: 'ko', routing: { prefixDefaultLocale: false } },
   build: { format: 'directory' },
 });
