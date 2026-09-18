@@ -176,6 +176,17 @@ content:
         label: 키워드
         type: string
         list: true
+      - name: images
+        label: 사진 (여러 장, 드래그로 순서 변경)
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: 사진
+            type: image
+          - name: caption
+            label: 설명 (선택)
+            component: text_ko_en
       - name: id
         label: 고유 ID (영문 소문자)
         type: string

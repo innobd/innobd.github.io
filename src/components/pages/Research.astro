@@ -1,7 +1,7 @@
 ---
 import Base from '@/layouts/Base.astro';
 import research from '@/data/research.json';
-import { t, pick, type Lang } from '@/i18n/ui';
+import { t, pick, asset, type Lang } from '@/i18n/ui';
 const { lang } = Astro.props as { lang: Lang };
 const tr = t(lang);
 ---
@@ -20,6 +20,18 @@ const tr = t(lang);
             <div>
               <p>{pick(lang, r.summary)}</p>
               {r.keywords?.length > 0 && <p class="kw">{r.keywords.join(', ')}</p>}
+              {r.images?.length > 0 && (
+                <ul class="research-photos">
+                  {r.images.map((img: any) => (
+                    <li>
+                      <figure>
+                        <img src={asset(img.image)} alt={pick(lang, img.caption) || pick(lang, r.title)} loading="lazy" />
+                        {(img.caption?.en || img.caption?.ko) && <figcaption>{pick(lang, img.caption)}</figcaption>}
+                      </figure>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </li>
         ))}

@@ -1,0 +1,28 @@
+---
+import Base from '@/layouts/Base.astro';
+import members from '@/data/members.json';
+import { t, pick, asset, type Lang } from '@/i18n/ui';
+const { lang } = Astro.props as { lang: Lang };
+const tr = t(lang);
+const pi = members.find((m) => m.role === 'pi');
+const initials = (m: any) => pick('en', m.name).split(' ').map((s: string) => s[0]).join('').slice(0, 2);
+---
+<Base lang={lang} current="pi" title={tr('pi.title')}>
+  <section class="section">
+    <div class="wrap">
+      <h1 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:40px">{tr('pi.title')}</h1>
+      {pi && (
+        <div class="pi-block">
+          {pi.photo ? <img class="avatar" src={asset(pi.photo)} alt={pick(lang, pi.name)} /> : <div class="avatar">{initials(pi)}</div>}
+          <div>
+            <p class="muted small">{tr('team.pi')}</p>
+            <h2 style="margin-top:4px">{pick(lang, pi.name)}</h2>
+            <p class="muted" style="margin-top:6px">{pick(lang, pi.title)}</p>
+            <p style="margin-top:18px;max-width:40em">{pick(lang, (pi as any).bio)}</p>
+            {pi.email && <p style="margin-top:14px"><a href={`mailto:${pi.email}`}>{pi.email}</a></p>}
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+</Base>
