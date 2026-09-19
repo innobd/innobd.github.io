@@ -130,11 +130,11 @@ p { margin: 0; }
 .research-legend span { display: inline-flex; align-items: center; gap: 8px; }
 .research-legend i { width: 12px; height: 12px; border-radius: 3px; background: var(--lipid); }
 .research-legend i.method { background: var(--payload); border-radius: 50%; }
-@media (max-width: 720px) { .research-list li { grid-template-columns: 1fr; gap: 10px; } }
 .research-photos { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 14px; }
 .research-photos figure { margin: 0; }
 .research-photos img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius); background: var(--paper-2); display: block; }
 .research-photos figcaption { margin-top: 6px; font-size: 0.82rem; color: var(--ink-3); }
+@media (max-width: 720px) { .research-list li { grid-template-columns: 1fr; gap: 10px; } }
 
 /* news timeline (a real sequence, so dates lead) */
 .news-list { list-style: none; margin: 0; padding: 0; }
@@ -159,7 +159,7 @@ p { margin: 0; }
 
 /* people */
 .pi-block { display: grid; grid-template-columns: 220px 1fr; gap: 32px; align-items: start; padding-bottom: 48px; }
-.avatar { aspect-ratio: 1; width: 100%; border-radius: var(--radius); object-fit: cover; background: linear-gradient(135deg, var(--lipid-soft), var(--payload-soft)); display: grid; place-items: center; color: var(--lipid); font-weight: 700; font-size: 2rem; letter-spacing: -0.02em; }
+.avatar { aspect-ratio: 3 / 4; width: 100%; border-radius: var(--radius); object-fit: cover; background: linear-gradient(135deg, var(--lipid-soft), var(--payload-soft)); display: grid; place-items: center; color: var(--lipid); font-weight: 700; font-size: 2rem; letter-spacing: -0.02em; }
 .people-group { padding: 40px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 200px 1fr; gap: 24px 32px; }
 .people-group h2 { font-size: 1.15rem; color: var(--ink-2); font-weight: 600; letter-spacing: 0; }
 .people-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 28px 20px; }
