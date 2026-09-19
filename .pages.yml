@@ -120,6 +120,9 @@ content:
         label: 제목
         type: string
         required: true
+      - name: summary
+        label: 한 줄 설명 (선택, 초록 요약)
+        type: text
       - name: authors
         label: 저자 (Byun J 형식, 쉼표 구분)
         type: text
@@ -141,6 +144,12 @@ content:
       - name: pdf
         label: PDF 링크
         type: string
+      - name: openAccess
+        label: Open Access 논문
+        type: boolean
+      - name: image
+        label: 대표 이미지 (선택, 그래픽 초록 등)
+        type: image
       - name: selected
         label: 홈 화면 대표 논문으로 표시
         type: boolean

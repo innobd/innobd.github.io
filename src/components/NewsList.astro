@@ -3,15 +3,17 @@ import { t, pick, asset, formatDate, type Lang } from '@/i18n/ui';
 const { lang, items } = Astro.props as { lang: Lang; items: any[] };
 const tr = t(lang);
 ---
-<ul class="news-list">
+<ul class="ra-list">
   {items.map((n) => (
-    <li id={n.id}>
-      <time datetime={n.date}>{n.datePrecision === 'year' ? n.date.slice(0, 4) : formatDate(lang, n.date)}</time>
-      <p>
-        <span class={`type ${n.type}`}>{tr(`news.type.${n.type}` as any)}</span>
-        {n.link ? <a href={n.link}>{pick(lang, n.text)}</a> : pick(lang, n.text)}
-        {n.image && <img src={asset(n.image)} alt="" loading="lazy" style="margin-top:14px;border-radius:8px;max-width:520px" />}
-      </p>
+    <li class="ra-item" id={n.id}>
+      <div class="ra-meta">
+        <span class={`ra-type type-${n.type}`}>{tr(`news.type.${n.type}` as any)}</span>
+        <time class="ra-date" datetime={n.date}>{n.datePrecision === 'year' ? n.date.slice(0, 4) : formatDate(lang, n.date)}</time>
+      </div>
+      <div class="ra-body">
+        <h3 class="ra-title">{n.link ? <a href={n.link}>{pick(lang, n.text)}</a> : pick(lang, n.text)}</h3>
+      </div>
+      {n.image && <img class="ra-thumb" src={asset(n.image)} alt="" loading="lazy" />}
     </li>
   ))}
 </ul>

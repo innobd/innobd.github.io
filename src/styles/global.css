@@ -136,26 +136,33 @@ p { margin: 0; }
 .research-photos figcaption { margin-top: 6px; font-size: 0.82rem; color: var(--ink-3); }
 @media (max-width: 720px) { .research-list li { grid-template-columns: 1fr; gap: 10px; } }
 
-/* news timeline (a real sequence, so dates lead) */
-.news-list { list-style: none; margin: 0; padding: 0; }
-.news-list li { display: grid; grid-template-columns: 150px 1fr; gap: 8px 32px; padding: 20px 0; border-top: 1px solid var(--line); }
-.news-list li:last-child { border-bottom: 1px solid var(--line); }
-.news-list time { color: var(--ink-3); font-size: 0.95rem; font-variant-numeric: tabular-nums; }
-.news-list .type { display: inline-block; font-size: 0.8rem; font-weight: 600; color: var(--lipid); background: var(--lipid-soft); padding: 2px 8px; border-radius: 4px; margin-right: 10px; vertical-align: 2px; }
-.news-list .type.honor, .news-list .type.paper { color: var(--payload); background: var(--payload-soft); }
-@media (max-width: 600px) { .news-list li { grid-template-columns: 1fr; gap: 6px; } }
-
-/* publications */
-.pub-year { display: grid; grid-template-columns: 120px 1fr; gap: 16px 32px; padding: 32px 0; border-top: 1px solid var(--line); }
-.pub-year h2 { font-size: 1.6rem; color: var(--ink-2); }
-.pub-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 24px; }
-.pub-list .title { font-weight: 600; }
-.pub-list .authors { color: var(--ink-2); margin-top: 4px; }
-.pub-list .venue { color: var(--ink-3); font-size: 0.95rem; margin-top: 2px; }
-.pub-list .venue em { color: var(--ink-2); font-style: italic; }
-.pub-list .links { margin-top: 6px; font-size: 0.9rem; display: flex; gap: 14px; }
+/* research-article style list (news + publications), modeled on a journal's
+   "Latest Research articles" / "Featured" feed: a meta column (type, access
+   tag, date), the article body, and an optional thumbnail on the right. */
+.ra-list { list-style: none; margin: 0; padding: 0; }
+.ra-item { display: flex; align-items: flex-start; gap: 28px; padding: 28px 0; border-top: 1px solid var(--line); }
+.ra-list > .ra-item:last-child { border-bottom: 1px solid var(--line); }
+.ra-meta { flex: 0 0 130px; width: 130px; display: flex; flex-direction: column; gap: 6px; }
+.ra-type { font-size: 0.8rem; font-weight: 700; color: var(--ink); }
+.ra-type.type-honor, .ra-type.type-paper { color: var(--payload); }
+.ra-oa { font-size: 0.8rem; font-weight: 600; color: var(--lipid); }
+.ra-date { color: var(--ink-3); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+.ra-body { flex: 1 1 auto; min-width: 0; }
+.ra-title { margin: 0; font-size: 1.15rem; line-height: 1.4; font-weight: 700; }
+.ra-title a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.ra-title a:hover { color: var(--lipid); }
+.ra-summary { margin: 10px 0 0; color: var(--ink-2); }
+.ra-venue { margin: 10px 0 0; color: var(--ink-3); font-size: 0.95rem; }
+.ra-venue em { color: var(--ink-2); font-style: italic; }
+.ra-authors { margin: 6px 0 0; color: var(--ink-2); font-size: 0.95rem; }
+.ra-links { margin-top: 8px; font-size: 0.9rem; display: flex; gap: 14px; }
+.ra-thumb { flex: 0 0 160px; width: 160px; height: 120px; object-fit: cover; border-radius: var(--radius); background: var(--paper-2); }
 .empty { padding: 32px; border: 1px dashed var(--line); border-radius: var(--radius); color: var(--ink-2); }
-@media (max-width: 600px) { .pub-year { grid-template-columns: 1fr; } }
+@media (max-width: 720px) {
+  .ra-item { flex-direction: column; gap: 12px; }
+  .ra-meta { flex-direction: row; width: auto; align-items: center; gap: 12px; }
+  .ra-thumb { width: 100%; height: auto; aspect-ratio: 16 / 9; order: -1; }
+}
 
 /* people */
 .pi-block { display: grid; grid-template-columns: 220px 1fr; gap: 32px; align-items: start; padding-bottom: 48px; }
@@ -199,7 +206,7 @@ p { margin: 0; }
 .editor-steps { max-width:44em; padding-left:24px; }
 .editor-steps li { padding:12px 0; }
 .editor-note { margin:24px 0; padding:24px; background:white; border:1px solid var(--line); border-radius:10px; }
-.lead, .person, .news-list p { overflow-wrap:anywhere; }
+.lead, .person, .ra-title, .ra-summary { overflow-wrap:anywhere; }
 [id] { scroll-margin-top:90px; }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
 @media (max-width:820px) { .hero .particle { order:0; max-width:220px; } }

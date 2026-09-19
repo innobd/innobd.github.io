@@ -1,20 +1,36 @@
 ---
-import { t, type Lang } from '@/i18n/ui';
+import { t, asset, type Lang } from '@/i18n/ui';
 const { lang, items } = Astro.props as { lang: Lang; items: any[] };
 const tr = t(lang);
+
+/** "Byun J, Wels M, Vanmeerhaeghe B, ... Sauvage F" -> "Byun J, Wels M … Sauvage F" */
+function shortAuthors(authors: string): string {
+  const list = authors.split(',').map((a) => a.trim()).filter(Boolean);
+  if (list.length <= 3) return list.join(', ');
+  return `${list[0]}, ${list[1]} … ${list[list.length - 1]}`;
+}
 ---
-<ol class="pub-list">
+<ul class="ra-list">
   {items.map((p) => (
-    <li id={p.id}>
-      <div class="title">{p.doi ? <a href={`https://doi.org/${p.doi}`}>{p.title}</a> : p.title}</div>
-      <div class="authors">{p.authors}</div>
-      <div class="venue"><em>{p.journal}</em> {p.year}{p.volume && `, ${p.volume}`}{p.pages && `, ${p.pages}`}</div>
-      {(p.doi || p.pdf) && (
-        <div class="links">
-          {p.doi && <a href={`https://doi.org/${p.doi}`}>{tr('pubs.doi')}</a>}
-          {p.pdf && <a href={p.pdf}>{tr('pubs.pdf')}</a>}
-        </div>
-      )}
+    <li class="ra-item" id={p.id}>
+      <div class="ra-meta">
+        <span class="ra-type">{tr('pubs.article')}</span>
+        {p.openAccess && <span class="ra-oa">{tr('pubs.openAccess')}</span>}
+        <span class="ra-date">{p.year}</span>
+      </div>
+      <div class="ra-body">
+        <h3 class="ra-title">{p.doi ? <a href={`https://doi.org/${p.doi}`}>{p.title}</a> : p.title}</h3>
+        {p.summary && <p class="ra-summary">{p.summary}</p>}
+        <p class="ra-venue"><em>{p.journal}</em> {p.year}{p.volume && `, ${p.volume}`}{p.pages && `, ${p.pages}`}</p>
+        {p.authors && <p class="ra-authors">{shortAuthors(p.authors)}</p>}
+        {(p.doi || p.pdf) && (
+          <div class="ra-links">
+            {p.doi && <a href={`https://doi.org/${p.doi}`}>{tr('pubs.doi')}</a>}
+            {p.pdf && <a href={p.pdf}>{tr('pubs.pdf')}</a>}
+          </div>
+        )}
+      </div>
+      {p.image && <img class="ra-thumb" src={asset(p.image)} alt="" loading="lazy" />}
     </li>
   ))}
-</ol>
+</ul>
