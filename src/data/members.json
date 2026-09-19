@@ -14,7 +14,7 @@
       "en": "Ph.D., Seoul National University (advisor: Prof. Yu-Kyoung Oh). Postdoctoral training at Seoul National University (Prof. DaeDuk Kim) and Ghent University Nanomedicine Lab (Prof. Stefaan De Smedt) on cell-specific mRNA nanoparticles, LNP RNA delivery and photoporation. Editorial Board, Journal of Controlled Release.",
       "ko": "서울대학교 약학대학 박사 (지도교수 오유경). 서울대학교(김대덕 교수)와 벨기에 겐트대학교 Nanomedicine Lab(Stefaan De Smedt 교수)에서 박사후연구원으로 세포 특이적 mRNA 나노입자, LNP RNA 전달, 광천공 연구를 수행했습니다. Journal of Controlled Release 편집위원."
     },
-    "photo": "",
+    "photo": "/images/members/junho-byun.jpg",
     "email": "junho_byun@sookmyung.ac.kr",
     "links": {
       "scholar": "",
@@ -32,7 +32,7 @@
       "en": "Ph.D. student",
       "ko": "박사과정"
     },
-    "photo": ""
+    "photo": "/images/members/jeeyoon-park.jpg"
   },
   {
     "id": "miram-altohamy",
@@ -45,7 +45,7 @@
       "en": "Ph.D. student",
       "ko": "박사과정"
     },
-    "photo": ""
+    "photo": "/images/members/miram-altohamy.jpg"
   },
   {
     "id": "taejin-lee",
@@ -58,7 +58,7 @@
       "en": "Ph.D. student",
       "ko": "박사과정"
     },
-    "photo": ""
+    "photo": "/images/members/taejin-lee.png"
   },
   {
     "id": "yunji-shin",
@@ -71,7 +71,7 @@
       "en": "M.S. student",
       "ko": "석사과정"
     },
-    "photo": ""
+    "photo": "/images/members/yunji-shin.png"
   },
   {
     "id": "minhee-oh",
@@ -84,7 +84,7 @@
       "en": "M.S. student",
       "ko": "석사과정"
     },
-    "photo": ""
+    "photo": "/images/members/minhee-oh.png"
   },
   {
     "id": "hahyeon-park",
@@ -97,7 +97,7 @@
       "en": "M.S. student",
       "ko": "석사과정"
     },
-    "photo": ""
+    "photo": "/images/members/hahyeon-park.jpg"
   },
   {
     "id": "hyunseo-koo",
@@ -110,7 +110,7 @@
       "en": "Undergraduate researcher",
       "ko": "학부연구생"
     },
-    "photo": ""
+    "photo": "/images/members/hyunseo-koo.png"
   },
   {
     "id": "soyi-kim",
