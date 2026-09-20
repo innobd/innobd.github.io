@@ -64,9 +64,10 @@ content:
       - name: link
         label: 관련 링크 (선택)
         type: string
-      - name: image
-        label: 사진 (선택)
+      - name: images
+        label: 사진 (여러 장 가능, 드래그로 순서 변경)
         type: image
+        list: true
       - name: id
         label: 고유 ID (선택, 영문 소문자와 하이픈)
         type: string

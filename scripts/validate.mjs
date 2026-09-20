@@ -13,6 +13,14 @@ function urls(value, path = '') {
       check(typeof v === 'string' && (/^https?:\/\//i.test(v) || local), `Invalid URL: ${name}`);
       if (local) check(fs.existsSync(`public${v}`), `Missing uploaded file: ${v}`);
     }
+    if (k === 'images' && Array.isArray(v)) {
+      v.forEach((item, i) => {
+        if (typeof item !== 'string' || !item) return;
+        const local = /^\/(?!\/)/.test(item) && !item.includes('..') && !item.includes('\\');
+        check(/^https?:\/\//i.test(item) || local, `Invalid URL: ${name}[${i}]`);
+        if (local) check(fs.existsSync(`public${item}`), `Missing uploaded file: ${item}`);
+      });
+    }
     urls(v, name);
   }
 }

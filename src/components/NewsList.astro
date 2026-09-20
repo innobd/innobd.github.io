@@ -8,20 +8,41 @@ function variant(seed: string): number {
   for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
   return (h % 4) + 1;
 }
+/** Accepts the new `images` list (multiple photos) or the older single `image` string, so existing entries keep working unchanged. */
+function images(n: any): string[] {
+  if (Array.isArray(n.images)) return n.images.filter(Boolean);
+  if (n.image) return [n.image];
+  return [];
+}
 ---
 <ul class="ra-list">
-  {items.map((n) => (
-    <li class="ra-item" id={n.id}>
-      <div class="ra-meta">
-        <span class={`ra-type type-${n.type}`}>{tr(`news.type.${n.type}` as any)}</span>
-        <time class="ra-date" datetime={n.date}>{n.datePrecision === 'year' ? n.date.slice(0, 4) : formatDate(lang, n.date)}</time>
-      </div>
-      <div class="ra-body">
-        <h3 class="ra-title">{n.link ? <a href={n.link}>{pick(lang, n.text)}</a> : pick(lang, n.text)}</h3>
-      </div>
-      {n.image
-        ? <img class="ra-thumb" src={asset(n.image)} alt="" loading="lazy" />
-        : <div class={`ra-thumb ra-thumb-ph ra-thumb-ph-${variant(n.id || n.text?.en || n.date)}`} aria-hidden="true"></div>}
-    </li>
-  ))}
+  {items.map((n) => {
+    const imgs = images(n);
+    const shown = imgs.slice(0, 4);
+    return (
+      <li class="ra-item" id={n.id}>
+        <div class="ra-meta">
+          <span class={`ra-type type-${n.type}`}>{tr(`news.type.${n.type}` as any)}</span>
+          <time class="ra-date" datetime={n.date}>{n.datePrecision === 'year' ? n.date.slice(0, 4) : formatDate(lang, n.date)}</time>
+        </div>
+        <div class="ra-body">
+          <h3 class="ra-title">{n.link ? <a href={n.link}>{pick(lang, n.text)}</a> : pick(lang, n.text)}</h3>
+        </div>
+        {shown.length > 0
+          ? (
+            <div class={`ra-thumb-group count-${shown.length}`}>
+              {shown.map((src, i) => (
+                <div class="ra-thumb-cell">
+                  <img src={asset(src)} alt="" loading="lazy" />
+                  {i === shown.length - 1 && imgs.length > shown.length && (
+                    <span class="ra-thumb-more">+{imgs.length - shown.length}</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          )
+          : <div class={`ra-thumb ra-thumb-ph ra-thumb-ph-${variant(n.id || n.text?.en || n.date)}`} aria-hidden="true"></div>}
+      </li>
+    );
+  })}
 </ul>
