@@ -9,6 +9,12 @@ function shortAuthors(authors: string): string {
   if (list.length <= 3) return list.join(', ');
   return `${list[0]}, ${list[1]} … ${list[list.length - 1]}`;
 }
+/** Deterministic 1-4 pick from a string, so a placeholder thumbnail stays the same across rebuilds. */
+function variant(seed: string): number {
+  let h = 0;
+  for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
+  return (h % 4) + 1;
+}
 ---
 <ul class="ra-list">
   {items.map((p) => (
@@ -30,7 +36,9 @@ function shortAuthors(authors: string): string {
           </div>
         )}
       </div>
-      {p.image && <img class="ra-thumb" src={asset(p.image)} alt="" loading="lazy" />}
+      {p.image
+        ? <img class="ra-thumb" src={asset(p.image)} alt="" loading="lazy" />
+        : <div class={`ra-thumb ra-thumb-ph ra-thumb-ph-${variant(p.id || p.title)}`} aria-hidden="true"></div>}
     </li>
   ))}
 </ul>

@@ -157,6 +157,14 @@ p { margin: 0; }
 .ra-authors { margin: 6px 0 0; color: var(--ink-2); font-size: 0.95rem; }
 .ra-links { margin-top: 8px; font-size: 0.9rem; display: flex; gap: 14px; }
 .ra-thumb { flex: 0 0 160px; width: 160px; height: 120px; object-fit: cover; border-radius: var(--radius); background: var(--paper-2); }
+/* Decorative placeholder shown when an item has no uploaded photo yet, so the
+   layout keeps a thumbnail column like a journal feed. Not a real figure. */
+.ra-thumb-ph { position: relative; overflow: hidden; }
+.ra-thumb-ph::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.6) 1.5px, transparent 1.6px); background-size: 14px 14px; opacity: 0.65; }
+.ra-thumb-ph-1 { background: linear-gradient(135deg, var(--lipid), var(--lipid-soft)); }
+.ra-thumb-ph-2 { background: linear-gradient(135deg, var(--payload), var(--payload-soft)); }
+.ra-thumb-ph-3 { background: linear-gradient(135deg, var(--lipid), var(--payload)); }
+.ra-thumb-ph-4 { background: linear-gradient(135deg, var(--payload-soft), var(--lipid-soft)); }
 .empty { padding: 32px; border: 1px dashed var(--line); border-radius: var(--radius); color: var(--ink-2); }
 @media (max-width: 720px) {
   .ra-item { flex-direction: column; gap: 12px; }

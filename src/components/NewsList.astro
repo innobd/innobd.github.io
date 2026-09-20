@@ -2,6 +2,12 @@
 import { t, pick, asset, formatDate, type Lang } from '@/i18n/ui';
 const { lang, items } = Astro.props as { lang: Lang; items: any[] };
 const tr = t(lang);
+/** Deterministic 1-4 pick from a string, so a placeholder thumbnail stays the same across rebuilds. */
+function variant(seed: string): number {
+  let h = 0;
+  for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
+  return (h % 4) + 1;
+}
 ---
 <ul class="ra-list">
   {items.map((n) => (
@@ -13,7 +19,9 @@ const tr = t(lang);
       <div class="ra-body">
         <h3 class="ra-title">{n.link ? <a href={n.link}>{pick(lang, n.text)}</a> : pick(lang, n.text)}</h3>
       </div>
-      {n.image && <img class="ra-thumb" src={asset(n.image)} alt="" loading="lazy" />}
+      {n.image
+        ? <img class="ra-thumb" src={asset(n.image)} alt="" loading="lazy" />
+        : <div class={`ra-thumb ra-thumb-ph ra-thumb-ph-${variant(n.id || n.text?.en || n.date)}`} aria-hidden="true"></div>}
     </li>
   ))}
 </ul>
