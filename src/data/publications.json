@@ -10,6 +10,7 @@
     "pages": "e71643",
     "doi": "10.1002/adhm.71643",
     "pdf": "",
+    "image": "/images/publications/adhm-71643-fig1.png",
     "selected": true
   },
   {
@@ -23,6 +24,7 @@
     "pages": "e11962",
     "doi": "10.1002/advs.202511962",
     "pdf": "",
+    "image": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8ef5/12850053/585c1355d27f/ADVS-13-e11962-g005.jpg",
     "selected": true
   },
   {
@@ -36,6 +38,7 @@
     "pages": "e18445",
     "doi": "10.1002/adma.202418445",
     "pdf": "",
+    "image": "/images/publications/adma-202418445-fig1.png",
     "selected": true
   },
   {
@@ -49,6 +52,7 @@
     "pages": "114081",
     "doi": "10.1016/j.jconrel.2025.114081",
     "pdf": "",
+    "image": "/images/publications/jconrel-2025-114081-fig1.png",
     "selected": false
   },
   {
@@ -62,6 +66,7 @@
     "pages": "537-548",
     "doi": "10.1016/j.jconrel.2025.01.027",
     "pdf": "",
+    "image": "/images/publications/jconrel-2025-01-027-fig1.png",
     "selected": false
   }
 ]
