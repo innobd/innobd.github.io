@@ -1,0 +1,12 @@
+---
+import { pick, asset, type Lang } from '@/i18n/ui';
+const { lang, member } = Astro.props as { lang: Lang; member: any };
+const initials = pick('en', member.name).split(' ').map((s: string) => s[0]).join('').slice(0, 2);
+---
+<div class="person">
+  {member.photo
+    ? <img class="avatar" src={asset(member.photo)} alt={pick(lang, member.name)} loading="lazy" />
+    : <div class="avatar">{initials}</div>}
+  <div class="name">{pick(lang, member.name)}</div>
+  <div class="title">{pick(lang, member.title)}</div>
+</div>

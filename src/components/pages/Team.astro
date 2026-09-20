@@ -1,11 +1,15 @@
 ---
 import Base from '@/layouts/Base.astro';
+import PersonCard from '@/components/PersonCard.astro';
 import members from '@/data/members.json';
-import { t, pick, asset, type Lang } from '@/i18n/ui';
+import { t, type Lang } from '@/i18n/ui';
 const { lang } = Astro.props as { lang: Lang };
 const tr = t(lang);
-const groups = ['postdoc', 'phd', 'ms', 'undergrad', 'alumni'] as const;
-const initials = (m: any) => pick('en', m.name).split(' ').map((s: string) => s[0]).join('').slice(0, 2);
+// active groups, shown at the top level
+const groups = ['postdoc', 'phd', 'ms', 'undergrad'] as const;
+// "former members" groups, nested under one shared heading
+const formerGroups = ['alumni', 'intern'] as const;
+const hasFormerMembers = formerGroups.some((g) => members.some((m) => m.role === g));
 ---
 <Base lang={lang} current="team" title={tr('team.title')}>
   <section class="section">
@@ -19,16 +23,33 @@ const initials = (m: any) => pick('en', m.name).split(' ').map((s: string) => s[
             <h2>{tr(`team.${g}` as any)}</h2>
             <div class="people-grid">
               {list.map((m) => (
-                <div class="person">
-                  {m.photo ? <img class="avatar" src={asset(m.photo)} alt={pick(lang, m.name)} loading="lazy" /> : <div class="avatar">{initials(m)}</div>}
-                  <div class="name">{pick(lang, m.name)}</div>
-                  <div class="title">{pick(lang, m.title)}</div>
-                </div>
+                <PersonCard lang={lang} member={m} />
               ))}
             </div>
           </div>
         );
       })}
+      {hasFormerMembers && (
+        <div class="people-group">
+          <h2>{tr('team.former')}</h2>
+          <div class="people-subgroups">
+            {formerGroups.map((g) => {
+              const list = members.filter((m) => m.role === g);
+              if (!list.length) return null;
+              return (
+                <div class="people-subgroup">
+                  <h3>{tr(`team.${g}` as any)}</h3>
+                  <div class="people-grid">
+                    {list.map((m) => (
+                      <PersonCard lang={lang} member={m} />
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </div>
   </section>
 </Base>

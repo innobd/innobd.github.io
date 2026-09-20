@@ -4,7 +4,7 @@ import lab from '@/data/lab.json';
 import { t, pick, type Lang } from '@/i18n/ui';
 const { lang } = Astro.props as { lang: Lang };
 const tr = t(lang);
-const q = encodeURIComponent('Sookmyung Women\'s University College of Pharmacy');
+const q = encodeURIComponent('숙명여자대학교 약학대학');
 ---
 <Base lang={lang} current="contact" title={tr('contact.title')}>
   <section class="section">

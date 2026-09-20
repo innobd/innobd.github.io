@@ -114,79 +114,79 @@
   },
   {
     "id": "soyi-kim",
-    "role": "alumni",
+    "role": "intern",
     "name": {
       "en": "Soyi Kim",
       "ko": "김소이"
     },
     "title": {
-      "en": "Former undergraduate researcher",
-      "ko": "학부연구생 (수료)"
+      "en": "Lab Intern",
+      "ko": "학부인턴"
     },
     "photo": ""
   },
   {
     "id": "siyeong-lee",
-    "role": "alumni",
+    "role": "intern",
     "name": {
       "en": "Siyeong Lee",
       "ko": "이시영"
     },
     "title": {
-      "en": "Former undergraduate researcher",
-      "ko": "학부연구생 (수료)"
+      "en": "Lab Intern",
+      "ko": "학부인턴"
     },
     "photo": ""
   },
   {
     "id": "seonah-lee",
-    "role": "alumni",
+    "role": "intern",
     "name": {
       "en": "Seonah Lee",
       "ko": "이선아"
     },
     "title": {
-      "en": "Former undergraduate researcher",
-      "ko": "학부연구생 (수료)"
+      "en": "Lab Intern",
+      "ko": "학부인턴"
     },
     "photo": ""
   },
   {
     "id": "eunsoo-song",
-    "role": "alumni",
+    "role": "intern",
     "name": {
       "en": "Eunsoo Song",
       "ko": "송은수"
     },
     "title": {
-      "en": "Former undergraduate researcher",
-      "ko": "학부연구생 (수료)"
+      "en": "Lab Intern",
+      "ko": "학부인턴"
     },
     "photo": ""
   },
   {
     "id": "suhyeon-kim",
-    "role": "alumni",
+    "role": "intern",
     "name": {
       "en": "Suhyeon Kim",
       "ko": "김수현"
     },
     "title": {
-      "en": "Former undergraduate researcher",
-      "ko": "학부연구생 (수료)"
+      "en": "Lab Intern",
+      "ko": "학부인턴"
     },
     "photo": ""
   },
   {
     "id": "kyungyeon-kim",
-    "role": "alumni",
+    "role": "intern",
     "name": {
       "en": "Kyungyeon Kim",
       "ko": "김경연"
     },
     "title": {
-      "en": "Former undergraduate researcher",
-      "ko": "학부연구생 (수료)"
+      "en": "Lab Intern",
+      "ko": "학부인턴"
     },
     "photo": ""
   }

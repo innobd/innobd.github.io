@@ -189,15 +189,19 @@ p { margin: 0; }
 }
 
 /* people */
-.pi-block { display: grid; grid-template-columns: 220px 1fr; gap: 32px; align-items: start; padding-bottom: 48px; }
+.pi-block { display: grid; grid-template-columns: 147px 1fr; gap: 32px; align-items: start; padding-bottom: 48px; }
 .avatar { aspect-ratio: 3 / 4; width: 100%; border-radius: var(--radius); object-fit: cover; background: linear-gradient(135deg, var(--lipid-soft), var(--payload-soft)); display: grid; place-items: center; color: var(--lipid); font-weight: 700; font-size: 2rem; letter-spacing: -0.02em; }
 .people-group { padding: 40px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 200px 1fr; gap: 24px 32px; }
 .people-group h2 { font-size: 1.15rem; color: var(--ink-2); font-weight: 600; letter-spacing: 0; }
-.people-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 20px 14px; }
+.people-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 40px 28px; }
+/* "former members" heading contains its own labeled sub-sections (e.g. alumni, lab interns) */
+.people-subgroups { display: flex; flex-direction: column; gap: 32px; }
+.people-subgroup h3 { font-size: 0.95rem; color: var(--ink-3); font-weight: 600; letter-spacing: 0; margin: 0 0 14px; }
+.person { text-align: center; }
 .person .avatar { font-size: 1.4rem; margin-bottom: 10px; }
-.person .name { font-weight: 600; }
+.person .name { font-weight: 600; font-size: 0.843rem; }
 .person .title { color: var(--ink-3); font-size: 0.9rem; }
-@media (max-width: 720px) { .pi-block, .people-group { grid-template-columns: 1fr; } .pi-block .avatar { max-width: 220px; } }
+@media (max-width: 720px) { .pi-block, .people-group { grid-template-columns: 1fr; } .pi-block .avatar { max-width: 147px; } }
 
 /* join */
 .positions { list-style: none; margin: 0; padding: 0; }
