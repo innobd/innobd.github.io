@@ -3,11 +3,28 @@ import { t, asset, type Lang } from '@/i18n/ui';
 const { lang, items } = Astro.props as { lang: Lang; items: any[] };
 const tr = t(lang);
 
-/** "Byun J, Wels M, Vanmeerhaeghe B, ... Sauvage F" -> "Byun J, Wels M … Sauvage F" */
-function shortAuthors(authors: string): string {
-  const list = authors.split(',').map((a) => a.trim()).filter(Boolean);
-  if (list.length <= 3) return list.join(', ');
-  return `${list[0]}, ${list[1]} … ${list[list.length - 1]}`;
+/** Representative cover image for each journal (Wikipedia infobox or the
+ * publisher's own cover-image CDN, checked to actually load). Keyed by the
+ * exact "journal" text used in publications.json. Add a line here when a
+ * paper appears in a journal that isn't listed yet; if none is added, that
+ * journal's entries simply show the plain placeholder below. */
+const journalCovers: Record<string, string> = {
+  'Advanced Science': 'https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Advanced_Science_journal_cover_volume_1_issue_1.png/250px-Advanced_Science_journal_cover_volume_1_issue_1.png',
+  'Advanced Materials': 'https://upload.wikimedia.org/wikipedia/en/e/e4/Advanced_Materials_%28journal%29_cover.jpg',
+  'Journal of Controlled Release': 'https://upload.wikimedia.org/wikipedia/en/d/db/Journal_of_Controlled_Release_%28journal%29_cover.gif',
+  'Nature Communications': 'https://upload.wikimedia.org/wikipedia/en/b/bf/Nature_Communications_-_Journal_Cover.jpg',
+  'Asian Journal of Pharmaceutical Sciences': 'https://ars.els-cdn.com/content/image/X18180876.jpg',
+  'Advanced Drug Delivery Reviews': 'https://upload.wikimedia.org/wikipedia/en/2/23/ADDRjournalcover.gif',
+  'ACS Nano': 'https://upload.wikimedia.org/wikipedia/en/7/7e/Nano_cover.jpg',
+  'The AAPS Journal': 'https://media.springernature.com/w88/springer-static/cover-hires/journal/12248?as=webp',
+  'Biomaterials': 'https://upload.wikimedia.org/wikipedia/en/c/cd/The_cover_of_Biomaterials.jpg',
+  'Bioactive Materials': 'https://ars.els-cdn.com/content/image/X2452199X.jpg',
+};
+
+function authorRoleLabel(role: string | undefined): string | null {
+  if (role === 'first') return tr('pubs.firstAuthor');
+  if (role === 'corresponding') return tr('pubs.corresponding');
+  return null;
 }
 /** Deterministic 1-4 pick from a string, so a placeholder thumbnail stays the same across rebuilds. */
 function variant(seed: string): number {
@@ -17,28 +34,33 @@ function variant(seed: string): number {
 }
 ---
 <ul class="ra-list">
-  {items.map((p) => (
-    <li class="ra-item" id={p.id}>
-      <div class="ra-meta">
-        <span class="ra-type">{tr('pubs.article')}</span>
-        {p.openAccess && <span class="ra-oa">{tr('pubs.openAccess')}</span>}
-        <span class="ra-date">{p.year}</span>
-      </div>
-      <div class="ra-body">
-        <h3 class="ra-title">{p.doi ? <a href={`https://doi.org/${p.doi}`}>{p.title}</a> : p.title}</h3>
-        {p.summary && <p class="ra-summary">{p.summary}</p>}
-        <p class="ra-venue"><em>{p.journal}</em> {p.year}{p.volume && `, ${p.volume}`}{p.pages && `, ${p.pages}`}</p>
-        {p.authors && <p class="ra-authors">{shortAuthors(p.authors)}</p>}
-        {(p.doi || p.pdf) && (
-          <div class="ra-links">
-            {p.doi && <a href={`https://doi.org/${p.doi}`}>{tr('pubs.doi')}</a>}
-            {p.pdf && <a href={p.pdf}>{tr('pubs.pdf')}</a>}
-          </div>
-        )}
-      </div>
-      {p.image
-        ? <img class="ra-thumb" src={asset(p.image)} alt="" loading="lazy" />
-        : <div class={`ra-thumb ra-thumb-ph ra-thumb-ph-${variant(p.id || p.title)}`} aria-hidden="true"></div>}
-    </li>
-  ))}
+  {items.map((p) => {
+    const cover = journalCovers[p.journal];
+    const roleLabel = authorRoleLabel(p.authorRole);
+    return (
+      <li class="ra-item" id={p.id}>
+        <div class="ra-meta">
+          {cover
+            ? <img class="ra-journal-cover" src={cover} alt={p.journal} loading="lazy" />
+            : <div class="ra-journal-cover ra-journal-cover-ph" aria-hidden="true"></div>}
+          {roleLabel && <span class="ra-role">({roleLabel})</span>}
+        </div>
+        <div class="ra-body">
+          <h3 class="ra-title">{p.doi ? <a href={`https://doi.org/${p.doi}`}>{p.title}</a> : p.title}</h3>
+          {p.summary && <p class="ra-summary">{p.summary}</p>}
+          <p class="ra-venue"><em>{p.journal}</em> {p.year}{p.volume && `, ${p.volume}`}{p.pages && `, ${p.pages}`}{p.openAccess && <> · <span class="ra-oa">{tr('pubs.openAccess')}</span></>}</p>
+          {p.authors && <p class="ra-authors">{p.authors}</p>}
+          {(p.doi || p.pdf) && (
+            <div class="ra-links">
+              {p.doi && <a href={`https://doi.org/${p.doi}`}>{tr('pubs.doi')}</a>}
+              {p.pdf && <a href={p.pdf}>{tr('pubs.pdf')}</a>}
+            </div>
+          )}
+        </div>
+        {p.image
+          ? <img class="ra-thumb" src={asset(p.image)} alt="" loading="lazy" />
+          : <div class={`ra-thumb ra-thumb-ph ra-thumb-ph-${variant(p.id || p.title)}`} aria-hidden="true"></div>}
+      </li>
+    );
+  })}
 </ul>

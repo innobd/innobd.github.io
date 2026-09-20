@@ -155,8 +155,14 @@ p { margin: 0; }
 .ra-summary { margin: 10px 0 0; color: var(--ink-2); }
 .ra-venue { margin: 10px 0 0; color: var(--ink-3); font-size: 0.95rem; }
 .ra-venue em { color: var(--ink-2); font-style: italic; }
-.ra-authors { margin: 6px 0 0; color: var(--ink-2); font-size: 0.95rem; }
+.ra-authors { margin: 6px 0 0; color: var(--ink-2); font-size: 0.636rem; }
 .ra-links { margin-top: 8px; font-size: 0.9rem; display: flex; gap: 14px; }
+/* publications: journal cover thumbnail in the left meta column, replacing
+   the old type+year text, with an optional first/corresponding-author tag
+   underneath it. */
+.ra-journal-cover { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius); background: var(--paper-2); display: block; }
+.ra-journal-cover-ph { background: linear-gradient(135deg, var(--lipid-soft), var(--payload-soft)); }
+.ra-role { display: block; margin-top: 2px; color: #3BA4FB; font-style: italic; font-size: 0.8rem; font-weight: 600; }
 .ra-thumb { flex: 0 0 160px; width: 160px; height: 120px; object-fit: cover; border-radius: var(--radius); background: var(--paper-2); }
 /* Decorative placeholder shown when an item has no uploaded photo yet, so the
    layout keeps a thumbnail column like a journal feed. Not a real figure. */
@@ -185,6 +191,7 @@ p { margin: 0; }
 @media (max-width: 720px) {
   .ra-item { flex-direction: column; gap: 12px; }
   .ra-meta { flex-direction: row; width: auto; align-items: center; gap: 12px; }
+  .ra-meta .ra-journal-cover { width: 56px; height: 74px; aspect-ratio: unset; flex-shrink: 0; }
   .ra-thumb, .ra-thumb-group { width: 100%; height: auto; aspect-ratio: 16 / 9; order: -1; }
 }
 
@@ -199,8 +206,8 @@ p { margin: 0; }
 .people-subgroup h3 { font-size: 0.95rem; color: var(--ink-3); font-weight: 600; letter-spacing: 0; margin: 0 0 14px; }
 .person { text-align: center; }
 .person .avatar { font-size: 1.4rem; margin-bottom: 10px; }
-.person .name { font-weight: 600; font-size: 0.843rem; }
-.person .title { color: var(--ink-3); font-size: 0.9rem; }
+.person .name { font-weight: 600; font-size: 0.922rem; }
+.person .title { color: var(--ink-3); font-size: 0.743rem; }
 @media (max-width: 720px) { .pi-block, .people-group { grid-template-columns: 1fr; } .pi-block .avatar { max-width: 147px; } }
 
 /* join */
