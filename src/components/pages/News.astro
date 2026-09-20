@@ -5,13 +5,25 @@ import news from '@/data/news.json';
 import { t, type Lang } from '@/i18n/ui';
 const { lang } = Astro.props as { lang: Lang };
 const tr = t(lang);
-const sorted = [...news].sort((a, b) => b.date.localeCompare(a.date));
+// 올해 소식은 홈 화면에 표시되므로, 이 페이지(지난 소식)는 이전 연도만 연도별로 묶어서 보여줍니다.
+const thisYear = new Date().getFullYear();
+const pastNews = news.filter((n: any) => new Date(n.date).getFullYear() !== thisYear);
+const years = [...new Set(pastNews.map((n: any) => new Date(n.date).getFullYear()))].sort((a: any, b: any) => b - a);
 ---
 <Base lang={lang} current="news" title={tr('news.title')}>
   <section class="section">
     <div class="wrap">
       <h1 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:40px">{tr('news.title')}</h1>
-      <NewsList lang={lang} items={sorted} />
+      {years.length === 0 && <div class="empty">{tr('news.empty')}</div>}
+      {years.map((y: any) => (
+        <div class="year-group">
+          <h2>{y}</h2>
+          <NewsList
+            lang={lang}
+            items={pastNews.filter((n: any) => new Date(n.date).getFullYear() === y).sort((a: any, b: any) => b.date.localeCompare(a.date))}
+          />
+        </div>
+      ))}
     </div>
   </section>
 </Base>

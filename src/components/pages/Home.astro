@@ -11,7 +11,10 @@ import join from '@/data/join.json';
 import { t, pick, href, type Lang } from '@/i18n/ui';
 const { lang } = Astro.props as { lang: Lang };
 const tr = t(lang);
-const recentNews = [...news].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 4);
+const thisYear = new Date().getFullYear();
+const currentYearNews = news
+  .filter((n: any) => new Date(n.date).getFullYear() === thisYear)
+  .sort((a, b) => b.date.localeCompare(a.date));
 const selectedPubs = pubs.filter((p: any) => p.selected).sort((a, b) => b.year - a.year).slice(0, 5);
 ---
 <Base lang={lang} current="home">
@@ -31,10 +34,22 @@ const selectedPubs = pubs.filter((p: any) => p.selected).sort((a, b) => b.year -
     </div>
   </section>
 
+  {currentYearNews.length > 0 && (
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">01 / NEWS</p><h2>{thisYear}{lang === 'ko' ? '년 소식' : ' News'}</h2></div>
+          <a href={href(lang, '/news')}>{tr('home.seeAll')}</a>
+        </div>
+        <NewsList lang={lang} items={currentYearNews} />
+      </div>
+    </section>
+  )}
+
   <section class="section">
     <div class="wrap">
       <div class="section-head">
-        <div><p class="eyebrow">01 / RESEARCH</p><h2>{tr('home.researchTitle')}</h2><p class="lead">{tr('home.researchLead')}</p></div>
+        <div><p class="eyebrow">02 / RESEARCH</p><h2>{tr('home.researchTitle')}</h2><p class="lead">{tr('home.researchLead')}</p></div>
         <a href={href(lang, '/research')}>{tr('home.seeAll')}</a>
       </div>
       <ul class="research-list">
@@ -45,16 +60,6 @@ const selectedPubs = pubs.filter((p: any) => p.selected).sort((a, b) => b.year -
           </li>
         ))}
       </ul>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <div><p class="eyebrow">02 / NEWS</p><h2>{tr('home.newsTitle')}</h2></div>
-        <a href={href(lang, '/news')}>{tr('home.seeAll')}</a>
-      </div>
-      <NewsList lang={lang} items={recentNews} />
     </div>
   </section>
 
