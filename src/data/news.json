@@ -8,7 +8,11 @@
       "en": "Attended the Pharmaceutical Society's Formulation Technology Workshop."
     },
     "link": "",
-    "id": "2026-formulation-workshop"
+    "id": "2026-formulation-workshop",
+    "images": [
+      "/images/news/2026-formulation-workshop-1.jpg",
+      "/images/news/2026-formulation-workshop-2.jpg"
+    ]
   },
   {
     "date": "2026-01-15",
@@ -51,6 +55,16 @@
     "id": "2025-early-career"
   },
   {
+    "date": "2024-10-22",
+    "datePrecision": "year",
+    "type": "talk",
+    "text": {
+      "ko": "ESGCT 2024 유전자 및 세포치료 학회 (벨기에) 발표.",
+      "en": "Presentation at ESGCT 2024 (Gene and Cell Therapy), Belgium."
+    },
+    "id": "2024-esgct"
+  },
+  {
     "date": "2024-09-01",
     "datePrecision": "year",
     "type": "grant",
@@ -59,16 +73,6 @@
       "en": "Advanced Bio Global R&D Center Program (Ministry of Science and ICT): Korea-EU international joint research centre for nucleic acid therapies, College of Pharmacy."
     },
     "id": "2024-global-rd-center"
-  },
-  {
-    "date": "2024-07-01",
-    "datePrecision": "year",
-    "type": "grant",
-    "text": {
-      "ko": "과학기술정보통신부 한-EU 협력증진 사업 선정.",
-      "en": "Korea-EU Cooperation Promotion Program (Ministry of Science and ICT) selected."
-    },
-    "id": "2024-korea-eu-cooperation"
   },
   {
     "date": "2024-07-15",
@@ -91,6 +95,16 @@
     "id": "2024-crs"
   },
   {
+    "date": "2024-07-01",
+    "datePrecision": "year",
+    "type": "grant",
+    "text": {
+      "ko": "과학기술정보통신부 한-EU 협력증진 사업 선정.",
+      "en": "Korea-EU Cooperation Promotion Program (Ministry of Science and ICT) selected."
+    },
+    "id": "2024-korea-eu-cooperation"
+  },
+  {
     "date": "2024-04-10",
     "datePrecision": "year",
     "type": "talk",
@@ -99,16 +113,6 @@
       "en": "Invited speaker at ESCDD 2024, Netherlands."
     },
     "id": "2024-escdd"
-  },
-  {
-    "date": "2024-10-22",
-    "datePrecision": "year",
-    "type": "talk",
-    "text": {
-      "ko": "ESGCT 2024 유전자 및 세포치료 학회 (벨기에) 발표.",
-      "en": "Presentation at ESGCT 2024 (Gene and Cell Therapy), Belgium."
-    },
-    "id": "2024-esgct"
   },
   {
     "date": "2023-09-01",
