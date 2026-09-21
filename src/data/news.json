@@ -1,5 +1,16 @@
 [
   {
+    "date": "2026-09-20",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "약제학회 제제기술워크샵에 참석했습니다.",
+      "en": "Attended the Pharmaceutical Society's Formulation Technology Workshop."
+    },
+    "link": "",
+    "id": "2026-formulation-workshop"
+  },
+  {
     "date": "2026-01-15",
     "datePrecision": "day",
     "type": "honor",
