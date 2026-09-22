@@ -2,12 +2,6 @@
 import { t, pick, asset, formatDate, type Lang } from '@/i18n/ui';
 const { lang, items } = Astro.props as { lang: Lang; items: any[] };
 const tr = t(lang);
-/** Deterministic 1-4 pick from a string, so a placeholder thumbnail stays the same across rebuilds. */
-function variant(seed: string): number {
-  let h = 0;
-  for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
-  return (h % 4) + 1;
-}
 /** Accepts the new `images` list (multiple photos) or the older single `image` string, so existing entries keep working unchanged. */
 function images(n: any): string[] {
   if (Array.isArray(n.images)) return n.images.filter(Boolean);
@@ -18,31 +12,68 @@ function images(n: any): string[] {
 <ul class="ra-list">
   {items.map((n) => {
     const imgs = images(n);
-    const shown = imgs.slice(0, 4);
     return (
-      <li class="ra-item" id={n.id}>
-        <div class="ra-meta">
-          <span class={`ra-type type-${n.type}`}>{tr(`news.type.${n.type}` as any)}</span>
-          <time class="ra-date" datetime={n.date}>{n.datePrecision === 'year' ? n.date.slice(0, 4) : formatDate(lang, n.date)}</time>
+      <li class="ra-item news-item" id={n.id}>
+        <div class="news-head">
+          <div class="ra-meta">
+            <span class={`ra-type type-${n.type}`}>{tr(`news.type.${n.type}` as any)}</span>
+            <time class="ra-date" datetime={n.date}>{n.datePrecision === 'year' ? n.date.slice(0, 4) : formatDate(lang, n.date)}</time>
+          </div>
+          <div class="ra-body">
+            <h3 class="ra-title">{n.link ? <a href={n.link}>{pick(lang, n.text)}</a> : pick(lang, n.text)}</h3>
+          </div>
         </div>
-        <div class="ra-body">
-          <h3 class="ra-title">{n.link ? <a href={n.link}>{pick(lang, n.text)}</a> : pick(lang, n.text)}</h3>
-        </div>
-        {shown.length > 0
-          ? (
-            <div class={`ra-thumb-group count-${shown.length}`}>
-              {shown.map((src, i) => (
-                <div class="ra-thumb-cell">
-                  <img src={asset(src)} alt="" loading="lazy" />
-                  {i === shown.length - 1 && imgs.length > shown.length && (
-                    <span class="ra-thumb-more">+{imgs.length - shown.length}</span>
-                  )}
-                </div>
-              ))}
-            </div>
-          )
-          : <div class={`ra-thumb ra-thumb-ph ra-thumb-ph-${variant(n.id || n.text?.en || n.date)}`} aria-hidden="true"></div>}
+        {imgs.length > 0 && (
+          <div class={`news-gallery${imgs.length === 1 ? ' single' : ''}`}>
+            {imgs.map((src) => (
+              <div class="news-gallery-item">
+                <img src={asset(src)} alt="" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        )}
       </li>
     );
   })}
 </ul>
+
+<script>
+  /** Click-and-drag horizontal scrolling for news photo galleries (in addition
+   * to normal touch/trackpad scrolling, which already works natively). */
+  function initNewsDragScroll() {
+    document.querySelectorAll<HTMLElement>('.news-gallery').forEach((el) => {
+      if (el.dataset.dragInit) return;
+      el.dataset.dragInit = '1';
+      let isDown = false;
+      let startX = 0;
+      let startScroll = 0;
+      let moved = false;
+      el.addEventListener('pointerdown', (e) => {
+        if (e.pointerType === 'touch') return; // let touch use native scrolling
+        isDown = true;
+        moved = false;
+        startX = e.clientX;
+        startScroll = el.scrollLeft;
+        el.classList.add('dragging');
+      });
+      el.addEventListener('pointermove', (e) => {
+        if (!isDown) return;
+        const dx = e.clientX - startX;
+        if (Math.abs(dx) > 4) moved = true;
+        el.scrollLeft = startScroll - dx;
+      });
+      const stop = () => { isDown = false; el.classList.remove('dragging'); };
+      el.addEventListener('pointerup', stop);
+      el.addEventListener('pointerleave', stop);
+      el.addEventListener('pointercancel', stop);
+      el.addEventListener(
+        'click',
+        (e) => {
+          if (moved) { e.preventDefault(); e.stopPropagation(); }
+        },
+        true
+      );
+    });
+  }
+  initNewsDragScroll();
+</script>

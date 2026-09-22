@@ -189,5 +189,18 @@
       "ko": "학부인턴"
     },
     "photo": ""
+  },
+  {
+    "id": "joohyun-kang",
+    "role": "intern",
+    "name": {
+      "en": "Joohyun Kang",
+      "ko": "강주현"
+    },
+    "title": {
+      "en": "Lab Intern",
+      "ko": "학부인턴"
+    },
+    "photo": ""
   }
 ]
