@@ -106,6 +106,16 @@
       "en": "Ph.D. student",
       "ko": "박사과정생"
     },
+    "research": [
+      {
+        "en": "Design of targeted delivery systems directed at lesion-associated cells in fibrotic disease",
+        "ko": "섬유화 질환에서 병변 관련 세포를 겨냥한 표적 전달체 설계"
+      },
+      {
+        "en": "Particle formulations for hematopoietic lineage cell targeting and gene editing",
+        "ko": "조혈 계통 세포 표적화 및 Gene editing을 위한 입자 조성 연구"
+      }
+    ],
     "photo": "/images/members/jeeyoon-park.jpg"
   },
   {
@@ -119,6 +129,16 @@
       "en": "Ph.D. student",
       "ko": "박사과정생"
     },
+    "research": [
+      {
+        "en": "RNA delivery nanosystems for cancer immunotherapy",
+        "ko": "종양 면역치료를 위한 RNA 전달 나노시스템 연구"
+      },
+      {
+        "en": "Lipid nanoparticle strategies to modulate tumor immune-evasion mechanisms",
+        "ko": "암세포의 면역 회피 기전을 조절하는 지질나노입자 전략 개발"
+      }
+    ],
     "photo": "/images/members/miram-altohamy.jpg"
   },
   {
@@ -132,6 +152,16 @@
       "en": "Ph.D. student",
       "ko": "박사과정생"
     },
+    "research": [
+      {
+        "en": "Light-based intracellular delivery technology (photoporation)",
+        "ko": "빛을 이용한 세포 내 물질 전달 기술(photoporation) 연구"
+      },
+      {
+        "en": "Development of ex vivo immune cell therapeutics",
+        "ko": "Ex vivo 면역세포 치료제 개발 연구"
+      }
+    ],
     "photo": "/images/members/taejin-lee.png"
   },
   {
@@ -145,6 +175,16 @@
       "en": "M.S. student",
       "ko": "석사과정생"
     },
+    "research": [
+      {
+        "en": "Nucleic acid delivery systems for the treatment of inflammatory bowel disease",
+        "ko": "염증성 장질환 치료를 위한 핵산 전달체 연구"
+      },
+      {
+        "en": "Design of delivery systems combining biologically derived vesicles with lipid nanoparticles",
+        "ko": "생체 유래 소포체와 지질나노입자를 결합한 전달 시스템 설계"
+      }
+    ],
     "photo": "/images/members/yunji-shin.png"
   },
   {
@@ -158,6 +198,16 @@
       "en": "M.S. student",
       "ko": "석사과정생"
     },
+    "research": [
+      {
+        "en": "Improving targeting selectivity through lipid nanoparticle surface modification",
+        "ko": "지질나노입자 표면 개질을 통한 표적 선택성 향상 연구"
+      },
+      {
+        "en": "Targeting strategies based on selective binding to cell surface markers",
+        "ko": "세포 표면 표지를 활용한 선택적 결합 기반 표적화 전략 개발"
+      }
+    ],
     "photo": "/images/members/minhee-oh.png"
   },
   {
@@ -171,6 +221,16 @@
       "en": "M.S. student",
       "ko": "석사과정생"
     },
+    "research": [
+      {
+        "en": "Identifying the factors that determine photoporation delivery efficiency",
+        "ko": "photoporation 전달 효율 결정 인자 규명 연구"
+      },
+      {
+        "en": "Techniques to improve delivery efficiency through cell-state modulation",
+        "ko": "세포 상태 조절을 통한 전달 효율 향상 기법 개발 연구"
+      }
+    ],
     "photo": "/images/members/hahyeon-park.jpg"
   },
   {
@@ -184,6 +244,16 @@
       "en": "Undergraduate researcher",
       "ko": "학부연구생"
     },
+    "affiliation": {
+      "en": "College of Pharmacy, Sookmyung Women's University",
+      "ko": "숙명여자대학교 약학대학"
+    },
+    "research": [
+      {
+        "en": "Lipid nanoparticles for mRNA delivery to restore function in senescent cells",
+        "ko": "노화 세포의 기능 회복을 위한 mRNA 전달 지질나노입자 연구"
+      }
+    ],
     "photo": "/images/members/hyunseo-koo.png"
   },
   {
@@ -197,6 +267,10 @@
       "en": "Undergraduate researcher",
       "ko": "학부연구생"
     },
+    "affiliation": {
+      "en": "College of Pharmacy, Sookmyung Women's University",
+      "ko": "숙명여자대학교 약학대학"
+    },
     "photo": "/images/members/joohyun-kang.png"
   },
   {
@@ -206,9 +280,9 @@
       "en": "Soyi Kim",
       "ko": "김소이"
     },
-    "title": {
-      "en": "Lab Intern",
-      "ko": "학부인턴"
+    "note": {
+      "en": "Korea University, Summer 2026 intern",
+      "ko": "고려대학교, 2026 하계 인턴"
     }
   },
   {
@@ -218,9 +292,9 @@
       "en": "Siyeong Lee",
       "ko": "이시영"
     },
-    "title": {
-      "en": "Lab Intern",
-      "ko": "학부인턴"
+    "note": {
+      "en": "College of Pharmacy, Sookmyung Women's University, Summer 2026 intern",
+      "ko": "숙명여대 약대, 2026 하계 인턴"
     }
   },
   {
@@ -230,9 +304,9 @@
       "en": "Seonah Lee",
       "ko": "이선아"
     },
-    "title": {
-      "en": "Lab Intern",
-      "ko": "학부인턴"
+    "note": {
+      "en": "College of Pharmacy, Sookmyung Women's University, 2025–2026 intern",
+      "ko": "숙명여대 약대, 2025-2026 인턴"
     }
   },
   {
@@ -242,9 +316,9 @@
       "en": "Eunsoo Song",
       "ko": "송은수"
     },
-    "title": {
-      "en": "Lab Intern",
-      "ko": "학부인턴"
+    "note": {
+      "en": "College of Pharmacy, Sookmyung Women's University, Winter 2025 intern",
+      "ko": "숙명여대 약대, 2025 동계 인턴"
     }
   },
   {
@@ -254,9 +328,9 @@
       "en": "Suhyeon Kim",
       "ko": "김수현"
     },
-    "title": {
-      "en": "Lab Intern",
-      "ko": "학부인턴"
+    "note": {
+      "en": "Soongsil University, Summer 2025 intern",
+      "ko": "숭실대학교, 2025 하계 인턴"
     }
   },
   {
@@ -266,9 +340,9 @@
       "en": "Kyungyeon Kim",
       "ko": "김경연"
     },
-    "title": {
-      "en": "Lab Intern",
-      "ko": "학부인턴"
+    "note": {
+      "en": "College of Pharmacy, Sookmyung Women's University, Winter 2024 intern",
+      "ko": "숙명여대 약대, 2024 동계 인턴"
     }
   }
 ]

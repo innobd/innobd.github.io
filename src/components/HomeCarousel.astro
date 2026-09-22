@@ -11,9 +11,9 @@ const slides = (carousel as any[]).filter((s) => s.image);
 {slides.length > 0 && (
   <section class="home-carousel" data-home-carousel aria-roledescription="carousel">
     <div class="hc-track">
-      {slides.map((s) => {
+      {slides.map((s, i) => {
         const hasCaption = pick(lang, s.caption);
-        const img = <img src={asset(s.image)} alt={hasCaption || ''} loading="eager" />;
+        const img = <img src={asset(s.image)} alt={hasCaption || ''} loading={i === 0 ? 'eager' : 'lazy'} />;
         const caption = hasCaption && <div class="hc-caption"><p class="hc-headline">{hasCaption}</p></div>;
         return s.link ? (
           <a class="hc-slide" href={/^https?:\/\//i.test(s.link) ? s.link : href(lang, s.link)}>{img}{caption}</a>

@@ -1,0 +1,28 @@
+---
+// 팀 페이지의 개별 멤버 소개 카드 (사진 + 구분 + 이름 + 연구 내용 불릿).
+// src/data/members.json 의 research 항목이 있으면 불릿 목록이 함께 표시됩니다.
+import { pick, asset, t, type Lang } from '@/i18n/ui';
+const { lang, member } = Astro.props as { lang: Lang; member: any };
+const tr = t(lang);
+const initials = pick('en', member.name).split(' ').map((s: string) => s[0]).join('').slice(0, 2);
+const primaryName = pick(lang, member.name);
+const otherName = lang === 'ko' ? pick('en', member.name) : pick('ko', member.name);
+const showOther = otherName && otherName !== primaryName;
+const research = Array.isArray(member.research) ? member.research : [];
+---
+
+<div class="member-card">
+  {member.photo
+    ? <img class="avatar member-photo" src={asset(member.photo)} alt={primaryName} loading="lazy" />
+    : <div class="avatar member-photo">{initials}</div>}
+  <div class="member-body">
+    <p class="member-role">{tr(`team.${member.role}` as any)}</p>
+    <h3 class="member-name">{primaryName}{showOther && ` (${otherName})`}</h3>
+    {member.affiliation && <p class="member-affiliation">{pick(lang, member.affiliation)}</p>}
+    {research.length > 0 && (
+      <ul class="member-research">
+        {research.map((r: any) => (<li>{pick(lang, r)}</li>))}
+      </ul>
+    )}
+  </div>
+</div>

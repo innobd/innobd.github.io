@@ -1,35 +1,47 @@
 ---
 import Base from '@/layouts/Base.astro';
-import PersonCard from '@/components/PersonCard.astro';
+import MemberIntro from '@/components/MemberIntro.astro';
 import members from '@/data/members.json';
-import { t, type Lang } from '@/i18n/ui';
+import { t, pick, type Lang } from '@/i18n/ui';
 const { lang } = Astro.props as { lang: Lang };
 const tr = t(lang);
 // Flat, ordered groups: 박사과정생 - 석사과정생 - 학부연구생 - 졸업생 - 인턴수료생.
 // "alumni" (졸업생) is always shown, even while empty, as a placeholder for
 // future graduates; the rest only show once they have members.
-const groups = ['postdoc', 'phd', 'ms', 'undergrad', 'alumni', 'intern'] as const;
+// "intern" (인턴수료생) is listed as plain text (name + affiliation/term), no photos.
+const photoGroups = ['postdoc', 'phd', 'ms', 'undergrad', 'alumni'] as const;
+const interns = members.filter((m) => m.role === 'intern');
 ---
 <Base lang={lang} current="team" title={tr('team.title')}>
   <section class="section">
     <div class="wrap">
       <h1 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:40px">{tr('team.title')}</h1>
-      {groups.map((g) => {
+      {photoGroups.map((g) => {
         const list = members.filter((m) => m.role === g);
         if (g !== 'alumni' && !list.length) return null;
         return (
           <div class="people-group">
             <h2>{tr(`team.${g}` as any)}</h2>
             {list.length > 0 && (
-              <div class="people-grid">
+              <div class="member-list">
                 {list.map((m) => (
-                  <PersonCard lang={lang} member={m} />
+                  <MemberIntro lang={lang} member={m} />
                 ))}
               </div>
             )}
           </div>
         );
       })}
+      {interns.length > 0 && (
+        <div class="people-group">
+          <h2>{tr('team.intern')}</h2>
+          <ul class="intern-list">
+            {interns.map((m: any) => (
+              <li><span class="intern-name">{pick(lang, m.name)}</span>{m.note && <span class="muted"> ({pick(lang, m.note)})</span>}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   </section>
 </Base>

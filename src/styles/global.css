@@ -235,6 +235,25 @@ p { margin: 0; }
 .person .avatar { font-size: 1.4rem; margin-bottom: 10px; }
 .person .name { font-weight: 600; font-size: 0.922rem; }
 .person .title { color: var(--ink-3); font-size: 0.743rem; }
+.person .affiliation { color: var(--ink-3); font-size: 0.68rem; margin-top: 2px; }
+.intern-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.intern-list li { line-height: 1.6; }
+.intern-list .intern-name { font-weight: 600; }
+/* member intro card: one row per person, photo + role + name + research bullets */
+.member-list { display: flex; flex-direction: column; gap: 20px; }
+.member-card { display: flex; gap: 28px; align-items: flex-start; padding: 28px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); }
+.member-photo { width: 130px; flex: none; margin-bottom: 0; }
+.member-body { min-width: 0; }
+.member-role { color: var(--lipid); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.02em; margin: 0 0 6px; }
+.member-name { font-size: 1.3rem; margin: 0 0 4px; }
+.member-affiliation { color: var(--ink-3); font-size: 0.88rem; margin: 0 0 8px; }
+.member-research { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.member-research li { position: relative; padding-left: 18px; line-height: 1.6; color: var(--ink-2); }
+.member-research li::before { content: '–'; position: absolute; left: 0; color: var(--ink-3); }
+@media (max-width: 640px) {
+  .member-card { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .member-photo { width: 100px; }
+}
 /* PI profile: research interest / education / experience sections */
 .pi-section { padding: 40px 0; border-top: 1px solid var(--line); }
 .pi-section h2 { font-size: 1.15rem; color: var(--ink-2); font-weight: 600; letter-spacing: 0; margin: 0 0 20px; }

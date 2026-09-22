@@ -122,9 +122,19 @@ content:
       - name: title
         label: 직함 표시
         component: text_ko_en
+      - name: affiliation
+        label: "소속 (선택, 학부연구생 등 제목 아래에 괄호로 표시)"
+        component: text_ko_en
+      - name: research
+        label: "연구 내용 (선택, 박사/석사과정생 등 멤버 소개 카드에 불릿으로 표시)"
+        component: text_ko_en
+        list: true
       - name: photo
-        label: 사진
+        label: "사진 (인턴수료생은 사용하지 않음, 텍스트로만 표시)"
         type: image
+      - name: note
+        label: "인턴수료생 설명 (예 숙명여대 약대, 2026 하계 인턴)"
+        component: text_ko_en
       - name: email
         label: 이메일
         type: string

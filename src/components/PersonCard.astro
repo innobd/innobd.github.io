@@ -9,4 +9,5 @@ const initials = pick('en', member.name).split(' ').map((s: string) => s[0]).joi
     : <div class="avatar">{initials}</div>}
   <div class="name">{pick(lang, member.name)}</div>
   <div class="title">{pick(lang, member.title)}</div>
+  {member.affiliation && <div class="affiliation">({pick(lang, member.affiliation)})</div>}
 </div>
