@@ -4,8 +4,12 @@
     "datePrecision": "day",
     "type": "news",
     "text": {
-      "ko": "약제학회 제제기술워크샵에 참석했습니다.",
-      "en": "Attended the Pharmaceutical Society's Formulation Technology Workshop."
+      "ko": "약제학회 제제기술워크샵에 참석",
+      "en": "Attended Pharmaceutical Society Formulation Technology Workshop"
+    },
+    "detail": {
+      "ko": "한국약제학회 주최 2026 제제기술워크샵으로, 변준호 교수가 세션 좌장을 맡았으며 박지윤·Miram Altohamy·이태진·신윤지·오민희·박하현 등 연구실 구성원이 함께 참석했습니다.",
+      "en": "Hosted by the Korean Society of Pharmaceutical Sciences and Technology; Prof. Byun chaired a session, joined by lab members Jeeyoon Park, Miram Altohamy, Taejin Lee, Yunji Shin, Minhee Oh, and Hahyeon Park."
     },
     "link": "",
     "id": "2026-formulation-workshop",
@@ -19,8 +23,12 @@
     "datePrecision": "day",
     "type": "honor",
     "text": {
-      "ko": "변준호 교수가 Journal of Controlled Release 편집위원으로 위촉되었습니다.",
-      "en": "Prof. Junho Byun joined the Editorial Board of the Journal of Controlled Release."
+      "ko": "변준호 교수 Journal of Controlled Release 편집위원으로 위촉",
+      "en": "Prof. Junho Byun Appointed to Journal of Controlled Release Editorial Board"
+    },
+    "detail": {
+      "ko": "약물전달시스템, 나노의약품, 유전자 및 핵산 전달, 생체재료 등 첨단 제약·바이오 분야를 다루는 대표적인 국제학술지입니다. Impact Factor 12.4로 JCR 상위 3%에 해당하는 약물전달 분야 최상위 학술지로 평가받습니다.",
+      "en": "A leading international journal covering drug delivery systems, nanomedicine, gene and nucleic acid delivery, and biomaterials. With an Impact Factor of 12.4, it ranks in the top 3% of JCR-listed journals and is regarded as the foremost journal in drug delivery."
     },
     "id": "2026-jcr-editorial-board"
   },

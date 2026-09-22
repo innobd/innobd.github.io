@@ -153,6 +153,9 @@ p { margin: 0; }
 .ra-title a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 .ra-title a:hover { color: var(--lipid); }
 .ra-summary { margin: 10px 0 0; color: var(--ink-2); }
+/* news: a short, non-bold explainer under the headline-style title (about 2pt
+   smaller than the title, which stays the same size/weight as before). */
+.ra-detail { margin: 6px 0 0; font-weight: 400; font-size: 0.993rem; line-height: 1.5; color: var(--ink-2); }
 .ra-venue { margin: 10px 0 0; color: var(--ink-3); font-size: 0.95rem; }
 .ra-venue em { color: var(--ink-2); font-style: italic; }
 .ra-authors { margin: 6px 0 0; color: var(--ink-2); font-size: 0.636rem; }
@@ -247,7 +250,7 @@ p { margin: 0; }
 .editor-steps { max-width:44em; padding-left:24px; }
 .editor-steps li { padding:12px 0; }
 .editor-note { margin:24px 0; padding:24px; background:white; border:1px solid var(--line); border-radius:10px; }
-.lead, .person, .ra-title, .ra-summary { overflow-wrap:anywhere; }
+.lead, .person, .ra-title, .ra-summary, .ra-detail { overflow-wrap:anywhere; }
 [id] { scroll-margin-top:90px; }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
 @media (max-width:820px) { .hero .particle { order:0; max-width:220px; } }

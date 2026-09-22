@@ -21,6 +21,7 @@ function images(n: any): string[] {
           </div>
           <div class="ra-body">
             <h3 class="ra-title">{n.link ? <a href={n.link}>{pick(lang, n.text)}</a> : pick(lang, n.text)}</h3>
+            {n.detail && <p class="ra-detail">{pick(lang, n.detail)}</p>}
           </div>
         </div>
         {imgs.length > 0 && (

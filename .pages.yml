@@ -59,7 +59,10 @@ content:
             - { name: paper, label: 논문 게재 }
             - { name: news, label: 일반 소식 }
       - name: text
-        label: 내용
+        label: 제목 (신문기사 제목처럼 짧고 간결하게)
+        component: para_ko_en
+      - name: detail
+        label: 추가 설명 (선택, 제목 아래 작은 글씨로 1~2줄)
         component: para_ko_en
       - name: link
         label: 관련 링크 (선택)
