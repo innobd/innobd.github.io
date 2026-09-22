@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ghent-university",
+    "institution": {
+      "en": "Ghent University",
+      "ko": "겐트대학교"
+    },
+    "country": {
+      "en": "Belgium",
+      "ko": "벨기에"
+    },
+    "people": "Prof. Stefaan De Smedt, Prof. Félix Sauvage",
+    "note": {
+      "en": "Nanomedicine Lab; ongoing collaboration on photoporation-based gene delivery for fibrotic disease.",
+      "ko": "Nanomedicine Lab; 광천공(photoporation) 기반 섬유화 질환 유전자 전달 공동연구를 진행하고 있습니다."
+    }
+  },
+  {
+    "id": "university-of-padova",
+    "institution": {
+      "en": "University of Padova",
+      "ko": "파도바대학교"
+    },
+    "country": {
+      "en": "Italy",
+      "ko": "이탈리아"
+    },
+    "people": "Prof. Alessio Malfanti",
+    "note": {
+      "en": "Collaboration on hydrogel-LNP mRNA delivery for local glioblastoma immunotherapy.",
+      "ko": "국소 교모세포종 면역치료를 위한 하이드로젤-LNP mRNA 전달 공동연구를 진행하고 있습니다."
+    }
+  },
+  {
+    "id": "seoul-national-university",
+    "institution": {
+      "en": "Seoul National University",
+      "ko": "서울대학교"
+    },
+    "country": {
+      "en": "Republic of Korea",
+      "ko": "대한민국"
+    },
+    "people": "Prof. Yu-Kyoung Oh",
+    "note": {
+      "en": "Ph.D. advisor; continuing joint publications on mRNA nanoparticle delivery.",
+      "ko": "박사 지도교수; mRNA 나노입자 전달 관련 공동논문을 지속적으로 발표하고 있습니다."
+    }
+  }
+]

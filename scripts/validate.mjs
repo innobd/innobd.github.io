@@ -24,7 +24,7 @@ function urls(value, path = '') {
     urls(v, name);
   }
 }
-for (const name of ['news','members','research','publications']) {
+for (const name of ['news','members','research','publications','collaborators','carousel']) {
   const rows = load(name); check(Array.isArray(rows), `${name}: expected list`);
   if (!Array.isArray(rows)) continue;
   const ids = new Set();
@@ -34,6 +34,8 @@ for (const name of ['news','members','research','publications']) {
     if (name === 'news') { check(/^\d{4}-\d{2}-\d{2}$/.test(row.date) && !Number.isNaN(Date.parse(row.date)) && new Date(row.date).toISOString().slice(0,10) === row.date, `${at}: invalid date`); check(bilingual(row.text), `${at}: missing text`); check(['grant','honor','talk','paper','news'].includes(row.type), `${at}: invalid type`); }
     if (name === 'members') { check(bilingual(row.name), `${at}: missing name`); check(['pi','postdoc','phd','ms','undergrad','intern','alumni'].includes(row.role), `${at}: invalid role`); }
     if (name === 'research') { check(bilingual(row.title) && bilingual(row.summary), `${at}: missing title/summary`); check(['platform','method'].includes(row.track), `${at}: invalid track`); }
+    if (name === 'collaborators') { check(bilingual(row.institution), `${at}: missing institution`); }
+    if (name === 'carousel') { check(text(row.image), `${at}: missing image`); }
     if (name === 'publications') { check(text(row.title) && text(row.authors), `${at}: missing title/authors`); check(Number.isInteger(row.year) && row.year > 1900 && row.year < 2200, `${at}: invalid year`); if (row.authorRole) check(['first','corresponding'].includes(row.authorRole), `${at}: invalid authorRole`); }
   }
   urls(rows, name);

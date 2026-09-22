@@ -1,0 +1,75 @@
+---
+// 홈 화면 맨 위 자동 슬라이드. src/data/carousel.json 에 등록된 사진을 그대로 보여줍니다.
+// Pages CMS의 "홈 화면 상단 슬라이드" 항목에서 사진을 추가/삭제/순서 변경하면 됩니다.
+import carousel from '@/data/carousel.json';
+import { pick, asset, href, type Lang } from '@/i18n/ui';
+
+const { lang } = Astro.props as { lang: Lang };
+const slides = (carousel as any[]).filter((s) => s.image);
+---
+
+{slides.length > 0 && (
+  <section class="home-carousel" data-home-carousel aria-roledescription="carousel">
+    <div class="hc-track">
+      {slides.map((s) => {
+        const hasCaption = pick(lang, s.caption);
+        const img = <img src={asset(s.image)} alt={hasCaption || ''} loading="eager" />;
+        const caption = hasCaption && <div class="hc-caption"><p class="hc-headline">{hasCaption}</p></div>;
+        return s.link ? (
+          <a class="hc-slide" href={/^https?:\/\//i.test(s.link) ? s.link : href(lang, s.link)}>{img}{caption}</a>
+        ) : (
+          <div class="hc-slide">{img}{caption}</div>
+        );
+      })}
+    </div>
+    <button type="button" class="hc-nav hc-prev" aria-label="Previous slide">‹</button>
+    <button type="button" class="hc-nav hc-next" aria-label="Next slide">›</button>
+    <div class="hc-dots"></div>
+  </section>
+)}
+
+<script>
+  function initHomeCarousel() {
+    document.querySelectorAll<HTMLElement>('[data-home-carousel]').forEach((root) => {
+      if (root.dataset.init) return;
+      root.dataset.init = '1';
+      const track = root.querySelector<HTMLElement>('.hc-track');
+      const slides = Array.from(root.querySelectorAll<HTMLElement>('.hc-slide'));
+      const dotsWrap = root.querySelector<HTMLElement>('.hc-dots');
+      if (!track || slides.length <= 1) {
+        root.querySelector('.hc-nav.hc-prev')?.remove();
+        root.querySelector('.hc-nav.hc-next')?.remove();
+        return;
+      }
+      let index = 0;
+      let timer: ReturnType<typeof setInterval> | null = null;
+      const dots = slides.map((_, i) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', `Slide ${i + 1}`);
+        b.addEventListener('click', () => goTo(i));
+        dotsWrap?.appendChild(b);
+        return b;
+      });
+      function render() {
+        track!.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === index));
+      }
+      function goTo(i: number) {
+        index = (i + slides.length) % slides.length;
+        render();
+      }
+      function next() { goTo(index + 1); }
+      function prev() { goTo(index - 1); }
+      function start() { stop(); timer = setInterval(next, 5000); }
+      function stop() { if (timer) clearInterval(timer); }
+      root.querySelector('.hc-next')?.addEventListener('click', () => { next(); start(); });
+      root.querySelector('.hc-prev')?.addEventListener('click', () => { prev(); start(); });
+      root.addEventListener('mouseenter', stop);
+      root.addEventListener('mouseleave', start);
+      render();
+      start();
+    });
+  }
+  initHomeCarousel();
+</script>

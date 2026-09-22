@@ -5,12 +5,10 @@ import members from '@/data/members.json';
 import { t, type Lang } from '@/i18n/ui';
 const { lang } = Astro.props as { lang: Lang };
 const tr = t(lang);
-// active groups, shown at the top level
-const groups = ['postdoc', 'phd', 'ms', 'undergrad'] as const;
-// "former members" groups, nested under one shared heading.
+// Flat, ordered groups: 박사과정생 - 석사과정생 - 학부연구생 - 졸업생 - 인턴수료생.
 // "alumni" (졸업생) is always shown, even while empty, as a placeholder for
-// future graduates; "intern" (연구실 인턴) only shows once it has members.
-const formerGroups = ['alumni', 'intern'] as const;
+// future graduates; the rest only show once they have members.
+const groups = ['postdoc', 'phd', 'ms', 'undergrad', 'alumni', 'intern'] as const;
 ---
 <Base lang={lang} current="team" title={tr('team.title')}>
   <section class="section">
@@ -18,39 +16,20 @@ const formerGroups = ['alumni', 'intern'] as const;
       <h1 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:40px">{tr('team.title')}</h1>
       {groups.map((g) => {
         const list = members.filter((m) => m.role === g);
-        if (!list.length) return null;
+        if (g !== 'alumni' && !list.length) return null;
         return (
           <div class="people-group">
             <h2>{tr(`team.${g}` as any)}</h2>
-            <div class="people-grid">
-              {list.map((m) => (
-                <PersonCard lang={lang} member={m} />
-              ))}
-            </div>
+            {list.length > 0 && (
+              <div class="people-grid">
+                {list.map((m) => (
+                  <PersonCard lang={lang} member={m} />
+                ))}
+              </div>
+            )}
           </div>
         );
       })}
-      <div class="people-group">
-        <h2>{tr('team.former')}</h2>
-        <div class="people-subgroups">
-          {formerGroups.map((g) => {
-            const list = members.filter((m) => m.role === g);
-            if (g !== 'alumni' && !list.length) return null;
-            return (
-              <div class="people-subgroup">
-                <h3>{tr(`team.${g}` as any)}</h3>
-                {list.length > 0 && (
-                  <div class="people-grid">
-                    {list.map((m) => (
-                      <PersonCard lang={lang} member={m} />
-                    ))}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </div>
     </div>
   </section>
 </Base>

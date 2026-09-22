@@ -28,6 +28,28 @@ components:
         type: text
 
 content:
+  - name: carousel
+    label: 홈 화면 상단 슬라이드
+    type: file
+    path: src/data/carousel.json
+    format: json
+    list: true
+    fields:
+      - name: image
+        label: 사진
+        type: image
+        required: true
+      - name: caption
+        label: 문구 (선택, 사진 위에 덧붙일 제목)
+        component: text_ko_en
+      - name: link
+        label: 클릭 시 이동할 링크 (선택, 예 /news 또는 /research)
+        type: string
+      - name: id
+        label: 고유 ID (영문 소문자, 예 research-overview)
+        type: string
+        required: true
+
   - name: news
     label: 소식
     type: file
@@ -95,8 +117,8 @@ content:
             - { name: phd, label: 박사과정 }
             - { name: ms, label: 석사과정 }
             - { name: undergrad, label: 학부연구생 }
-            - { name: intern, label: "학부인턴 (이전 멤버들 > 연구실 인턴)" }
-            - { name: alumni, label: "졸업생 (이전 멤버들 > 졸업생)" }
+            - { name: intern, label: "인턴수료생" }
+            - { name: alumni, label: "졸업생" }
       - name: title
         label: 직함 표시
         component: text_ko_en
@@ -109,6 +131,32 @@ content:
       - name: bio
         label: 소개 (교수만)
         component: para_ko_en
+      - name: researchInterest
+        label: "PI 프로필 - 연구 관심사 (교수만, 목록)"
+        component: text_ko_en
+        list: true
+      - name: education
+        label: "PI 프로필 - 학력 (교수만, 목록)"
+        type: object
+        list: true
+        fields:
+          - name: period
+            label: 기간 (예 2017 – 2023)
+            type: string
+          - name: text
+            label: 내용
+            component: para_ko_en
+      - name: experience
+        label: "PI 프로필 - 경력 (교수만, 목록)"
+        type: object
+        list: true
+        fields:
+          - name: period
+            label: 기간 (예 2024 – Present)
+            type: string
+          - name: text
+            label: 내용
+            component: para_ko_en
       - name: id
         label: 고유 ID (영문 소문자, 예 jiyoon-park)
         type: string
@@ -208,6 +256,30 @@ content:
           - name: caption
             label: 설명 (선택)
             component: text_ko_en
+      - name: id
+        label: 고유 ID (영문 소문자)
+        type: string
+        required: true
+
+  - name: collaborators
+    label: 공동연구기관
+    type: file
+    path: src/data/collaborators.json
+    format: json
+    list: true
+    fields:
+      - name: institution
+        label: 기관명
+        component: text_ko_en
+      - name: country
+        label: 국가
+        component: text_ko_en
+      - name: people
+        label: 담당 교수 (쉼표 구분)
+        type: string
+      - name: note
+        label: 협력 내용 (선택)
+        component: para_ko_en
       - name: id
         label: 고유 ID (영문 소문자)
         type: string

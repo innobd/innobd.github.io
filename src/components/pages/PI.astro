@@ -23,6 +23,42 @@ const initials = (m: any) => pick('en', m.name).split(' ').map((s: string) => s[
           </div>
         </div>
       )}
+      {pi && Array.isArray((pi as any).researchInterest) && (pi as any).researchInterest.length > 0 && (
+        <div class="pi-section">
+          <h2>{tr('pi.interests')}</h2>
+          <ul class="pi-interests">
+            {(pi as any).researchInterest.map((item: any) => (
+              <li>{pick(lang, item)}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {pi && Array.isArray((pi as any).education) && (pi as any).education.length > 0 && (
+        <div class="pi-section">
+          <h2>{tr('pi.education')}</h2>
+          <ul class="positions">
+            {(pi as any).education.map((item: any) => (
+              <li>
+                <span class="muted">{item.period}</span>
+                <span>{pick(lang, item.text)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {pi && Array.isArray((pi as any).experience) && (pi as any).experience.length > 0 && (
+        <div class="pi-section">
+          <h2>{tr('pi.experience')}</h2>
+          <ul class="positions">
+            {(pi as any).experience.map((item: any) => (
+              <li>
+                <span class="muted">{item.period}</span>
+                <span>{pick(lang, item.text)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   </section>
 </Base>

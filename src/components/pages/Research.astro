@@ -1,6 +1,7 @@
 ---
 import Base from '@/layouts/Base.astro';
 import research from '@/data/research.json';
+import collaborators from '@/data/collaborators.json';
 import { t, pick, asset, type Lang } from '@/i18n/ui';
 const { lang } = Astro.props as { lang: Lang };
 const tr = t(lang);
@@ -36,6 +37,21 @@ const tr = t(lang);
           </li>
         ))}
       </ul>
+      {collaborators.length > 0 && (
+        <div class="pi-section">
+          <h2>{tr('research.collaborators')}</h2>
+          <ul class="collab-grid">
+            {collaborators.map((c: any) => (
+              <li class="collab-card">
+                <h3>{pick(lang, c.institution)}</h3>
+                <p class="muted small">{pick(lang, c.country)}</p>
+                {c.people && <p class="collab-people">{c.people}</p>}
+                {(c.note?.en || c.note?.ko) && <p>{pick(lang, c.note)}</p>}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   </section>
 </Base>

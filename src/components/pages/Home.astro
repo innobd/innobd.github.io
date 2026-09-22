@@ -1,6 +1,7 @@
 ---
 import Base from '@/layouts/Base.astro';
 import Particle from '@/components/Particle.astro';
+import HomeCarousel from '@/components/HomeCarousel.astro';
 import NewsList from '@/components/NewsList.astro';
 import lab from '@/data/lab.json';
 import news from '@/data/news.json';
@@ -13,6 +14,20 @@ const currentYearNews = news
   .sort((a, b) => b.date.localeCompare(a.date));
 ---
 <Base lang={lang} current="home">
+  <HomeCarousel lang={lang} />
+
+  {currentYearNews.length > 0 && (
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">01 / NEWS</p><h2>{thisYear}{lang === 'ko' ? '년 소식' : ' News'}</h2></div>
+          <a href={href(lang, '/news')}>{tr('home.seeAll')}</a>
+        </div>
+        <NewsList lang={lang} items={currentYearNews} />
+      </div>
+    </section>
+  )}
+
   <section class="hero">
     <div class="wrap">
       <div>
@@ -28,16 +43,4 @@ const currentYearNews = news
       <Particle />
     </div>
   </section>
-
-  {currentYearNews.length > 0 && (
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <div><p class="eyebrow">01 / NEWS</p><h2>{thisYear}{lang === 'ko' ? '년 소식' : ' News'}</h2></div>
-          <a href={href(lang, '/news')}>{tr('home.seeAll')}</a>
-        </div>
-        <NewsList lang={lang} items={currentYearNews} />
-      </div>
-    </section>
-  )}
 </Base>
