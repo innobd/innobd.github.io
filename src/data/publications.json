@@ -85,7 +85,7 @@
     "pages": "10747",
     "doi": "10.1038/s41467-024-54817-7",
     "pdf": "",
-    "image": "",
+    "image": "/images/publications/s41467-024-54817-7-fig1.png",
     "selected": false
   },
   {
@@ -99,7 +99,7 @@
     "pages": "100968",
     "doi": "10.1016/j.ajps.2024.100968",
     "pdf": "",
-    "image": "",
+    "image": "/images/publications/ajps-2024-100968-fig1.png",
     "selected": false,
     "authorRole": "first"
   },
@@ -114,7 +114,7 @@
     "pages": "115362",
     "doi": "10.1016/j.addr.2024.115362",
     "pdf": "",
-    "image": "",
+    "image": "/images/publications/addr-2024-115362-fig1.png",
     "selected": false,
     "authorRole": "corresponding"
   },
@@ -129,7 +129,7 @@
     "pages": "9311-9330",
     "doi": "10.1021/acsnano.3c06001",
     "pdf": "",
-    "image": "",
+    "image": "/images/publications/acsnano-3c06001-fig1.png",
     "selected": false,
     "authorRole": "first"
   },
@@ -144,7 +144,7 @@
     "pages": "95",
     "doi": "10.1208/s12248-023-00860-z",
     "pdf": "",
-    "image": "",
+    "image": "/images/publications/s12248-023-00860-z-fig1.png",
     "selected": false,
     "authorRole": "first"
   },
@@ -159,7 +159,7 @@
     "pages": "122162",
     "doi": "10.1016/j.biomaterials.2023.122162",
     "pdf": "",
-    "image": "",
+    "image": "/images/publications/biomaterials-2023-122162-fig1.png",
     "selected": false,
     "authorRole": "first"
   },
@@ -216,7 +216,7 @@
     "pages": "1516",
     "doi": "10.1038/s41467-022-29186-8",
     "pdf": "",
-    "image": "",
+    "image": "/images/publications/s41467-022-29186-8-fig1.png",
     "selected": false,
     "authorRole": "first"
   },
@@ -231,7 +231,7 @@
     "pages": "121327",
     "doi": "10.1016/j.biomaterials.2021.121327",
     "pdf": "",
-    "image": "",
+    "image": "/images/publications/biomaterials-2021-121327-fig1.png",
     "selected": false
   }
 ]

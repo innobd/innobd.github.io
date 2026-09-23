@@ -1,7 +1,6 @@
 ---
-import Mark from './Mark.astro';
 import lab from '@/data/lab.json';
-import { t, href, switchPath, type Lang } from '@/i18n/ui';
+import { t, href, switchPath, asset, type Lang } from '@/i18n/ui';
 interface Props { lang: Lang; current: string }
 const { lang, current } = Astro.props;
 const tr = t(lang);
@@ -20,8 +19,7 @@ const other = switchPath(lang, Astro.url.pathname);
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href={href(lang, '/')} aria-label={lab.shortName}>
-      <Mark />
-      <span>{lab.shortName}</span>
+      <img class="brand-logo" src={asset('/images/brand/innobd-logo.png')} alt={lab.shortName} />
     </a>
     <nav class="nav" id="nav" aria-label="Main">
       {items.map(([slug, key]) => (

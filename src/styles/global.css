@@ -80,6 +80,7 @@ p { margin: 0; }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; letter-spacing: -0.01em; }
 .brand svg { width: 28px; height: 28px; }
+.brand-logo { height: 40px; width: auto; display: block; }
 .nav { display: flex; align-items: center; gap: 4px; }
 .nav a { padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--ink-2); font-weight: 500; }
 .nav a:hover { color: var(--ink); background: var(--paper-2); }
@@ -99,7 +100,7 @@ p { margin: 0; }
 }
 
 /* home carousel */
-.home-carousel { position: relative; overflow: hidden; height: clamp(160px, 34vw, 460px); background: var(--paper-2); }
+.home-carousel { position: relative; overflow: hidden; height: clamp(107px, 23vw, 307px); background: var(--paper-2); }
 .hc-track { display: flex; height: 100%; transition: transform 600ms ease; }
 .hc-slide { flex: 0 0 100%; position: relative; display: block; height: 100%; color: inherit; text-decoration: none; }
 .hc-slide img { width: 100%; height: 100%; object-fit: contain; background: var(--paper-2); display: block; }
@@ -115,7 +116,7 @@ p { margin: 0; }
 @media (max-width: 720px) { .hc-nav { display: none; } }
 
 /* hero */
-.hero { padding: clamp(38px, 6vw, 80px) 0 clamp(32px, 4.6vw, 64px); }
+.hero { padding: clamp(25px, 4vw, 53px) 0 clamp(21px, 3vw, 43px); }
 .hero .wrap { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(24px, 5vw, 60px); align-items: center; }
 .hero h1 { max-width: 16ch; font-size: clamp(1.4rem, 3.6vw, 2.7rem); }
 .hero .lead { margin-top: 14px; font-size: 0.95rem; }
@@ -207,10 +208,10 @@ p { margin: 0; }
 .news-gallery::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
 .news-gallery::-webkit-scrollbar-track { background: transparent; }
 .news-gallery-item { flex: 0 0 auto; scroll-snap-align: start; }
-.news-gallery-item img { display: block; height: 340px; width: auto; max-width: 78vw; object-fit: cover; border-radius: var(--radius); background: var(--paper-2); pointer-events: none; }
+.news-gallery-item img { display: block; height: 227px; width: auto; max-width: 78vw; object-fit: cover; border-radius: var(--radius); background: var(--paper-2); pointer-events: none; }
 .news-gallery.single { overflow-x: visible; cursor: default; }
 .news-gallery.single .news-gallery-item { width: 100%; }
-.news-gallery.single .news-gallery-item img { width: 100%; max-width: 100%; height: auto; max-height: 560px; }
+.news-gallery.single .news-gallery-item img { width: 100%; max-width: 100%; height: auto; max-height: 373px; }
 .empty { padding: 32px; border: 1px dashed var(--line); border-radius: var(--radius); color: var(--ink-2); }
 /* year-grouped archive (past news) */
 .year-group { padding: 40px 0 8px; border-top: 1px solid var(--line); }
@@ -221,8 +222,8 @@ p { margin: 0; }
   .ra-meta { flex-direction: row; width: auto; align-items: center; gap: 12px; }
   .ra-meta .ra-journal-cover { width: 56px; height: 74px; aspect-ratio: unset; flex-shrink: 0; }
   .ra-thumb { width: 100%; height: auto; aspect-ratio: 16 / 9; order: -1; }
-  .news-gallery-item img { height: 220px; max-width: 85vw; }
-  .news-gallery.single .news-gallery-item img { max-height: 320px; }
+  .news-gallery-item img { height: 147px; max-width: 85vw; }
+  .news-gallery.single .news-gallery-item img { max-height: 213px; }
 }
 
 /* people */
@@ -266,7 +267,11 @@ p { margin: 0; }
 .positions { list-style: none; margin: 0; padding: 0; }
 .positions li { padding: 28px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 12px 48px; }
 .positions li:last-child { border-bottom: 1px solid var(--line); }
-@media (max-width: 720px) { .positions li { grid-template-columns: 1fr; } }
+/* PI page: education/experience use a period + text layout; size the period
+   column to its own content so the text sits close to it instead of being
+   pushed far right on wide screens. */
+.pi-section .positions li { grid-template-columns: max-content 1fr; gap: 12px 24px; }
+@media (max-width: 720px) { .positions li, .pi-section .positions li { grid-template-columns: 1fr; } }
 .how { margin-top: 48px; padding: 32px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); max-width: 44em; }
 
 /* contact */
