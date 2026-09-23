@@ -38,6 +38,40 @@
     ]
   },
   {
+    "date": "2026-09-01",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "박지윤, 이태진 학생, 겐트대학교 방문연구 마치고 귀국",
+      "en": "Jeeyoon Park and Taejin Lee Return from Visiting Research at Ghent University"
+    },
+    "detail": {
+      "ko": "겐트대학교에서 방문연구를 진행하던 박지윤, 이태진 학생이 연구를 마치고 귀국했습니다.",
+      "en": "Ph.D. students Jeeyoon Park and Taejin Lee, who had been conducting visiting research at Ghent University, completed their research stay and returned to Korea."
+    },
+    "link": "",
+    "id": "2026-ghent-return-park-lee",
+    "images": [
+      "/images/news/2026-ghent-return-park-lee-1.jpg",
+      "/images/news/2026-ghent-return-park-lee-2.jpg"
+    ]
+  },
+  {
+    "date": "2026-08-28",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "Miram 박사과정생, 이탈리아 파도바대학교 방문연구 마치고 귀국",
+      "en": "Miram Altohamy Returns from Visiting Research at the University of Padova, Italy"
+    },
+    "detail": {
+      "ko": "Miram Altohamy 박사과정생이 약 2개월간 이탈리아 파도바대학교에서 방문연구를 진행하고 귀국했습니다. Alessio Malfanti 교수, Paolo 교수 연구팀과 긴밀한 연구 네트워크를 형성했습니다.",
+      "en": "Ph.D. student Miram Altohamy completed about two months of visiting research at the University of Padova, Italy, and returned to Korea, building a strong research network with the teams of Prof. Alessio Malfanti and Prof. Paolo."
+    },
+    "link": "",
+    "id": "2026-padova-return-altohamy"
+  },
+  {
     "date": "2026-08-25",
     "datePrecision": "day",
     "type": "honor",
@@ -53,6 +87,45 @@
     "id": "2026-jcr-editorial-board",
     "images": [
       "/images/news/2026-jcr-editorial-board-1.png"
+    ]
+  },
+  {
+    "date": "2026-07-30",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "오민희, 박하현 학생, 겐트대학교 방문연구 마치고 귀국",
+      "en": "Minhee Oh and Hahyeon Park Return from Visiting Research at Ghent University"
+    },
+    "detail": {
+      "ko": "겐트대학교에서 방문연구를 진행하던 오민희, 박하현 학생이 연구를 마치고 귀국했습니다.",
+      "en": "M.S. students Minhee Oh and Hahyeon Park, who had been conducting visiting research at Ghent University, completed their research stay and returned to Korea."
+    },
+    "link": "",
+    "id": "2026-ghent-return-oh-park",
+    "images": [
+      "/images/news/2026-ghent-return-oh-park-1.jpg",
+      "/images/news/2026-ghent-return-oh-park-2.jpg"
+    ]
+  },
+  {
+    "date": "2026-07-16",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "변준호 교수, 겐트대학교 방문 및 InnoBD 단체 모임",
+      "en": "Prof. Junho Byun Visits Ghent University for an InnoBD Group Gathering"
+    },
+    "detail": {
+      "ko": "변준호 교수와 숙명여자대학교 약학대학 교수님들이 겐트대학교를 방문해 공동 심포지엄을 개최했습니다. 겐트대학교에서 방문연구를 진행 중이던 박지윤, 이태진, 오민희, 박하현과 공동연구를 진행하고 있는 KAIST 백민준 교수 연구팀이 함께했습니다.",
+      "en": "Prof. Junho Byun and faculty members from Sookmyung Women's University College of Pharmacy visited Ghent University and held a joint symposium, together with lab members Jeeyoon Park, Taejin Lee, Minhee Oh, and Hahyeon Park, who were conducting visiting research at Ghent, and the research team of Prof. Minjoon Baek (KAIST), a collaborating partner."
+    },
+    "link": "",
+    "id": "2026-ghent-symposium",
+    "images": [
+      "/images/news/2026-ghent-symposium-1.jpg",
+      "/images/news/2026-ghent-symposium-2.jpg",
+      "/images/news/2026-ghent-symposium-3.jpg"
     ]
   },
   {
