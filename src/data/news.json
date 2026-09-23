@@ -1,5 +1,24 @@
 [
   {
+    "date": "2026-09-22",
+    "datePrecision": "day",
+    "type": "honor",
+    "text": {
+      "ko": "학부연구생 구현서 학생, 숙명여자대학교 약학대학 제3회 학술제 대상 수상",
+      "en": "Undergraduate Researcher Hyunseo Koo Wins Grand Prize at Sookmyung Women's University College of Pharmacy's 3rd Academic Festival"
+    },
+    "detail": {
+      "ko": "2026 숙명여자대학교 약학대학 제3회 학술제(EP:HARMONY)에서 대상(상금 40만원)을 수상했습니다.",
+      "en": "Received the Grand Prize (400,000 KRW) at the 2026 Sookmyung Women's University College of Pharmacy's 3rd Academic Festival (EP:HARMONY)."
+    },
+    "link": "",
+    "id": "2026-pharm-festival-award",
+    "images": [
+      "/images/news/2026-pharm-festival-award-1.jpg",
+      "/images/news/2026-pharm-festival-award-2.jpg"
+    ]
+  },
+  {
     "date": "2026-09-20",
     "datePrecision": "day",
     "type": "news",
@@ -19,7 +38,7 @@
     ]
   },
   {
-    "date": "2026-01-15",
+    "date": "2026-08-25",
     "datePrecision": "day",
     "type": "honor",
     "text": {
@@ -30,7 +49,11 @@
       "ko": "약물전달시스템, 나노의약품, 유전자 및 핵산 전달, 생체재료 등 첨단 제약·바이오 분야를 다루는 대표적인 국제학술지입니다. Impact Factor 12.4로 JCR 상위 3%에 해당하는 약물전달 분야 최상위 학술지로 평가받습니다.",
       "en": "A leading international journal covering drug delivery systems, nanomedicine, gene and nucleic acid delivery, and biomaterials. With an Impact Factor of 12.4, it ranks in the top 3% of JCR-listed journals and is regarded as the foremost journal in drug delivery."
     },
-    "id": "2026-jcr-editorial-board"
+    "link": "",
+    "id": "2026-jcr-editorial-board",
+    "images": [
+      "/images/news/2026-jcr-editorial-board-1.png"
+    ]
   },
   {
     "date": "2025-06-01",
