@@ -19,6 +19,21 @@
     ]
   },
   {
+    "date": "2026-09-22",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "강주현 학생, 학부 인턴으로 합류",
+      "en": "Joohyun Kang Joins as Undergraduate Intern"
+    },
+    "detail": {
+      "ko": "숙명여자대학교 약학대학 4학년 강주현 학생이 학부 인턴으로 InnoBD Lab에 합류했습니다. 앞으로 함께 연구하며 좋은 경험을 쌓기를 기대합니다.",
+      "en": "Joohyun Kang, a fourth-year student at the College of Pharmacy, Sookmyung Women's University, has joined InnoBD Lab as an undergraduate intern. We look forward to working together."
+    },
+    "link": "",
+    "id": "2026-joohyun-kang-joins"
+  },
+  {
     "date": "2026-09-20",
     "datePrecision": "day",
     "type": "news",
@@ -102,6 +117,81 @@
     ]
   },
   {
+    "date": "2026-08-25",
+    "datePrecision": "day",
+    "type": "talk",
+    "text": {
+      "ko": "KSBMB 오토파지 연구분과 심포지엄 2026 발표",
+      "en": "Talk at KSBMB Autophagy Symposium 2026"
+    },
+    "detail": {
+      "ko": "변준호 교수가 8월 25일부터 27일까지 양양 쏠비치에서 열린 한국생화학분자생물학회(KSBMB) 오토파지 연구분과 심포지엄 2026에서 \"Photoactivation of Chaperone-Mediated Autophagy for Selective Lipolysis Using Photothermal Nanoparticles\"를 주제로 발표했습니다.",
+      "en": "Prof. Junho Byun gave a talk titled \"Photoactivation of Chaperone-Mediated Autophagy for Selective Lipolysis Using Photothermal Nanoparticles\" at the KSBMB Autophagy Symposium 2026, held at Sol Beach Yangyang from August 25 to 27."
+    },
+    "link": "",
+    "id": "2026-ksbmb-autophagy-symposium"
+  },
+  {
+    "date": "2026-08-24",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "해외 약대생 하계 연구실습 수료",
+      "en": "International Pharmacy Students Complete Summer Research Internship"
+    },
+    "detail": {
+      "ko": "폴란드 바르샤바 의과대학(Medical University of Warsaw) 약학대학의 Ada Stankiewicz 학생과 포르투갈 코임브라대학교(University of Coimbra) 약학대학의 Leonor Candeias 학생이 한국약학대학생연합(KNAPS) 여름방학 해외 약대생 연구 실습 프로그램을 통해 8월 10일부터 본 연구실에서 연구 실습을 진행했습니다. 8월 24일에는 수료증을 전달하고 연구실 구성원들과 기념사진을 남겼습니다. 두 학생을 함께 지도해 준 연구실 구성원들에게도 감사드립니다.",
+      "en": "Ada Stankiewicz (Faculty of Pharmacy, Medical University of Warsaw, Poland) and Leonor Candeias (Faculty of Pharmacy, University of Coimbra, Portugal) joined our lab for a summer research internship starting August 10, through the KNAPS summer research program for international pharmacy students. On August 24, they received their certificates and took photos with lab members. Thanks to everyone in the lab who hosted and guided them."
+    },
+    "link": "",
+    "id": "2026-knaps-summer-interns"
+  },
+  {
+    "date": "2026-08-24",
+    "datePrecision": "day",
+    "type": "paper",
+    "text": {
+      "ko": "Advanced Healthcare Materials 논문 게재",
+      "en": "Paper Published in Advanced Healthcare Materials"
+    },
+    "detail": {
+      "ko": "변준호 교수가 벨기에 겐트대학교 박사후연구원 시절 수행한 연구가 Advanced Healthcare Materials에 게재되었습니다. 논문 \"Light-mediated transfection of the ocular surface using an ophthalmic YAG laser\"는 임상에서 쓰이는 안과용 YAG 레이저를 이용해 안구 표면 조직에 유전자를 전달한 연구입니다. (doi: 10.1002/adhm.71643)",
+      "en": "Research conducted by Prof. Junho Byun during his postdoctoral work at Ghent University has been published in Advanced Healthcare Materials. The paper, \"Light-mediated transfection of the ocular surface using an ophthalmic YAG laser,\" demonstrates gene delivery to ocular surface tissue using a clinical ophthalmic YAG laser. (doi: 10.1002/adhm.71643)"
+    },
+    "link": "",
+    "id": "2026-adhm-ocular-yag-laser"
+  },
+  {
+    "date": "2026-08-20",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "하계 학부인턴",
+      "en": "Summer Undergraduate Interns"
+    },
+    "detail": {
+      "ko": "고려대학교 바이오시스템의과학부 김소이 학생과 숙명여자대학교 약학대학 6학년 이시영 학생이 여름방학 동안 InnoBD Lab에서 연구 인턴을 진행했습니다.",
+      "en": "Soyi Kim (Division of Biosystems and Biomedical Sciences, Korea University) and Siyeong Lee (sixth-year pharmacy student, Sookmyung Women's University) completed research internships at InnoBD Lab over the summer."
+    },
+    "link": "",
+    "id": "2026-summer-interns"
+  },
+  {
+    "date": "2026-08-14",
+    "datePrecision": "day",
+    "type": "talk",
+    "text": {
+      "ko": "글로컬랩 워크숍 참석 및 발표",
+      "en": "Presentation at Glocal Lab Workshop"
+    },
+    "detail": {
+      "ko": "변준호 교수가 글로컬랩 워크숍에서 연구 발표를 했고, 연구실 구성원들도 함께 참석했습니다.",
+      "en": "Prof. Junho Byun gave a research presentation at the Glocal Lab workshop, which our lab members also attended."
+    },
+    "link": "",
+    "id": "2026-glocal-lab-workshop"
+  },
+  {
     "date": "2026-07-30",
     "datePrecision": "day",
     "type": "news",
@@ -125,6 +215,21 @@
     ]
   },
   {
+    "date": "2026-07-21",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "숙명여대, 서울시 앵커(ANCHOR) 사업 선정",
+      "en": "Sookmyung Women's University Selected for Seoul ANCHOR Program"
+    },
+    "detail": {
+      "ko": "숙명여자대학교가 서울시 지역성장 인재양성체계(앵커, ANCHOR) 사업의 \"Seoul Anchor 10 Challenge\" 바이오 리뉴얼 핵심기술 개발 과제에 선정되었습니다. 약학대학 장창영 교수가 책임을 맡은 이 과제는 9년간 80억 원 규모로, 노화세포 제거를 통해 건강수명을 늘리는 기술 개발을 목표로 합니다.",
+      "en": "Sookmyung Women's University has been selected for the \"Seoul Anchor 10 Challenge\" bio-renewal core technology project under the Seoul Metropolitan Government's ANCHOR program. Led by Prof. Chang-young Jang of the College of Pharmacy, the nine-year, 8-billion-won project aims to extend healthy lifespan by eliminating senescent cells."
+    },
+    "link": "",
+    "id": "2026-seoul-anchor-selection"
+  },
+  {
     "date": "2026-07-16",
     "datePrecision": "day",
     "type": "news",
@@ -143,6 +248,141 @@
       "/images/news/2026-ghent-symposium-2.jpg",
       "/images/news/2026-ghent-symposium-3.jpg"
     ]
+  },
+  {
+    "date": "2026-07-06",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "CRS 2026 Annual Meeting 참석 (포르투갈 리스본)",
+      "en": "Attended CRS 2026 Annual Meeting in Lisbon, Portugal"
+    },
+    "detail": {
+      "ko": "변준호 교수가 7월 6일부터 9일까지 포르투갈 리스본에서 열린 CRS(Controlled Release Society) 2026 Annual Meeting & Exposition에 참석했습니다. 공동연구 초록 1건이 포스터 발표로 채택되었습니다.",
+      "en": "Prof. Junho Byun attended the CRS 2026 Annual Meeting & Exposition in Lisbon, Portugal (July 6 to 9). A collaborative abstract was accepted for poster presentation."
+    },
+    "link": "",
+    "id": "2026-crs-lisbon"
+  },
+  {
+    "date": "2026-06-29",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "5개 대학 연합 심포지엄 참석",
+      "en": "Attended Joint Symposium with Five Universities"
+    },
+    "detail": {
+      "ko": "6월 29일, 서울대, 고려대, 연세대, 숭실대, 숙명여대 연구실의 교수님들과 학생들이 함께 모인 연합 심포지엄에 연구실 구성원들이 참석했습니다. 학생들의 자기소개 세션과 연구 교류에 이어 저녁 식사까지 함께하며 대학 간 교류를 넓히는 시간이 되었습니다.",
+      "en": "On June 29, our lab members attended a joint symposium with faculty and students from Seoul National University, Korea University, Yonsei University, Soongsil University, and Sookmyung Women's University. The program included a self-introduction session for students and research exchange, followed by dinner together."
+    },
+    "link": "",
+    "id": "2026-five-university-symposium"
+  },
+  {
+    "date": "2026-06-04",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "중국 난징임업대학교 공동 세미나",
+      "en": "Joint Seminar at Nanjing Forestry University, China"
+    },
+    "detail": {
+      "ko": "변준호 교수가 벨기에 겐트대학교 Stefaan De Smedt 교수와 함께 중국 난징임업대학교(Nanjing Forestry University)를 방문해 공동 세미나를 진행했습니다. 방문 기간 동안 Chaobo Huang 교수, Ranhua Xiong 교수 연구팀과 공동연구와 상호 방문을 논의했습니다.",
+      "en": "Prof. Junho Byun visited Nanjing Forestry University, China, together with Prof. Stefaan De Smedt (Ghent University), and held a joint seminar. During the visit, they discussed collaborative research and future exchange visits with the research teams of Prof. Chaobo Huang and Prof. Ranhua Xiong."
+    },
+    "link": "",
+    "id": "2026-nanjing-forestry-seminar"
+  },
+  {
+    "date": "2026-05-28",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "Stefaan De Smedt 교수, 이기범 교수 GTRC 초청세미나",
+      "en": "GTRC Invited Seminar with Prof. Stefaan De Smedt and Prof. Ki-Bum Lee"
+    },
+    "detail": {
+      "ko": "5월 28일, 약학대학 GTRC(외부 자극 감응형 유전자 치료제 한-벨기에 공동연구센터) 초청세미나가 창학관 B111호에서 열렸습니다. 벨기에 겐트대학교의 Stefaan De Smedt 교수님과 미국 럿거스대학교의 이기범(Ki-Bum Lee) 교수님이 연자로 강연해 주셨고, 세미나 후 연구실 구성원들과 함께 실험실을 둘러보며 연구 이야기를 나눴습니다.",
+      "en": "On May 28, the GTRC (Korea-Belgium Joint Research Center for External Stimuli-Responsive Gene Therapeutics) at the College of Pharmacy hosted an invited seminar in Changhak Hall B111. Prof. Stefaan De Smedt (Ghent University, Belgium) and Prof. Ki-Bum Lee (Rutgers University, USA) gave talks, and afterwards visited our lab and talked with our members."
+    },
+    "link": "",
+    "id": "2026-gtrc-seminar-desmedt-lee"
+  },
+  {
+    "date": "2026-05-15",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "스승의 날",
+      "en": "Teacher's Day"
+    },
+    "detail": {
+      "ko": "스승의 날을 맞아 연구실 구성원들이 감사의 마음을 담은 작은 행사를 준비해 주었습니다. 늘 함께 애써주는 구성원들에게 고마운 마음을 전하며, 앞으로도 다 같이 최선을 다하겠습니다.",
+      "en": "On Teacher's Day, our lab members prepared a small celebration to express their gratitude. We are thankful to everyone in the lab and look forward to continuing our work together."
+    },
+    "link": "",
+    "id": "2026-teachers-day"
+  },
+  {
+    "date": "2026-04-10",
+    "datePrecision": "day",
+    "type": "talk",
+    "text": {
+      "ko": "2026 한국약제학회 과학의 달 기념 심포지엄",
+      "en": "2026 KSPST Science Month Symposium"
+    },
+    "detail": {
+      "ko": "4월 10일, 2026 한국약제학회 과학의 달 기념 심포지엄에서 변준호 교수가 연구 발표를 했으며, 연구실 구성원들도 함께 참석해 다양한 약제학 연구 발표를 들었습니다.",
+      "en": "On April 10, Prof. Junho Byun gave a talk at the 2026 KSPST Science Month Symposium, hosted by the Korean Society of Pharmaceutical Science and Technology. Lab members also attended and joined the sessions."
+    },
+    "link": "",
+    "id": "2026-kspst-science-month-symposium"
+  },
+  {
+    "date": "2026-03-26",
+    "datePrecision": "day",
+    "type": "talk",
+    "text": {
+      "ko": "체코 프라하 PBP World Meeting 초청 강연",
+      "en": "Invited Talk at PBP World Meeting in Prague, Czech Republic"
+    },
+    "detail": {
+      "ko": "변준호 교수가 3월 23일부터 26일까지 체코 프라하에서 열린 제15회 PBP World Meeting(World Meeting on Pharmaceutics, Biopharmaceutics and Pharmaceutical Technology)에서 초청 강연을 했습니다.",
+      "en": "Prof. Junho Byun gave an invited talk at the 15th World Meeting on Pharmaceutics, Biopharmaceutics and Pharmaceutical Technology (PBP World Meeting), held in Prague, Czech Republic, from March 23 to 26."
+    },
+    "link": "",
+    "id": "2026-pbp-prague"
+  },
+  {
+    "date": "2026-03-04",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "학부연구생 구현서 학생 합류",
+      "en": "Undergraduate Researcher Hyunseo Koo Joins the Lab"
+    },
+    "detail": {
+      "ko": "숙명여자대학교 약학대학 3학년 구현서 학생이 학부연구생으로 InnoBD Lab에 합류했습니다.",
+      "en": "Hyunseo Koo, a third-year pharmacy student at Sookmyung Women's University, has joined InnoBD Lab as an undergraduate researcher."
+    },
+    "link": "",
+    "id": "2026-hyunseo-koo-joins"
+  },
+  {
+    "date": "2026-02-23",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "Trince Simon Sioen 박사 방문, LumiPore 장비 점검",
+      "en": "Dr. Simon Sioen of Trince Visits for LumiPore Equipment Check"
+    },
+    "detail": {
+      "ko": "Photoporation 기반 세포 내 전달 장비인 LumiPore가 약학대학 공동기기로 도입되었습니다. 2월 23일에는 벨기에 Trince사의 Field Application Scientist인 Simon Sioen 박사가 연구실을 방문해 장비를 함께 점검하고, 그동안의 실험 데이터를 바탕으로 연구실 학생들과 미팅을 진행했습니다.",
+      "en": "LumiPore, a photoporation-based intracellular delivery system, has been introduced as shared equipment at the College of Pharmacy. On February 23, Dr. Simon Sioen, Field Application Scientist at Trince (Belgium), visited our lab to check the system and held a meeting with our students to review experimental data."
+    },
+    "link": "",
+    "id": "2026-lumipore-sioen-visit"
   },
   {
     "date": "2025-06-01",
