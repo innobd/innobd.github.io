@@ -208,10 +208,10 @@ p { margin: 0; }
 .news-gallery::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
 .news-gallery::-webkit-scrollbar-track { background: transparent; }
 .news-gallery-item { flex: 0 0 auto; scroll-snap-align: start; }
-.news-gallery-item img { display: block; height: 227px; width: auto; max-width: 78vw; object-fit: cover; border-radius: var(--radius); background: var(--paper-2); pointer-events: none; }
+.news-gallery-item img { display: block; height: 151px; width: auto; max-width: 78vw; object-fit: cover; border-radius: var(--radius); background: var(--paper-2); pointer-events: none; }
 .news-gallery.single { overflow-x: visible; cursor: default; }
 .news-gallery.single .news-gallery-item { width: 100%; }
-.news-gallery.single .news-gallery-item img { width: 100%; max-width: 100%; height: auto; max-height: 373px; }
+.news-gallery.single .news-gallery-item img { width: auto; max-width: 100%; height: 151px; max-height: none; }
 .empty { padding: 32px; border: 1px dashed var(--line); border-radius: var(--radius); color: var(--ink-2); }
 /* year-grouped archive (past news) */
 .year-group { padding: 40px 0 8px; border-top: 1px solid var(--line); }
@@ -222,8 +222,8 @@ p { margin: 0; }
   .ra-meta { flex-direction: row; width: auto; align-items: center; gap: 12px; }
   .ra-meta .ra-journal-cover { width: 56px; height: 74px; aspect-ratio: unset; flex-shrink: 0; }
   .ra-thumb { width: 100%; height: auto; aspect-ratio: 16 / 9; order: -1; }
-  .news-gallery-item img { height: 147px; max-width: 85vw; }
-  .news-gallery.single .news-gallery-item img { max-height: 213px; }
+  .news-gallery-item img { height: 98px; max-width: 85vw; }
+  .news-gallery.single .news-gallery-item img { height: 98px; }
 }
 
 /* people */
@@ -292,6 +292,8 @@ p { margin: 0; }
 .eyebrow { font-size:.7rem; font-weight:650; letter-spacing:.13em; color:var(--lipid); margin-bottom:20px; }
 .hero { background:linear-gradient(115deg,#f3f6f7 55%,#e8f0f0); }
 .hero h1 { white-space:pre-line; }
+/* Korean headline: three short lines, each kept on a single line */
+html[lang="ko"] .hero h1 { max-width:none; white-space:pre; font-size:clamp(1.25rem, 3.2vw, 2.2rem); }
 .admin-link { font-size:.85rem; align-self:start; }
 .skip-link { position:fixed; top:-100px; left:16px; z-index:100; background:white; padding:12px; }
 .skip-link:focus { top:12px; }

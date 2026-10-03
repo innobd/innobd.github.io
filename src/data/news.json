@@ -75,7 +75,10 @@
       "/images/news/2026-ghent-return-park-lee-6.jpg",
       "/images/news/2026-ghent-return-park-lee-7.jpg",
       "/images/news/2026-ghent-return-park-lee-8.jpg",
-      "/images/news/2026-ghent-return-park-lee-9.jpg"
+      "/images/news/2026-ghent-return-park-lee-9.jpg",
+      "/images/news/2026-ghent-return-park-lee-10.jpg",
+      "/images/news/2026-ghent-return-park-lee-11.jpg",
+      "/images/news/2026-ghent-return-park-lee-12.jpg"
     ]
   },
   {
@@ -258,7 +261,8 @@
     "images": [
       "/images/news/2026-ghent-symposium-1.jpg",
       "/images/news/2026-ghent-symposium-2.jpg",
-      "/images/news/2026-ghent-symposium-3.jpg"
+      "/images/news/2026-ghent-symposium-3.jpg",
+      "/images/news/2026-ghent-symposium-4.jpg"
     ]
   },
   {
@@ -274,7 +278,15 @@
       "en": "Prof. Junho Byun attended the CRS 2026 Annual Meeting & Exposition in Lisbon, Portugal (July 6 to 9). A collaborative abstract was accepted for poster presentation."
     },
     "link": "",
-    "id": "2026-crs-lisbon"
+    "id": "2026-crs-lisbon",
+    "images": [
+      "/images/news/2026-crs-lisbon-1.jpg",
+      "/images/news/2026-crs-lisbon-2.jpg",
+      "/images/news/2026-crs-lisbon-3.jpg",
+      "/images/news/2026-crs-lisbon-4.jpg",
+      "/images/news/2026-crs-lisbon-5.jpg",
+      "/images/news/2026-crs-lisbon-6.jpg"
+    ]
   },
   {
     "date": "2026-06-29",
@@ -432,6 +444,92 @@
       "/images/news/2026-lumipore-sioen-visit-2.jpg",
       "/images/news/2026-lumipore-sioen-visit-3.jpg",
       "/images/news/2026-lumipore-sioen-visit-4.jpg"
+    ]
+  },
+  {
+    "date": "2026-01-29",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "글로컬랩·MRC·GTRC 합동 동계 워크숍 참석 (강원 평창)",
+      "en": "Joint Winter Workshop of Glocal Lab, MRC and GTRC in Pyeongchang"
+    },
+    "detail": {
+      "ko": "1월 29일부터 1박 2일 일정으로 숙명여자대학교 약학연구소 글로컬랩·MRC·GTRC 합동 동계 워크숍이 강원도 평창 모나 용평리조트에서 열려, 연구실 구성원들이 함께 참석해 세미나와 교류 행사에 참여했습니다.",
+      "en": "Starting January 29, a two-day joint winter workshop of the Glocal Lab, MRC and GTRC of the Pharmaceutical Research Institute, Sookmyung Women's University, is being held at Mona Yongpyong Resort in Pyeongchang, Gangwon Province. Our lab members are attending the seminar and networking events together."
+    },
+    "link": "",
+    "id": "2026-gtrc-hagl-mprc-workshop",
+    "images": [
+      "/images/news/2026-gtrc-hagl-mprc-workshop-1.jpg",
+      "/images/news/2026-gtrc-hagl-mprc-workshop-2.jpg"
+    ]
+  },
+  {
+    "date": "2025-12-18",
+    "datePrecision": "day",
+    "type": "honor",
+    "text": {
+      "ko": "박지윤 학생, 2025 한국통합생물학회 정기학술대회 우수발표상 수상",
+      "en": "Jeeyoon Park Receives Excellent Presentation Award at the 2025 Korean Society for Integrative Biology Annual Conference"
+    },
+    "detail": {
+      "ko": "박사과정 박지윤 학생이 12월 17일부터 19일까지 광주 김대중컨벤션센터에서 열린 2025년 한국통합생물학회 정기학술대회에서 우수발표상을 받았습니다. 축하합니다!",
+      "en": "PhD student Jeeyoon Park received an Excellent Presentation Award at the 2025 Annual Conference of the Korean Society for Integrative Biology, held at the Kimdaejung Convention Center in Gwangju from December 17 to 19. Congratulations!"
+    },
+    "link": "",
+    "id": "2025-ksib-excellent-presentation-park"
+  },
+  {
+    "date": "2025-11-28",
+    "datePrecision": "day",
+    "type": "honor",
+    "text": {
+      "ko": "박지윤 학생 우수구두발표상, 이태진 학생 우수포스터상 수상 (2025 한국약제학회 국제학술대회)",
+      "en": "Jeeyoon Park and Taejin Lee Win Outstanding Oral and Poster Presentation Awards at the 2025 KSPST International Conference"
+    },
+    "detail": {
+      "ko": "11월 26일부터 28일까지 세종대학교 컨벤션센터에서 열린 2025 한국약제학회 총회 및 국제학술대회(2025 Annual Meeting and International Conference of the KSPST)에서 박지윤 학생이 우수구두발표상을, 이태진 학생이 우수포스터상을 수상했습니다. 연구실 구성원들이 구두 및 포스터 발표에 참여했고, 변준호 교수는 세션 좌장을 맡았습니다.",
+      "en": "At the 2025 Annual Meeting and International Conference of the Korean Society of Pharmaceutical Science and Technology (KSPST), held November 26 to 28 at the Sejong University Convention Center in Seoul, Jeeyoon Park received the Outstanding Oral Presentation Award and Taejin Lee received the Outstanding Poster Award. Lab members took part in oral and poster presentations, and Prof. Junho Byun chaired a session."
+    },
+    "link": "",
+    "id": "2025-kspst-annual-meeting",
+    "images": [
+      "/images/news/2025-kspst-annual-meeting-1.jpg",
+      "/images/news/2025-kspst-annual-meeting-2.jpg",
+      "/images/news/2025-kspst-annual-meeting-3.jpg",
+      "/images/news/2025-kspst-annual-meeting-4.jpg",
+      "/images/news/2025-kspst-annual-meeting-5.jpg",
+      "/images/news/2025-kspst-annual-meeting-6.jpg",
+      "/images/news/2025-kspst-annual-meeting-7.jpg",
+      "/images/news/2025-kspst-annual-meeting-8.jpg",
+      "/images/news/2025-kspst-annual-meeting-9.jpg",
+      "/images/news/2025-kspst-annual-meeting-10.jpg",
+      "/images/news/2025-kspst-annual-meeting-11.jpg",
+      "/images/news/2025-kspst-annual-meeting-12.jpg",
+      "/images/news/2025-kspst-annual-meeting-13.jpg",
+      "/images/news/2025-kspst-annual-meeting-14.jpg"
+    ]
+  },
+  {
+    "date": "2025-11-25",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "겐트대학교 Koen Raemdonck 교수 연구실 방문",
+      "en": "Prof. Koen Raemdonck of Ghent University Visits Our Lab"
+    },
+    "detail": {
+      "ko": "벨기에 겐트대학교의 Koen Raemdonck 교수가 한국약제학회 국제학술대회 참석차 방한하여 InnoBD Lab을 방문했습니다. Koen 교수는 폐 표적 mRNA LNP 전달 등을 연구하고 있으며, 연구실 구성원들과 연구 논의를 나눴습니다.",
+      "en": "Prof. Koen Raemdonck of Ghent University, Belgium, visited InnoBD Lab while in Korea to attend the KSPST international conference. His research includes lung-targeted mRNA LNP delivery, and he discussed research with our lab members."
+    },
+    "link": "",
+    "id": "2025-koen-raemdonck-visit",
+    "images": [
+      "/images/news/2025-koen-raemdonck-visit-1.jpg",
+      "/images/news/2025-koen-raemdonck-visit-2.jpg",
+      "/images/news/2025-koen-raemdonck-visit-3.jpg",
+      "/images/news/2025-koen-raemdonck-visit-4.jpg"
     ]
   },
   {
