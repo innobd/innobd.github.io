@@ -35,7 +35,7 @@ const currentYearNews = news
     <section class="section">
       <div class="wrap">
         <div class="section-head">
-          <div><p class="eyebrow">01 / NEWS</p><h2>{thisYear}{lang === 'ko' ? '년 소식' : ' News'}</h2></div>
+          <div><p class="eyebrow">01 / NEWS</p><h2>{thisYear}{lang === 'ko' ? '년 소식' : ' News'}</h2><p class="muted small" style="margin-top:8px">Automatically reported by InnoAI (Claude Sonnet 5.5)</p></div>
           <a href={href(lang, '/news')}>{tr('home.seeAll')}</a>
         </div>
         <NewsList lang={lang} items={currentYearNews} />

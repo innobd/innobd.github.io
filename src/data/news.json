@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-09-28",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "강주현 학생, 학부 인턴으로 합류",
+      "en": "Joohyun Kang Joins as Undergraduate Intern"
+    },
+    "detail": {
+      "ko": "숙명여자대학교 약학대학 4학년 강주현 학생이 학부 인턴으로 InnoBD Lab에 합류했습니다. 앞으로 함께 연구하며 좋은 경험을 쌓기를 기대합니다.",
+      "en": "Joohyun Kang, a fourth-year student at the College of Pharmacy, Sookmyung Women's University, has joined InnoBD Lab as an undergraduate intern. We look forward to working together."
+    },
+    "link": "",
+    "id": "2026-joohyun-kang-joins"
+  },
+  {
     "date": "2026-09-22",
     "datePrecision": "day",
     "type": "honor",
@@ -17,21 +32,6 @@
       "/images/news/2026-pharm-festival-award-1.jpg",
       "/images/news/2026-pharm-festival-award-2.jpg"
     ]
-  },
-  {
-    "date": "2026-09-22",
-    "datePrecision": "day",
-    "type": "news",
-    "text": {
-      "ko": "강주현 학생, 학부 인턴으로 합류",
-      "en": "Joohyun Kang Joins as Undergraduate Intern"
-    },
-    "detail": {
-      "ko": "숙명여자대학교 약학대학 4학년 강주현 학생이 학부 인턴으로 InnoBD Lab에 합류했습니다. 앞으로 함께 연구하며 좋은 경험을 쌓기를 기대합니다.",
-      "en": "Joohyun Kang, a fourth-year student at the College of Pharmacy, Sookmyung Women's University, has joined InnoBD Lab as an undergraduate intern. We look forward to working together."
-    },
-    "link": "",
-    "id": "2026-joohyun-kang-joins"
   },
   {
     "date": "2026-09-20",
@@ -144,7 +144,13 @@
       "en": "Ada Stankiewicz (Faculty of Pharmacy, Medical University of Warsaw, Poland) and Leonor Candeias (Faculty of Pharmacy, University of Coimbra, Portugal) joined our lab for a summer research internship starting August 10, through the KNAPS summer research program for international pharmacy students. On August 24, they received their certificates and took photos with lab members. Thanks to everyone in the lab who hosted and guided them."
     },
     "link": "",
-    "id": "2026-knaps-summer-interns"
+    "id": "2026-knaps-summer-interns",
+    "images": [
+      "/images/news/2026-knaps-summer-interns-1.jpg",
+      "/images/news/2026-knaps-summer-interns-2.jpg",
+      "/images/news/2026-knaps-summer-interns-3.jpg",
+      "/images/news/2026-knaps-summer-interns-4.jpg"
+    ]
   },
   {
     "date": "2026-08-24",
@@ -174,7 +180,10 @@
       "en": "Soyi Kim (Division of Biosystems and Biomedical Sciences, Korea University) and Siyeong Lee (sixth-year pharmacy student, Sookmyung Women's University) completed research internships at InnoBD Lab over the summer."
     },
     "link": "",
-    "id": "2026-summer-interns"
+    "id": "2026-summer-interns",
+    "images": [
+      "/images/news/2026-summer-interns-1.jpg"
+    ]
   },
   {
     "date": "2026-08-14",
@@ -227,7 +236,10 @@
       "en": "Sookmyung Women's University has been selected for the \"Seoul Anchor 10 Challenge\" bio-renewal core technology project under the Seoul Metropolitan Government's ANCHOR program. Led by Prof. Chang-young Jang of the College of Pharmacy, the nine-year, 8-billion-won project aims to extend healthy lifespan by eliminating senescent cells."
     },
     "link": "",
-    "id": "2026-seoul-anchor-selection"
+    "id": "2026-seoul-anchor-selection",
+    "images": [
+      "/images/news/2026-seoul-anchor-selection-1.jpg"
+    ]
   },
   {
     "date": "2026-07-16",
@@ -277,7 +289,13 @@
       "en": "On June 29, our lab members attended a joint symposium with faculty and students from Seoul National University, Korea University, Yonsei University, Soongsil University, and Sookmyung Women's University. The program included a self-introduction session for students and research exchange, followed by dinner together."
     },
     "link": "",
-    "id": "2026-five-university-symposium"
+    "id": "2026-five-university-symposium",
+    "images": [
+      "/images/news/2026-five-university-symposium-1.jpg",
+      "/images/news/2026-five-university-symposium-2.jpg",
+      "/images/news/2026-five-university-symposium-3.jpg",
+      "/images/news/2026-five-university-symposium-4.jpg"
+    ]
   },
   {
     "date": "2026-06-04",
@@ -292,7 +310,12 @@
       "en": "Prof. Junho Byun visited Nanjing Forestry University, China, together with Prof. Stefaan De Smedt (Ghent University), and held a joint seminar. During the visit, they discussed collaborative research and future exchange visits with the research teams of Prof. Chaobo Huang and Prof. Ranhua Xiong."
     },
     "link": "",
-    "id": "2026-nanjing-forestry-seminar"
+    "id": "2026-nanjing-forestry-seminar",
+    "images": [
+      "/images/news/2026-nanjing-forestry-seminar-1.jpg",
+      "/images/news/2026-nanjing-forestry-seminar-2.jpg",
+      "/images/news/2026-nanjing-forestry-seminar-3.jpg"
+    ]
   },
   {
     "date": "2026-05-28",
@@ -307,7 +330,12 @@
       "en": "On May 28, the GTRC (Korea-Belgium Joint Research Center for External Stimuli-Responsive Gene Therapeutics) at the College of Pharmacy hosted an invited seminar in Changhak Hall B111. Prof. Stefaan De Smedt (Ghent University, Belgium) and Prof. Ki-Bum Lee (Rutgers University, USA) gave talks, and afterwards visited our lab and talked with our members."
     },
     "link": "",
-    "id": "2026-gtrc-seminar-desmedt-lee"
+    "id": "2026-gtrc-seminar-desmedt-lee",
+    "images": [
+      "/images/news/2026-gtrc-seminar-desmedt-lee-1.jpg",
+      "/images/news/2026-gtrc-seminar-desmedt-lee-2.jpg",
+      "/images/news/2026-gtrc-seminar-desmedt-lee-3.jpg"
+    ]
   },
   {
     "date": "2026-05-15",
@@ -322,7 +350,11 @@
       "en": "On Teacher's Day, our lab members prepared a small celebration to express their gratitude. We are thankful to everyone in the lab and look forward to continuing our work together."
     },
     "link": "",
-    "id": "2026-teachers-day"
+    "id": "2026-teachers-day",
+    "images": [
+      "/images/news/2026-teachers-day-1.jpg",
+      "/images/news/2026-teachers-day-2.jpg"
+    ]
   },
   {
     "date": "2026-04-10",
@@ -337,7 +369,13 @@
       "en": "On April 10, Prof. Junho Byun gave a talk at the 2026 KSPST Science Month Symposium, hosted by the Korean Society of Pharmaceutical Science and Technology. Lab members also attended and joined the sessions."
     },
     "link": "",
-    "id": "2026-kspst-science-month-symposium"
+    "id": "2026-kspst-science-month-symposium",
+    "images": [
+      "/images/news/2026-kspst-science-month-symposium-1.jpg",
+      "/images/news/2026-kspst-science-month-symposium-2.jpg",
+      "/images/news/2026-kspst-science-month-symposium-3.jpg",
+      "/images/news/2026-kspst-science-month-symposium-4.jpg"
+    ]
   },
   {
     "date": "2026-03-26",
@@ -352,7 +390,13 @@
       "en": "Prof. Junho Byun gave an invited talk at the 15th World Meeting on Pharmaceutics, Biopharmaceutics and Pharmaceutical Technology (PBP World Meeting), held in Prague, Czech Republic, from March 23 to 26."
     },
     "link": "",
-    "id": "2026-pbp-prague"
+    "id": "2026-pbp-prague",
+    "images": [
+      "/images/news/2026-pbp-prague-1.jpg",
+      "/images/news/2026-pbp-prague-2.jpg",
+      "/images/news/2026-pbp-prague-3.jpg",
+      "/images/news/2026-pbp-prague-4.jpg"
+    ]
   },
   {
     "date": "2026-03-04",
@@ -382,7 +426,13 @@
       "en": "LumiPore, a photoporation-based intracellular delivery system, has been introduced as shared equipment at the College of Pharmacy. On February 23, Dr. Simon Sioen, Field Application Scientist at Trince (Belgium), visited our lab to check the system and held a meeting with our students to review experimental data."
     },
     "link": "",
-    "id": "2026-lumipore-sioen-visit"
+    "id": "2026-lumipore-sioen-visit",
+    "images": [
+      "/images/news/2026-lumipore-sioen-visit-1.jpg",
+      "/images/news/2026-lumipore-sioen-visit-2.jpg",
+      "/images/news/2026-lumipore-sioen-visit-3.jpg",
+      "/images/news/2026-lumipore-sioen-visit-4.jpg"
+    ]
   },
   {
     "date": "2025-06-01",
