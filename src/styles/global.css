@@ -174,10 +174,10 @@ p { margin: 0; }
 .ra-title { margin: 0; font-size: 1.15rem; line-height: 1.4; font-weight: 700; }
 .ra-title a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 .ra-title a:hover { color: var(--lipid); }
-.ra-summary { margin: 10px 0 0; color: var(--ink-2); }
+.ra-summary { margin: 10px 0 0; color: var(--ink-2); max-width: 70ch; }
 /* news: a short, non-bold explainer under the headline-style title (about 2pt
    smaller than the title, which stays the same size/weight as before). */
-.ra-detail { margin: 6px 0 0; font-weight: 400; font-size: 0.993rem; line-height: 1.5; color: var(--ink-2); }
+.ra-detail { margin: 6px 0 0; font-weight: 400; font-size: 0.993rem; line-height: 1.5; color: var(--ink-2); max-width: 70ch; }
 .ra-venue { margin: 10px 0 0; color: var(--ink-3); font-size: 0.95rem; }
 .ra-venue em { color: var(--ink-2); font-style: italic; }
 .ra-authors { margin: 6px 0 0; color: var(--ink-2); font-size: 0.636rem; }
@@ -291,7 +291,7 @@ p { margin: 0; }
 
 /* Readable editorial accents and keyboard access. */
 :root { --ink-3: #596d78; }
-.eyebrow { font-size:.7rem; font-weight:650; letter-spacing:.13em; color:var(--lipid); margin-bottom:20px; }
+.eyebrow { font-size:.8rem; font-weight:650; letter-spacing:.05em; color:var(--lipid); margin-bottom:20px; }
 .hero { background:linear-gradient(115deg,#f3f6f7 55%,#e8f0f0); }
 .hero h1 { white-space:pre-line; }
 /* Korean headline: three short lines, each kept on a single line */
