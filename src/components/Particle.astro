@@ -8,7 +8,7 @@ const dots = Array.from({ length: n }, (_, i) => {
 });
 ---
 <svg class="particle" viewBox="0 0 400 400" role="img" aria-label="Lipid nanoparticle carrying an mRNA strand">
-  <circle cx={cx} cy={cy} r={r} fill="#fff" opacity="0.6" />
+  <circle cx={cx} cy={cy} r={r} fill="var(--ink)" opacity="0.1" />
   <circle cx={cx} cy={cy} r={r - 26} fill="var(--lipid-soft)" opacity="0.55" />
   {dots.map((d) => (
     <g class="lipid" style={`animation-delay:${d.delay}ms`}>

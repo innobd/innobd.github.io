@@ -12,7 +12,7 @@ const desc = description ?? pick(lang, lab.hero.sub);
 const alt = switchPath(lang, Astro.url.pathname);
 ---
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} data-page={current}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
