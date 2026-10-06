@@ -152,27 +152,32 @@ p { margin: 0; }
   @keyframes draw { to { stroke-dashoffset: 0; } }
 }
 
-/* research list */
-.research-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-.research-list li { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 16px 48px; padding: 28px 0; border-bottom: 1px solid var(--line); }
-.research-list h3 { display: flex; align-items: flex-start; gap: 12px; }
-.research-list .swatch { flex: none; width: 12px; height: 12px; margin-top: 0.42em; border-radius: 3px; background: var(--lipid); }
-.research-list .swatch.method { background: var(--payload); border-radius: 50%; }
-.research-list .kw { margin-top: 10px; color: var(--ink-3); font-size: 0.92rem; }
-.research-legend { display: flex; flex-wrap: wrap; gap: 20px; color: var(--ink-2); font-size: 0.95rem; margin-bottom: 20px; }
-.research-legend span { display: inline-flex; align-items: center; gap: 8px; }
-.research-legend i { width: 12px; height: 12px; border-radius: 3px; background: var(--lipid); }
-.research-legend i.method { background: var(--payload); border-radius: 50%; }
-.research-photos { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 14px; }
-.research-photos figure { margin: 0; }
-.research-photos img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius); background: var(--paper-2); display: block; }
-.research-photos figcaption { margin-top: 6px; font-size: 0.82rem; color: var(--ink-3); }
+/* research page */
+.rs-block { margin: 0 0 56px; max-width: 860px; }
+.rs-h2 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); margin: 0 0 8px; letter-spacing: -0.01em; }
+.rs-sub { margin: 0 0 22px; color: var(--lipid); font-weight: 600; font-size: 1.05rem; }
+.rs-body p { margin: 0 0 1em; line-height: 1.85; color: var(--ink-2); }
+.rs-questions, .rs-approach { list-style: none; margin: 24px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.rs-questions > li, .rs-approach > li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 0 16px; padding: 28px 0; border-bottom: 1px solid var(--line); }
+.rs-num { width: 32px; height: 32px; border-radius: 50%; background: var(--lipid-soft); color: var(--lipid); font-weight: 700; display: grid; place-items: center; font-size: 0.95rem; }
+.rs-questions h3, .rs-approach h3 { margin: 4px 0 14px; font-size: 1.15rem; line-height: 1.5; }
+.rs-approach p { margin: 0; line-height: 1.85; color: var(--ink-2); }
+.rs-take { margin: 4px 0 0; padding-left: 14px; border-left: 3px solid var(--payload); color: var(--ink); font-weight: 600; line-height: 1.7; }
+.rs-refs { margin-top: 16px; font-size: 0.9rem; color: var(--ink-3); }
+.rs-refs-label { display: block; font-weight: 600; margin-bottom: 4px; }
+.rs-refs ul { list-style: none; margin: 0; padding: 0; }
+.rs-refs li { margin: 3px 0; line-height: 1.55; }
+.rs-refs a { color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; }
+.rs-refs a:hover { color: var(--lipid); }
+.rs-closing { margin-top: 40px; padding: 28px 28px 8px; border-radius: var(--radius); background: var(--paper-2); }
+.rs-closing h3 { margin: 0 0 14px; font-size: 1.2rem; line-height: 1.5; }
+.rs-final { margin: 0 0 20px; font-weight: 700; color: var(--ink); line-height: 1.7; }
+@media (max-width: 720px) { .rs-questions > li, .rs-approach > li { grid-template-columns: 1fr; gap: 10px; } .rs-closing { padding: 22px 20px 6px; } }
 .collab-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
 .collab-card { padding: 22px 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper-2); }
 .collab-card h3 { font-size: 1.02rem; margin: 0; }
 .collab-card .collab-people { margin-top: 10px; font-weight: 600; font-size: 0.9rem; }
 .collab-card p { margin: 6px 0 0; }
-@media (max-width: 720px) { .research-list li { grid-template-columns: 1fr; gap: 10px; } }
 
 /* research-article style list (news + publications), modeled on a journal's
    "Latest Research articles" / "Featured" feed: a meta column (type, access

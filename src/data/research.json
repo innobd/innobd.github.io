@@ -1,108 +1,299 @@
-[
-  {
-    "id": "mrna-lnp",
-    "track": "platform",
-    "title": {
-      "en": "mRNA lipid nanoparticles",
-      "ko": "mRNA 지질나노입자(LNP)"
+{
+  "why": {
+    "title": "Why DDS Research in InnoBD",
+    "subtitle": {
+      "ko": "약물이 필요한 세포에서 제대로 작동하도록",
+      "en": "So that a drug works in the cells that need it"
     },
-    "summary": {
-      "en": "Designing ionizable lipids and formulations that release mRNA efficiently from the endosome, and testing them in models of aging, pulmonary fibrosis and psoriasis.",
-      "ko": "엔도솜 탈출 효율이 높은 이온화 지질과 제형을 설계하고, 노화, 폐섬유화, 건선 모델에서 검증합니다."
-    },
-    "keywords": [
-      "ionizable lipid",
-      "endosomal escape",
-      "mRNA"
-    ],
-    "images": []
+    "paragraphs": [
+      {
+        "ko": "약학은 약물을 통해 질병을 예방하고 치료하여 사람의 건강과 삶의 질을 높이는 학문입니다. 그 안에서 약제학은 약물을 실제로 쓸 수 있는 의약품으로 설계하는 분야이고, 약물전달시스템(Drug Delivery Systems, DDS) 연구는 약물이 체내에서 어디로 가고, 언제 얼마나 방출되며, 어떤 세포와 조직에서 작용하는지를 이해하고 조절하는 분야입니다.",
+        "en": "Pharmacy is the science of preventing and treating disease with drugs, and so improving health and quality of life. Within it, pharmaceutics designs a drug into a medicine that can actually be used, and drug delivery systems (DDS) research seeks to understand and control where a drug goes in the body, when and how much of it is released, and in which cells and tissues it acts."
+      },
+      {
+        "ko": "치료 효과가 있는 물질을 찾았다고 해서 그대로 의약품이 되는 것은 아닙니다. 약물은 작용 부위에 도달하기 전에 분해되기도 하고, 필요한 세포에 충분히 들어가지 못하거나, 정상 조직에까지 영향을 주기도 합니다. 특히 핵산과 같은 바이오의약품은 제 기능을 하기까지 세포 밖과 안의 여러 장벽을 넘어야 합니다. 약물의 가능성을 실제 치료로 연결하려면 약물 자체만이 아니라 전달하는 방법을 함께 연구해야 합니다.",
+        "en": "Finding a substance with therapeutic activity does not make it a medicine. A drug can be degraded before it reaches its site of action, can fail to enter the cells that need it in sufficient amounts, or can affect healthy tissue as well. Biologics such as nucleic acids in particular must cross many barriers, outside and inside the cell, before they can function. Turning a drug's promise into real treatment requires studying not only the drug itself but also how it is delivered."
+      },
+      {
+        "ko": "약물전달 연구가 목표로 하는 것은 필요한 부위에서 충분한 치료 효과를 얻으면서 불필요한 노출과 부작용은 줄이는 것입니다. 기존 의약품을 더 안전하고 편리하게 쓸 수 있도록 개선하는 일부터, 전달의 한계 때문에 의약품으로 만들기 어려웠던 새로운 치료 물질을 실제로 구현하는 일까지 포함합니다.",
+        "en": "Drug delivery research aims to achieve sufficient therapeutic effect where it is needed while reducing unnecessary exposure and side effects. This ranges from making existing medicines safer and more convenient to use, to realizing new therapeutic substances that were hard to turn into medicines because of delivery limits."
+      },
+      {
+        "ko": "InnoBD(Innovative Biodrug Delivery Lab)는 약제학을 기반으로 바이오의약품의 전달을 가로막는 원인을 이해하고 이를 해결하는 기술을 연구합니다. 특히 mRNA를 비롯한 핵산의 비바이러스 전달에 관심을 두고, 지질나노입자와 생체모사 전달체, 빛과 외부 자극, 국소 전달 제형을 활용하는 연구를 진행합니다. 여기에 더해 약물을 받는 세포의 상태와 질병 환경까지 함께 살펴봅니다.",
+        "en": "InnoBD (Innovative Biodrug Delivery Lab) builds on pharmaceutics to understand what blocks the delivery of biologics and to develop technologies that overcome it. We are especially interested in non-viral delivery of nucleic acids including mRNA, and work with lipid nanoparticles, biomimetic carriers, light and other external stimuli, and locally administered formulations. We also look at the state of the cells that receive the drug and at the disease environment around them."
+      },
+      {
+        "ko": "우리가 이러한 연구를 하는 이유는, 전달하는 방법을 바꾸면 그동안 어려웠던 치료가 가능해질 수 있다고 보기 때문입니다. 필요한 세포에서 치료 단백질을 만들게 하거나, 면역반응을 조절하거나, 질병 부위에서만 선택적으로 약물이 작용하도록 하는 것이 그 예입니다. InnoBD는 각 연구에서 얻은 결과를 바탕으로, 어떤 약물을 어떤 세포에 어떤 방식으로 전달해야 하는지를 설명할 수 있는 설계 원리를 찾아가고자 합니다.",
+        "en": "We do this research because we believe that changing how a drug is delivered can make previously difficult treatments possible. Examples include having the right cells produce a therapeutic protein, modulating immune responses, and making a drug act selectively at the diseased site. Building on the results of each study, InnoBD aims to find design principles that explain which drug should be delivered to which cells, and how."
+      }
+    ]
   },
-  {
-    "id": "carrier-free-mrna",
-    "track": "platform",
-    "title": {
-      "en": "Carrier-free mRNA delivery",
-      "ko": "나노전달체 없는 mRNA 전달"
-    },
-    "summary": {
-      "en": "Next-generation mRNA delivery that does not depend on nanocarriers, supported by the Outstanding Early-Career Researcher Program (Ministry of Science and ICT, 2025).",
-      "ko": "나노전달체에 의존하지 않는 차세대 mRNA 전달 기술을 개발합니다 (2025 과학기술정보통신부 우수신진연구 과제)."
-    },
-    "keywords": [
-      "nanocarrier-free",
-      "mRNA"
-    ],
-    "images": []
+  "questions": {
+    "title": "Research Questions",
+    "items": [
+      {
+        "id": "q1",
+        "q": {
+          "ko": "약물을 필요한 세포에 선택적으로 전달할 수 있을까?",
+          "en": "Can a drug be delivered selectively to the cells that need it?"
+        },
+        "paragraphs": [
+          {
+            "ko": "우리가 목표로 하는 전달은 약물이 특정 장기에 많이 쌓이는 것만으로 완성되지 않습니다. 그 장기 안에서도 어떤 세포가 약물을 받아들이는지, 치료가 필요한 세포에서 실제로 작용하는지까지 확인해야 합니다.",
+            "en": "The delivery we aim for is not complete when a drug simply accumulates in a particular organ. Within that organ, we need to confirm which cells take up the drug and whether it actually acts in the cells that need treatment."
+          },
+          {
+            "ko": "InnoBD는 전달체의 조성과 표면 특성, 생체 유래 성분, 투여 경로를 조절하여 약물의 분포와 세포 선택성을 연구합니다. 세포막의 특성을 활용한 mRNA 전달 연구처럼, 전달체와 세포 사이의 상호작용을 이용해 원하는 세포에서 약물이 작용할 가능성을 높이는 접근에 관심을 두고 있습니다.",
+            "en": "InnoBD studies drug distribution and cell selectivity by adjusting the composition and surface properties of carriers, biologically derived components, and the route of administration. As in work that uses the properties of cell membranes for mRNA delivery, we are interested in approaches that use the interaction between carrier and cell to raise the chance that a drug acts in the intended cells."
+          }
+        ],
+        "takeaway": {
+          "ko": "어디에 도달했는가와 함께, 어떤 세포에서 필요한 기능을 했는가를 묻습니다.",
+          "en": "We ask not only where a drug arrived, but in which cells it did its job."
+        },
+        "refs": [
+          "ajps"
+        ]
+      },
+      {
+        "id": "q2",
+        "q": {
+          "ko": "세포 안으로 들어간 약물은 왜 모두 작용하지 않을까?",
+          "en": "Why does not every drug that enters a cell take effect?"
+        },
+        "paragraphs": [
+          {
+            "ko": "핵산이 세포 안에서 관찰된다고 해서 전달에 성공한 것은 아닙니다. mRNA는 세포에 들어간 뒤에도 분해를 피하고 세포질에 도달해 단백질로 번역되어야 합니다. 따라서 세포로 들어간 양과 실제 단백질 발현은 구분해서 봐야 합니다.",
+            "en": "Seeing nucleic acids inside a cell does not mean delivery has succeeded. After entering the cell, mRNA still has to escape degradation, reach the cytoplasm, and be translated into protein. The amount that entered the cell and the actual protein expression must therefore be assessed separately."
+          },
+          {
+            "ko": "InnoBD는 세포 유입, 세포 내 이동, 엔도솜 탈출, 핵산의 안정성과 기능 발현을 하나로 연결하여 전달 과정의 어느 단계가 제한 요인인지 확인하고자 합니다. 전달체로 세포 안에 운반하는 방법과, 세포막을 일시적으로 통과하도록 돕는 물리적 전달 방법을 함께 연구하는 것도 이 때문입니다.",
+            "en": "InnoBD links cellular uptake, intracellular trafficking, endosomal escape, nucleic acid stability, and functional expression into one picture, to identify which step of delivery is limiting. This is also why we study both carrier-based delivery into cells and physical delivery methods that help molecules cross the cell membrane transiently."
+          }
+        ],
+        "takeaway": {
+          "ko": "약물을 세포 안에 넣는 것에서 나아가, 세포 안에서 의도한 작용을 일으키는 조건을 찾습니다.",
+          "en": "Beyond getting a drug into the cell, we look for the conditions under which it does what we intend inside the cell."
+        },
+        "refs": []
+      },
+      {
+        "id": "q3",
+        "q": {
+          "ko": "빛과 외부 자극으로 전달의 위치와 시간을 조절할 수 있을까?",
+          "en": "Can light and other external stimuli control where and when delivery happens?"
+        },
+        "paragraphs": [
+          {
+            "ko": "약물을 투여한 뒤 원하는 위치와 시점에 전달이나 작용을 유도할 수 있다면 어떨까요. InnoBD는 빛과 외부 자극을 이용해 약물이 세포에 들어가는 과정이나 치료 반응을 조절하는 방법을 연구합니다.",
+            "en": "What if, after a drug is administered, delivery or action could be triggered at a chosen place and time? InnoBD studies how to use light and other external stimuli to control how a drug enters cells and how the therapeutic response unfolds."
+          },
+          {
+            "ko": "주요 접근 중 하나는 레이저와 빛에 반응하는 나노입자를 이용해 세포막의 투과성을 일시적으로 높이는 광천공(photoporation)입니다. 이 방법을 활용한 안구 표면 mRNA 전달 연구에서는 연구용 레이저뿐 아니라 안과용 YAG 레이저를 이용한 전달 가능성까지 살펴보았습니다.",
+            "en": "One of our main approaches is photoporation, which uses a laser and light-responsive nanoparticles to raise the permeability of the cell membrane transiently. In our study of mRNA delivery to the ocular surface with this method, we examined delivery not only with a research laser but also with an ophthalmic YAG laser."
+          },
+          {
+            "ko": "또한 저온 대기압 플라즈마에 반응하는 지질나노입자로 지방세포 안의 활성산소 생성을 증폭시켜 지방분해를 유도하는 연구를 진행해 왔습니다. 이러한 연구에서는 전달체뿐 아니라 자극의 조건과 적용 부위까지 함께 설계합니다.",
+            "en": "We have also studied lipid nanoparticles that respond to cold atmospheric plasma, amplifying the generation of reactive oxygen species inside adipocytes to induce lipolysis. In such work, we design not only the carrier but also the conditions of the stimulus and the site where it is applied."
+          }
+        ],
+        "takeaway": {
+          "ko": "핵심 질문은 원하는 부위에서 충분한 효과를 얻으면서 주변 세포와 조직에 미치는 영향은 어떻게 제한할 것인가입니다.",
+          "en": "The key question is how to obtain sufficient effect at the intended site while limiting the impact on surrounding cells and tissue."
+        },
+        "refs": [
+          "adhm",
+          "cap"
+        ]
+      },
+      {
+        "id": "q4",
+        "q": {
+          "ko": "질병과 노화에 따라 약물 전달 전략도 달라져야 할까?",
+          "en": "Should delivery strategies change with disease and aging?"
+        },
+        "paragraphs": [
+          {
+            "ko": "같은 전달체를 쓰더라도 정상 세포, 염증 상태의 세포, 노화 세포에서 같은 결과를 얻을 수 있을까요. 우리는 이러한 차이를 미리 단정하지 않고, 세포의 상태가 전달의 각 단계와 최종 기능 발현에 어떤 영향을 미치는지 확인하고자 합니다.",
+            "en": "Would the same carrier give the same result in normal cells, inflamed cells, and senescent cells? We do not assume such differences in advance. We want to confirm how the state of a cell affects each step of delivery and the final functional expression."
+          },
+          {
+            "ko": "특히 산화 스트레스, 염증 신호, 세포 내 분해 과정, 단백질 합성 상태가 핵산 전달의 결과에 어떻게 관여하는지에 관심을 두고 있습니다. 이를 통해 전달체를 바꿔야 하는 문제인지, 약물을 받는 세포의 환경까지 함께 조절해야 하는 문제인지를 구분하고자 합니다.",
+            "en": "We are especially interested in how oxidative stress, inflammatory signals, intracellular degradation pathways, and the state of protein synthesis shape the outcome of nucleic acid delivery. This helps us tell whether the problem calls for a different carrier or also for adjusting the environment of the receiving cell."
+          },
+          {
+            "ko": "질병 환경을 선택적 치료의 단서로 활용하는 것도 중요한 방향입니다. 간 섬유화 부위에서 많이 발현되는 섬유아세포 활성화 단백질(FAP)이 펩타이드를 잘라 활성화하도록 설계한 연구처럼, 질병 부위의 특징을 약물 작용의 조건으로 쓸 수 있습니다.",
+            "en": "Using the disease environment as a cue for selective treatment is another important direction. As in a study in which fibroblast activation protein (FAP), abundant in fibrotic liver, was designed to cleave and activate a therapeutic peptide, features of the diseased site can serve as conditions for drug action."
+          }
+        ],
+        "takeaway": {
+          "ko": "질병 환경이 전달을 어떻게 바꾸는지 이해하고, 그 특징을 치료에 활용하는 방법을 찾습니다.",
+          "en": "We seek to understand how the disease environment changes delivery, and how to use its features for treatment."
+        },
+        "refs": [
+          "nat"
+        ]
+      },
+      {
+        "id": "q5",
+        "q": {
+          "ko": "전달 기술로 세포의 기능을 바꾸어 질병을 치료할 수 있을까?",
+          "en": "Can delivery technology change cell function to treat disease?"
+        },
+        "paragraphs": [
+          {
+            "ko": "InnoBD는 약물 전달을 세포의 기능을 조절하는 수단으로 봅니다. 필요한 단백질을 발현시키고, 질병과 관련된 신호를 조절하며, 치료에 유리한 면역반응을 유도하는 것이 우리가 추구하는 방향입니다.",
+            "en": "InnoBD regards drug delivery as a means of regulating cell function. Our direction is to express needed proteins, modulate disease-related signals, and induce immune responses that favor treatment."
+          },
+          {
+            "ko": "암 면역치료에서는 종양을 인식하는 면역반응은 높이면서 그 반응을 억제하는 환경은 조절하는 접근을 연구해 왔습니다. TGF-β 억제제를 담은 지질나노입자와 종양 항원으로 자극한 수지상세포막을 결합한 하이브리드 전달체 연구가 이러한 방향을 보여주는 예입니다.",
+            "en": "In cancer immunotherapy, we have studied approaches that strengthen the immune response against tumors while modulating the environment that suppresses it. Research on hybrid carriers that combine lipid nanoparticles carrying a TGF-β inhibitor with the membranes of dendritic cells primed with tumor antigens is an example of this direction."
+          },
+          {
+            "ko": "앞으로는 면역세포와 조혈세포 등에 핵산을 전달하는 기술을 발전시켜, 세포 본래의 기능은 보존하면서 필요한 치료 기능을 부여하는 유전자 및 세포치료 전략으로 연결하고자 합니다.",
+            "en": "Going forward, we plan to advance technologies that deliver nucleic acids to immune and hematopoietic cells, and to connect them to gene and cell therapy strategies that give cells the needed therapeutic function while preserving their original function."
+          }
+        ],
+        "takeaway": {
+          "ko": "이때 중요한 기준은 얼마나 많은 세포에 전달했는가뿐 아니라, 전달받은 세포가 어떤 기능을 하고 그 변화가 치료에 얼마나 기여하는가입니다.",
+          "en": "The important criterion is not only how many cells received the drug, but what function the recipient cells perform and how much that change contributes to treatment."
+        },
+        "refs": [
+          "dcnp"
+        ]
+      },
+      {
+        "id": "q6",
+        "q": {
+          "ko": "실험실에서 잘되는 전달 기술을 실제로 쓸 수 있게 하려면 무엇이 필요할까?",
+          "en": "What does it take to make a delivery technology that works in the lab usable in practice?"
+        },
+        "paragraphs": [
+          {
+            "ko": "InnoBD가 지향하는 전달 기술은 특정 실험 조건에서 효율이 높은 데 그치지 않습니다. 서로 다른 세포와 질환 조건에서도 결과를 재현할 수 있는지, 필요한 용량과 안전성을 확보할 수 있는지, 제조와 보관, 투여가 가능한지까지 함께 검토하고자 합니다.",
+            "en": "The delivery technology InnoBD aims for is not just one that is efficient under particular experimental conditions. We also want to examine whether results can be reproduced across different cells and disease conditions, whether the required dose and safety can be secured, and whether manufacturing, storage, and administration are feasible."
+          },
+          {
+            "ko": "나노입자 기반 기술에서는 조성과 제조 조건에 따른 품질의 일관성이 중요합니다. 외부 자극 기반 기술에서는 장비의 적용 범위, 자극 조건, 시술 과정과 조직에 미치는 영향을 함께 고려해야 합니다. 우리는 이러한 항목을 연구 초기부터 설계와 평가에 반영하는 것을 목표로 합니다.",
+            "en": "For nanoparticle-based technologies, consistent quality across compositions and manufacturing conditions is important. For stimulus-based technologies, the range of application of the device, the stimulus conditions, the procedure, and the effects on tissue must be considered together. We aim to build these items into design and evaluation from the earliest stage of research."
+          }
+        ],
+        "takeaway": {
+          "ko": "궁극적으로는 기존 치료보다 어떤 점에서 나아지는지, 환자와 의료진이 감당해야 하는 부담은 무엇인지를 설명할 수 있는 기술을 만들고자 합니다.",
+          "en": "Ultimately, we want to build technologies that can explain how they improve on existing treatments and what burden they place on patients and clinicians."
+        },
+        "refs": []
+      }
+    ]
   },
-  {
-    "id": "hydrogel-immunotherapy",
-    "track": "platform",
-    "title": {
-      "en": "Hydrogels for local cancer immunotherapy",
-      "ko": "국소 항암 면역치료용 하이드로젤"
+  "approach": {
+    "title": "Our Approach & Aim",
+    "subtitle": {
+      "ko": "전달체를 설계하고, 생체 반응을 측정하며, 치료로 이어지는 조건을 찾습니다",
+      "en": "We design carriers, measure biological responses, and find the conditions that lead to treatment"
     },
-    "summary": {
-      "en": "Injectable hydrogels that hold LNP-formulated mRNA at the tumor site and remodel the tumor immune microenvironment, with a focus on glioblastoma.",
-      "ko": "LNP 제형의 mRNA를 종양 부위에 머물게 하면서 종양 면역미세환경을 조절하는 주사형 하이드로젤을 개발하며, 특히 교모세포종을 대상으로 합니다."
+    "intro": {
+      "ko": "InnoBD는 특정 재료나 장비를 모든 문제에 똑같이 적용하기보다, 먼저 치료에 필요한 조건과 전달을 제한하는 원인을 살펴봅니다. 그에 따라 전달체, 제형, 투여 경로, 외부 자극을 선택하고 필요하면 서로 결합합니다.",
+      "en": "Rather than applying one material or device to every problem, InnoBD first looks at the conditions a treatment requires and at what limits delivery. We then choose among carriers, formulations, routes of administration, and external stimuli, and combine them when needed."
     },
-    "keywords": [
-      "hydrogel",
-      "glioblastoma",
-      "tumor microenvironment"
+    "items": [
+      {
+        "title": {
+          "ko": "전달체와 제형 설계",
+          "en": "Carrier and formulation design"
+        },
+        "body": {
+          "ko": "지질나노입자, 리포좀, 고분자, 생체막 기반 전달체를 활용하여 약물을 보호하고 세포와의 상호작용을 조절합니다. 하이드로젤과 국소 전달 제형을 통해 약물이 머무는 위치와 방출되는 조건을 설계하는 연구도 함께 진행합니다. 약물의 특성과 표적 조직에 맞는 전달 방식을 찾는 것이 목표입니다.",
+          "en": "We use lipid nanoparticles, liposomes, polymers, and cell membrane-based carriers to protect drugs and control their interaction with cells. We also design where a drug stays and under what conditions it is released, using hydrogels and locally administered formulations. The goal is to find a delivery method that fits the properties of the drug and the target tissue."
+        }
+      },
+      {
+        "title": {
+          "ko": "외부 자극을 이용한 전달 및 작용 제어",
+          "en": "Controlling delivery and action with external stimuli"
+        },
+        "body": {
+          "ko": "레이저 기반 광천공과, 빛 또는 저온 대기압 플라즈마에 반응하는 전달 기술을 연구합니다. 세포막의 일시적인 투과성 변화와 자극에 의한 치료 반응을 구분해서 살펴보고, 전달 효율과 세포 및 조직의 기능 보존을 함께 평가합니다. 초음파와 전기장 등 다른 외부 자극으로의 확장 가능성도 검토하고자 합니다.",
+          "en": "We study laser-based photoporation and delivery technologies that respond to light or cold atmospheric plasma. We examine transient changes in membrane permeability separately from stimulus-induced therapeutic responses, and evaluate delivery efficiency together with the preservation of cell and tissue function. We also plan to explore extension to other external stimuli such as ultrasound and electric fields."
+        }
+      },
+      {
+        "title": {
+          "ko": "전달 과정의 단계별 정량 분석",
+          "en": "Step-by-step quantitative analysis of delivery"
+        },
+        "body": {
+          "ko": "입자의 크기, 표면 특성, 약물 봉입과 안정성에서 출발하여 세포 유입, 세포 내 분포, 단백질 발현, 생물학적 반응을 분석합니다. 유세포분석, 영상 분석, 분자생물학적 평가를 연결하여 어느 단계에서 차이가 생기는지 확인하고자 합니다. 전달체의 신호, 약물의 존재, 실제 기능 발현을 가능한 한 구분하여 해석합니다.",
+          "en": "Starting from particle size, surface properties, drug loading, and stability, we analyze cellular uptake, intracellular distribution, protein expression, and biological responses. By linking flow cytometry, imaging analysis, and molecular biology assays, we aim to identify at which step differences arise. We interpret the signal of the carrier, the presence of the drug, and actual functional expression separately wherever possible."
+        }
+      },
+      {
+        "title": {
+          "ko": "질환 모델에서의 치료 효과와 안전성 검증",
+          "en": "Testing efficacy and safety in disease models"
+        },
+        "body": {
+          "ko": "배양 세포에서 확인한 결과를 일차세포, 조직, 동물모델로 연결하여 평가합니다. 암과 면역질환, 염증과 섬유화, 대사질환, 안과 질환 등의 연구에서 전달 특성과 치료 결과의 관계를 살펴봅니다. 노화와 질병 상태를 고려한 전달 연구로 범위를 넓히면서, 효능뿐 아니라 세포 기능, 조직 반응, 반복 적용 가능성까지 함께 확인하고자 합니다.",
+          "en": "We carry results from cultured cells through primary cells and tissues to animal models. In studies of cancer and immune diseases, inflammation and fibrosis, metabolic diseases, and eye diseases, we examine the relationship between delivery characteristics and therapeutic outcomes. As we widen the scope to delivery research that takes aging and disease state into account, we aim to confirm not only efficacy but also cell function, tissue response, and the feasibility of repeated application."
+        }
+      }
     ],
-    "images": []
+    "closing": {
+      "title": {
+        "ko": "전달의 원리를 이해하는 연구에서, 쓸 수 있는 치료 기술로",
+        "en": "From understanding the principles of delivery to usable therapeutic technology"
+      },
+      "paragraphs": [
+        {
+          "ko": "InnoBD는 연구를 통해 무엇이 약물 전달을 결정하는지 이해하고, 그동안 어려웠던 치료를 가능하게 하며, 이를 재현 가능한 방법으로 구현하고자 합니다. 이 과정이 더 안전한 치료, 줄어든 투여 부담, 새로운 치료 선택지로 이어지는 것이 우리가 추구하는 가치입니다.",
+          "en": "Through research, InnoBD wants to understand what determines drug delivery, make previously difficult treatments possible, and realize them in reproducible ways. The value we pursue is that this process leads to safer treatment, a lighter burden of administration, and new therapeutic options."
+        },
+        {
+          "ko": "학생들은 이 과정에서 약제학과 생물학, 재료 및 물리적 전달 기술을 함께 배웁니다. 새로운 전달체를 만드는 능력과 더불어, 왜 특정 조건에서 효과가 나타나는지 설명하고, 결과의 한계를 판단하며, 다음 실험을 설계하는 역량을 기르는 것을 중요하게 생각합니다.",
+          "en": "Students learn pharmaceutics, biology, materials, and physical delivery technologies together in this process. Alongside the ability to build new carriers, we value the ability to explain why an effect appears under particular conditions, to judge the limits of results, and to design the next experiment."
+        }
+      ],
+      "final": {
+        "ko": "InnoBD의 목표는 약물의 전달을 이해하고 설계하여, 필요한 세포에서 의미 있는 치료 작용이 일어나게 하는 것입니다.",
+        "en": "InnoBD's goal is to understand and design drug delivery so that meaningful therapeutic action takes place in the cells that need it."
+      }
+    }
   },
-  {
-    "id": "cell-selective",
-    "track": "platform",
-    "title": {
-      "en": "Cell-selective biotherapeutic delivery",
-      "ko": "세포 선택적 바이오의약품 전달"
+  "references": [
+    {
+      "id": "ajps",
+      "title": "Cell membrane-coated mRNA nanoparticles for enhanced delivery to dendritic cells and immunotherapy",
+      "journal": "Asian J Pharm Sci",
+      "year": "2024",
+      "doi": "10.1016/j.ajps.2024.100968"
     },
-    "summary": {
-      "en": "Targeting genes and mRNA to specific hematopoietic lineages and tissue cell types so that therapy acts where it is needed and nowhere else.",
-      "ko": "특정 조혈세포 계통과 조직 세포에만 유전자와 mRNA가 전달되도록 하여, 필요한 곳에서만 약효가 나타나게 합니다."
+    {
+      "id": "adhm",
+      "title": "Light-mediated transfection of the ocular surface using an ophthalmic YAG laser",
+      "journal": "Adv Healthc Mater",
+      "year": "2026",
+      "doi": "10.1002/adhm.71643"
     },
-    "keywords": [
-      "targeting",
-      "hematopoietic lineage",
-      "gene therapy"
-    ],
-    "images": []
-  },
-  {
-    "id": "photoporation",
-    "track": "platform",
-    "title": {
-      "en": "Photoporation",
-      "ko": "광천공(Photoporation)"
+    {
+      "id": "cap",
+      "title": "Targeted lipolysis for obesity treatment: Cold atmospheric plasma-responsive nanoparticles amplify reactive oxygen species generation in adipocytes",
+      "journal": "J Control Release",
+      "year": "2025",
+      "doi": "10.1016/j.jconrel.2025.114081"
     },
-    "summary": {
-      "en": "Light-triggered nanoparticles that transiently open cell membranes for gene delivery into hard-to-transfect cells, applied to fibrotic disease with Ghent University.",
-      "ko": "빛으로 세포막을 일시적으로 열어 형질주입이 어려운 세포에 유전자를 전달하는 기술로, 겐트대학교와 함께 섬유화 질환에 적용합니다."
+    {
+      "id": "nat",
+      "title": "Fibroblast activation protein activated antifibrotic peptide delivery attenuates fibrosis in mouse models of liver fibrosis",
+      "journal": "Nat Commun",
+      "year": "2022",
+      "doi": "10.1038/s41467-022-29186-8"
     },
-    "keywords": [
-      "photoporation",
-      "fibrosis",
-      "Ghent University"
-    ],
-    "images": []
-  },
-  {
-    "id": "evaluation",
-    "track": "method",
-    "title": {
-      "en": "Evaluation techniques for biotherapeutics",
-      "ko": "바이오의약품 평가 기술"
-    },
-    "summary": {
-      "en": "Reporter-cell screens, uptake and translation assays that tell us early whether a delivery system will work in the body.",
-      "ko": "리포터 세포 스크리닝, 세포 흡수 및 번역 분석을 통해 전달 시스템이 체내에서 작동할지 초기에 판단합니다."
-    },
-    "keywords": [
-      "reporter assay",
-      "screening"
-    ],
-    "images": []
-  }
-]
+    {
+      "id": "dcnp",
+      "title": "Hybrid lipid nanoparticles with tumor antigen-primed dendritic cell membranes for post-surgical tumor immunotherapy",
+      "journal": "J Control Release",
+      "year": "2025",
+      "doi": "10.1016/j.jconrel.2025.01.027"
+    }
+  ]
+}

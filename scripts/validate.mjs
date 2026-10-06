@@ -24,7 +24,7 @@ function urls(value, path = '') {
     urls(v, name);
   }
 }
-for (const name of ['news','members','research','publications','collaborators','carousel']) {
+for (const name of ['news','members','publications','collaborators','carousel']) {
   const rows = load(name); check(Array.isArray(rows), `${name}: expected list`);
   if (!Array.isArray(rows)) continue;
   const ids = new Set();
@@ -33,12 +33,29 @@ for (const name of ['news','members','research','publications','collaborators','
     if (row.id) { check(/^[a-z0-9][a-z0-9-]*$/.test(row.id), `${at}: invalid ID`); check(!ids.has(row.id), `${at}: duplicate ID`); ids.add(row.id); }
     if (name === 'news') { check(/^\d{4}-\d{2}-\d{2}$/.test(row.date) && !Number.isNaN(Date.parse(row.date)) && new Date(row.date).toISOString().slice(0,10) === row.date, `${at}: invalid date`); check(bilingual(row.text), `${at}: missing text`); check(['grant','honor','talk','paper','news'].includes(row.type), `${at}: invalid type`); }
     if (name === 'members') { check(bilingual(row.name), `${at}: missing name`); check(['pi','postdoc','phd','ms','undergrad','intern','alumni'].includes(row.role), `${at}: invalid role`); }
-    if (name === 'research') { check(bilingual(row.title) && bilingual(row.summary), `${at}: missing title/summary`); check(['platform','method'].includes(row.track), `${at}: invalid track`); }
     if (name === 'collaborators') { check(bilingual(row.institution), `${at}: missing institution`); }
     if (name === 'carousel') { check(text(row.image), `${at}: missing image`); }
     if (name === 'publications') { check(text(row.title) && text(row.authors), `${at}: missing title/authors`); check(Number.isInteger(row.year) && row.year > 1900 && row.year < 2200, `${at}: invalid year`); if (row.authorRole) check(['first','corresponding'].includes(row.authorRole), `${at}: invalid authorRole`); }
   }
   urls(rows, name);
+}
+const research = load('research');
+check(research && !Array.isArray(research), 'research: expected object');
+if (research && !Array.isArray(research)) {
+  const refIds = new Set((research.references || []).map(r => r.id));
+  for (const r of research.references || []) { check(/^[a-z0-9][a-z0-9-]*$/.test(r.id || ''), `research.references: invalid ID ${r.id}`); check(text(r.title) && text(r.doi), `research.references[${r.id}]: missing title/doi`); }
+  check((research.why?.paragraphs || []).length > 0 && (research.why.paragraphs).every(bilingual), 'research.why: missing paragraphs');
+  const qs = research.questions?.items || [];
+  check(qs.length > 0, 'research.questions: no items');
+  const qids = new Set();
+  for (const [i, q] of qs.entries()) {
+    const at = `research.questions[${i + 1}]`;
+    check(/^[a-z0-9][a-z0-9-]*$/.test(q.id || ''), `${at}: invalid ID`); check(!qids.has(q.id), `${at}: duplicate ID`); qids.add(q.id);
+    check(bilingual(q.q), `${at}: missing question`);
+    for (const id of q.refs || []) check(refIds.has(id), `${at}: unknown reference ${id}`);
+  }
+  check((research.approach?.items || []).every(it => bilingual(it.title) && bilingual(it.body)), 'research.approach: missing title/body');
+  urls(research, 'research');
 }
 const lab = load('lab'); check(bilingual(lab.name) && bilingual(lab.hero?.headline), 'Lab: missing name/headline'); urls(lab, 'lab');
 const join = load('join'); check(Array.isArray(join.positions), 'Join: positions must be a list'); urls(join, 'join');

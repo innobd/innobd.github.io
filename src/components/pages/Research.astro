@@ -2,41 +2,81 @@
 import Base from '@/layouts/Base.astro';
 import research from '@/data/research.json';
 import collaborators from '@/data/collaborators.json';
-import { t, pick, asset, type Lang } from '@/i18n/ui';
+import { t, pick, type Lang } from '@/i18n/ui';
 const { lang } = Astro.props as { lang: Lang };
 const tr = t(lang);
+const { why, questions, approach, references } = research as any;
+const refList = (ids: string[] = []) => ids.map((id) => (references as any[]).find((r) => r.id === id)).filter(Boolean);
+const relatedLabel = lang === 'ko' ? '관련 연구' : 'Related work';
 ---
 <Base lang={lang} current="research" title={tr('research.title')}>
   <section class="section">
     <div class="wrap">
-      <div class="section-head"><div><h1 style="font-size:clamp(2rem,4vw,3rem)">{tr('research.title')}</h1><p class="lead">{tr('research.lead')}</p></div></div>
-      <div class="research-legend">
-        <span><i></i>{tr('research.track.platform')}</span>
-        <span><i class="method"></i>{tr('research.track.method')}</span>
+      <h1 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:40px">{tr('research.title')}</h1>
+
+      <div class="rs-block">
+        <h2 class="rs-h2">{why.title}</h2>
+        <p class="rs-sub">{pick(lang, why.subtitle)}</p>
+        <div class="rs-body">
+          {why.paragraphs.map((p: any) => <p>{pick(lang, p)}</p>)}
+        </div>
       </div>
-      <ul class="research-list">
-        {research.map((r) => (
-          <li id={r.id}>
-            <h3><span class={`swatch ${r.track}`}></span>{pick(lang, r.title)}</h3>
-            <div>
-              <p>{pick(lang, r.summary)}</p>
-              {r.keywords?.length > 0 && <p class="kw">{r.keywords.join(', ')}</p>}
-              {r.images?.length > 0 && (
-                <ul class="research-photos">
-                  {r.images.map((img: any) => (
-                    <li>
-                      <figure>
-                        <img src={asset(img.image)} alt={pick(lang, img.caption) || pick(lang, r.title)} loading="lazy" />
-                        {(img.caption?.en || img.caption?.ko) && <figcaption>{pick(lang, img.caption)}</figcaption>}
-                      </figure>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          </li>
-        ))}
-      </ul>
+
+      <div class="rs-block">
+        <h2 class="rs-h2">{questions.title}</h2>
+        <ol class="rs-questions">
+          {questions.items.map((q: any, i: number) => (
+            <li id={q.id}>
+              <span class="rs-num">{i + 1}</span>
+              <div>
+                <h3>{pick(lang, q.q)}</h3>
+                <div class="rs-body">
+                  {q.paragraphs.map((p: any) => <p>{pick(lang, p)}</p>)}
+                </div>
+                <p class="rs-take">{pick(lang, q.takeaway)}</p>
+                {refList(q.refs).length > 0 && (
+                  <div class="rs-refs">
+                    <span class="rs-refs-label">{relatedLabel}</span>
+                    <ul>
+                      {refList(q.refs).map((r: any) => (
+                        <li>
+                          <a href={`https://doi.org/${r.doi}`} target="_blank" rel="noopener">{r.title}</a>
+                          <span class="rs-ref-meta"> {r.journal} {r.year}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+
+      <div class="rs-block">
+        <h2 class="rs-h2">{approach.title}</h2>
+        <p class="rs-sub">{pick(lang, approach.subtitle)}</p>
+        <div class="rs-body"><p>{pick(lang, approach.intro)}</p></div>
+        <ul class="rs-approach">
+          {approach.items.map((it: any, i: number) => (
+            <li>
+              <span class="rs-num">{i + 1}</span>
+              <div>
+                <h3>{pick(lang, it.title)}</h3>
+                <p>{pick(lang, it.body)}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <div class="rs-closing">
+          <h3>{pick(lang, approach.closing.title)}</h3>
+          <div class="rs-body">
+            {approach.closing.paragraphs.map((p: any) => <p>{pick(lang, p)}</p>)}
+          </div>
+          <p class="rs-final">{pick(lang, approach.closing.final)}</p>
+        </div>
+      </div>
+
       {collaborators.length > 0 && (
         <div class="pi-section">
           <h2>{tr('research.collaborators')}</h2>

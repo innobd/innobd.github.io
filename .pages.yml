@@ -126,150 +126,100 @@ content:
         label: "소속 (선택, 학부연구생 등 제목 아래에 괄호로 표시)"
         component: text_ko_en
       - name: research
-        label: "연구 내용 (선택, 박사/석사과정생 등 멤버 소개 카드에 불릿으로 표시)"
-        component: text_ko_en
-        list: true
-      - name: photo
-        label: "사진 (인턴수료생은 사용하지 않음, 텍스트로만 표시)"
-        type: image
-      - name: note
-        label: "인턴수료생 설명 (예 숙명여대 약대, 2026 하계 인턴)"
-        component: text_ko_en
-      - name: email
-        label: 이메일
-        type: string
-      - name: bio
-        label: 소개 (교수만)
-        component: para_ko_en
-      - name: researchInterest
-        label: "PI 프로필 - 연구 관심사 (교수만, 목록)"
-        component: text_ko_en
-        list: true
-      - name: education
-        label: "PI 프로필 - 학력 (교수만, 목록)"
-        type: object
-        list: true
-        fields:
-          - name: period
-            label: 기간 (예 2017 – 2023)
-            type: string
-          - name: text
-            label: 내용
-            component: para_ko_en
-      - name: experience
-        label: "PI 프로필 - 경력 (교수만, 목록)"
-        type: object
-        list: true
-        fields:
-          - name: period
-            label: 기간 (예 2024 – Present)
-            type: string
-          - name: text
-            label: 내용
-            component: para_ko_en
-      - name: id
-        label: 고유 ID (영문 소문자, 예 jiyoon-park)
-        type: string
-        required: true
-
-  - name: publications
-    label: 논문
-    type: file
-    path: src/data/publications.json
-    format: json
-    list: true
-    fields:
-      - name: title
-        label: 제목
-        type: string
-        required: true
-      - name: summary
-        label: 한 줄 설명 (선택, 초록 요약)
-        type: text
-      - name: authors
-        label: 저자 (Byun J 형식, 쉼표 구분)
-        type: text
-      - name: journal
-        label: 저널 (정식 명칭, 예 Journal of Controlled Release)
-        type: string
-      - name: authorRole
-        label: 저자 표시
-        type: select
-        options:
-          values:
-            - { name: first, label: 1저자 }
-            - { name: corresponding, label: 교신저자 }
-      - name: year
-        label: 연도
-        type: number
-      - name: volume
-        label: 권
-        type: string
-      - name: pages
-        label: 페이지
-        type: string
-      - name: doi
-        label: DOI (10.xxxx/... 부분만)
-        type: string
-      - name: pdf
-        label: PDF 링크
-        type: string
-      - name: openAccess
-        label: Open Access 논문
-        type: boolean
-      - name: image
-        label: 대표 이미지 (선택, 그래픽 초록 등)
-        type: image
-      - name: selected
-        label: 홈 화면 대표 논문으로 표시
-        type: boolean
-      - name: id
-        label: 고유 ID (선택)
-        type: string
-      - name: pmid
-        label: PubMed ID (자동)
-        type: string
-        hidden: true
-
-  - name: research
-    label: 연구 주제
+    label: 연구 페이지
     type: file
     path: src/data/research.json
     format: json
-    list: true
     fields:
-      - name: title
-        label: 주제명
-        component: text_ko_en
-      - name: track
-        label: 분류
-        type: select
-        options:
-          values:
-            - { name: platform, label: 전달 플랫폼 }
-            - { name: method, label: 평가 기술 }
-      - name: summary
-        label: 설명
-        component: para_ko_en
-      - name: keywords
-        label: 키워드
-        type: string
-        list: true
-      - name: images
-        label: 사진 (여러 장, 드래그로 순서 변경)
+      - name: why
+        label: "1. Why DDS Research in InnoBD"
         type: object
-        list: true
         fields:
-          - name: image
-            label: 사진
-            type: image
-          - name: caption
-            label: 설명 (선택)
+          - { name: title, label: 제목 (영문 그대로 표시), type: string }
+          - name: subtitle
+            label: 부제
             component: text_ko_en
-      - name: id
-        label: 고유 ID (영문 소문자)
-        type: string
-        required: true
+          - name: paragraphs
+            label: 본문 (문단별로 추가)
+            component: para_ko_en
+            list: true
+      - name: questions
+        label: "2. Research Questions"
+        type: object
+        fields:
+          - { name: title, label: 제목 (영문 그대로 표시), type: string }
+          - name: items
+            label: 연구 질문 (순서대로 1, 2, 3 번호가 붙습니다)
+            type: object
+            list:
+              collapsible:
+                summary: "{q.ko}"
+            fields:
+              - { name: id, label: 고유 ID (영문 소문자, 예 q1), type: string, required: true }
+              - name: q
+                label: 질문
+                component: text_ko_en
+              - name: paragraphs
+                label: 본문 (문단별로 추가)
+                component: para_ko_en
+                list: true
+              - name: takeaway
+                label: 한 줄 정리 (굵게 표시)
+                component: para_ko_en
+              - name: refs
+                label: 관련 연구 (아래 "참고 논문"의 고유 ID, 예 ajps)
+                type: string
+                list: true
+      - name: approach
+        label: "3. Our Approach & Aim"
+        type: object
+        fields:
+          - { name: title, label: 제목 (영문 그대로 표시), type: string }
+          - name: subtitle
+            label: 부제
+            component: text_ko_en
+          - name: intro
+            label: 도입 문단
+            component: para_ko_en
+          - name: items
+            label: 접근 방법 (순서대로 번호가 붙습니다)
+            type: object
+            list:
+              collapsible:
+                summary: "{title.ko}"
+            fields:
+              - name: title
+                label: 제목
+                component: text_ko_en
+              - name: body
+                label: 설명
+                component: para_ko_en
+          - name: closing
+            label: 맺음말
+            type: object
+            fields:
+              - name: title
+                label: 제목
+                component: text_ko_en
+              - name: paragraphs
+                label: 본문 (문단별로 추가)
+                component: para_ko_en
+                list: true
+              - name: final
+                label: 마지막 한 줄 (굵게 표시)
+                component: para_ko_en
+      - name: references
+        label: 참고 논문 (연구 질문 아래 "관련 연구"로 링크됩니다)
+        type: object
+        list:
+          collapsible:
+            summary: "{id}"
+        fields:
+          - { name: id, label: 고유 ID (영문 소문자, 질문의 "관련 연구"에서 사용), type: string, required: true }
+          - { name: title, label: 논문 제목, type: string }
+          - { name: journal, label: 저널, type: string }
+          - { name: year, label: 연도, type: string }
+          - { name: doi, label: DOI (10.xxxx/... 부분만), type: string }
 
   - name: collaborators
     label: 공동연구기관
