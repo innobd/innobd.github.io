@@ -87,7 +87,7 @@ p { margin: 0; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; letter-spacing: -0.01em; }
 .brand svg { width: 28px; height: 28px; }
 /* Logo PNG has black lettering and sits directly on the light header. */
-.brand-logo { height: 34px; width: auto; display: block; }
+.brand-logo { height: 25.5px; width: auto; display: block; }
 .nav { display: flex; align-items: center; gap: 4px; }
 .nav a { padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--ink-2); font-family: var(--font); font-size: 0.94rem; font-weight: 500; }
 .nav a:hover { color: var(--ink); background: var(--paper-2); }
@@ -138,62 +138,82 @@ p { margin: 0; }
   .particle, .delivery { max-width: 200px; margin: 0 auto; order: -1; }
 }
 
-/* delivery animation (about 10 s loop): LNP arrives, light pulse opens the
-   membrane, mRNA enters, membrane closes, the cell makes protein. */
+/* delivery animation (about 10 s loop): LNP docks, a near-infrared beam hits
+   the contact point, an orange ripple opens the membrane (photoporation), mRNA
+   enters, the membrane closes, and the cell makes protein (2 inside, 2 on the
+   outer face of the membrane). */
+.delivery { --green: #3a9a5b; --orange: #e67201; }
 .delivery .lnp, .delivery .mrna, .delivery .pulse, .delivery .prot { transform-box: fill-box; transform-origin: center; }
-.delivery .mrna { opacity: 0; }
-.delivery .lnp { opacity: 0; }
-.delivery .pulse { opacity: 0; }
+.delivery .mrna, .delivery .lnp, .delivery .pulse { opacity: 0; }
+.delivery .beam { opacity: 0; }
+.delivery .beam line { stroke-dasharray: 100; stroke-dashoffset: 100; }
 .delivery .prot { opacity: 0; transform: scale(0); }
 @media (prefers-reduced-motion: no-preference) {
   .delivery .lnp { animation: d-lnp 10s ease-in-out infinite; }
+  .delivery .beam { animation: d-beam 10s ease-in-out infinite; }
+  .delivery .beam line { animation: d-beam-draw 10s ease-out infinite; }
   .delivery .pulse { animation: d-pulse 10s ease-out infinite; }
+  .delivery .pulse2 { animation-name: d-pulse2; }
   .delivery .patch { animation: d-patch 10s linear infinite; }
   .delivery .mrna { animation: d-mrna 10s ease-in-out infinite; }
-  .delivery .prot { animation: d-prot 10s ease-out infinite; }
-  .delivery .p2 { animation-delay: 0.2s; }
-  .delivery .p3 { animation-delay: 0.4s; }
+  .delivery .p1 { animation: d-prot-a 10s ease-out infinite; }
+  .delivery .p2 { animation: d-prot-b 10s ease-out infinite; }
+  .delivery .p3 { animation: d-prot-c 10s ease-out infinite; }
+  .delivery .p4 { animation: d-prot-d 10s ease-out infinite; }
 }
 @keyframes d-lnp {
   0% { opacity: 0; transform: translateX(-60px) scale(1); }
   8% { opacity: 1; }
-  30% { opacity: 1; transform: translateX(0) scale(1); }
-  38% { opacity: 1; transform: translateX(0) scale(1); }
-  46% { opacity: 0; transform: translateX(0) scale(0.55); }
+  26% { opacity: 1; transform: translateX(0) scale(1); }
+  46% { opacity: 1; transform: translateX(0) scale(1); }
+  52% { opacity: 0; transform: translateX(0) scale(0.55); }
   100% { opacity: 0; transform: translateX(-60px) scale(1); }
 }
+@keyframes d-beam {
+  0%, 27% { opacity: 0; }
+  30% { opacity: 1; }
+  46% { opacity: 1; }
+  52%, 100% { opacity: 0; }
+}
+@keyframes d-beam-draw {
+  0%, 27% { stroke-dashoffset: 100; }
+  35%, 100% { stroke-dashoffset: 0; }
+}
 @keyframes d-pulse {
-  0%, 30% { opacity: 0; transform: scale(0.4); }
-  32% { opacity: 0.9; transform: scale(0.5); }
-  44% { opacity: 0; transform: scale(2.8); }
+  0%, 35% { opacity: 0; transform: scale(0.4); }
+  37% { opacity: 0.95; transform: scale(0.5); }
+  49% { opacity: 0; transform: scale(2.8); }
   100% { opacity: 0; transform: scale(2.8); }
 }
+@keyframes d-pulse2 {
+  0%, 39% { opacity: 0; transform: scale(0.4); }
+  41% { opacity: 0.8; transform: scale(0.5); }
+  53% { opacity: 0; transform: scale(3.2); }
+  100% { opacity: 0; transform: scale(3.2); }
+}
 @keyframes d-patch {
-  0%, 30% { opacity: 1; }
-  32%, 54% { opacity: 0; }
-  60%, 100% { opacity: 1; }
+  0%, 35% { opacity: 1; }
+  37%, 56% { opacity: 0; }
+  62%, 100% { opacity: 1; }
 }
 @keyframes d-mrna {
-  0%, 40% { opacity: 0; transform: translate(0, 0); }
-  44% { opacity: 1; transform: translate(0, 0); }
-  62% { opacity: 1; transform: translate(155px, -26px); }
-  80% { opacity: 1; transform: translate(155px, -26px); }
-  88%, 100% { opacity: 0; transform: translate(155px, -26px); }
+  0%, 46% { opacity: 0; transform: translate(0, 0); }
+  50% { opacity: 1; transform: translate(0, 0); }
+  66% { opacity: 1; transform: translate(155px, -26px); }
+  82% { opacity: 1; transform: translate(155px, -26px); }
+  89%, 100% { opacity: 0; transform: translate(155px, -26px); }
 }
-@keyframes d-prot {
-  0%, 62% { opacity: 0; transform: scale(0); }
-  68% { opacity: 1; transform: scale(1.25); }
-  72% { opacity: 1; transform: scale(1); }
-  90% { opacity: 1; transform: scale(1); }
-  97%, 100% { opacity: 0; transform: scale(1); }
-}
+@keyframes d-prot-a { 0%, 66% { opacity: 0; transform: scale(0); } 71% { opacity: 1; transform: scale(1.25); } 75% { opacity: 1; transform: scale(1); } 91% { opacity: 1; transform: scale(1); } 97%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes d-prot-b { 0%, 69% { opacity: 0; transform: scale(0); } 74% { opacity: 1; transform: scale(1.25); } 78% { opacity: 1; transform: scale(1); } 91% { opacity: 1; transform: scale(1); } 97%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes d-prot-c { 0%, 72% { opacity: 0; transform: scale(0); } 77% { opacity: 1; transform: scale(1.25); } 81% { opacity: 1; transform: scale(1); } 91% { opacity: 1; transform: scale(1); } 97%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes d-prot-d { 0%, 75% { opacity: 0; transform: scale(0); } 80% { opacity: 1; transform: scale(1.25); } 84% { opacity: 1; transform: scale(1); } 91% { opacity: 1; transform: scale(1); } 97%, 100% { opacity: 0; transform: scale(1); } }
 @media (prefers-reduced-motion: reduce) {
   .delivery .mrna { opacity: 1; transform: translate(155px, -26px); }
   .delivery .prot { opacity: 1; transform: scale(1); }
 }
 
 /* research page */
-.rs-block { margin: 0 0 56px; max-width: 860px; }
+.rs-block { margin: 0 0 56px; }
 .rs-h2 { font-size: clamp(1.5rem, 2.8vw, 2.1rem); margin: 0 0 8px; letter-spacing: -0.01em; }
 .rs-sub { font-family: var(--font); margin: 0 0 22px; color: var(--lipid); font-weight: 600; font-size: 1.05rem; }
 .rs-body p { margin: 0 0 1em; line-height: 1.85; color: var(--ink-2); }
@@ -234,10 +254,10 @@ p { margin: 0; }
 .ra-title { margin: 0; font-size: 1.15rem; line-height: 1.4; font-weight: 700; }
 .ra-title a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 .ra-title a:hover { color: var(--lipid); }
-.ra-summary { margin: 10px 0 0; color: var(--ink-2); max-width: 70ch; }
+.ra-summary { margin: 10px 0 0; color: var(--ink-2); }
 /* news: a short, non-bold explainer under the headline-style title (about 2pt
    smaller than the title, which stays the same size/weight as before). */
-.ra-detail { margin: 6px 0 0; font-weight: 400; font-size: 0.993rem; line-height: 1.5; color: var(--ink-2); max-width: 70ch; }
+.ra-detail { margin: 6px 0 0; font-weight: 400; font-size: 0.993rem; line-height: 1.5; color: var(--ink-2); }
 .ra-venue { margin: 10px 0 0; color: var(--ink-3); font-size: 0.95rem; }
 .ra-venue em { color: var(--ink-2); font-style: italic; }
 .ra-authors { margin: 6px 0 0; color: var(--ink-2); font-size: 0.636rem; }

@@ -1,22 +1,36 @@
 ---
-// Hero animation: a lipid nanoparticle (LNP) reaches a cell, a light pulse
-// briefly opens the membrane (photoporation), the mRNA slips in, the membrane
-// closes, and the cell makes protein. One loop is about 10 seconds. Colours come
-// from the site tokens (Pantone 287C / 285C). Reduced-motion visitors get the
+// Hero animation (about 10 s loop). A lipid nanoparticle (LNP) docks on a cell,
+// a near-infrared beam (translucent red) hits the contact point, an orange
+// ripple opens the membrane for a moment (photoporation), the mRNA slips in,
+// the membrane closes, and the cell makes protein: two inside the cell and two
+// on the outer face of the membrane (green). Reduced-motion visitors get the
 // final still frame.
 ---
-<svg class="delivery" viewBox="0 0 400 400" role="img" aria-label="Animation: a lipid nanoparticle delivers mRNA into a cell with a pulse of light, and the cell makes protein. 지질나노입자가 빛 자극으로 열린 세포막을 통해 mRNA를 전달하고, 세포가 단백질을 만드는 과정">
+<svg class="delivery" viewBox="0 0 400 400" role="img" aria-label="Animation: a lipid nanoparticle docks on a cell, a near-infrared light beam opens the membrane briefly, mRNA enters, and the cell makes protein inside and on its surface. 지질나노입자가 세포막에 닿고, 근적외선 빛으로 세포막이 잠시 열려 mRNA가 들어간 뒤 세포 안과 세포막 바깥쪽에 단백질이 만들어지는 과정">
+  <defs>
+    <linearGradient id="nir-grad" gradientUnits="userSpaceOnUse" x1="40" y1="5" x2="124" y2="198">
+      <stop offset="0" stop-color="#d8333b" stop-opacity="0" />
+      <stop offset="1" stop-color="#d8333b" stop-opacity="0.6" />
+    </linearGradient>
+  </defs>
   <!-- cell -->
   <circle cx="250" cy="200" r="125" fill="var(--lipid-soft)" opacity="0.6" />
   <path d="M132.54 157.25 A125 125 0 1 1 132.54 242.75" fill="none" stroke="var(--lipid)" stroke-width="6" stroke-linecap="round" />
   <path class="patch" d="M132.54 242.75 A125 125 0 0 1 132.54 157.25" fill="none" stroke="var(--lipid)" stroke-width="6" stroke-linecap="round" />
-  <!-- light pulse at the membrane -->
-  <circle class="pulse" cx="125" cy="200" r="14" fill="none" stroke="var(--payload)" stroke-width="3" />
-  <!-- proteins made in the cell -->
-  <g class="prots" fill="var(--lipid)">
-    <circle class="prot p1" cx="222" cy="244" r="11" />
-    <circle class="prot p2" cx="256" cy="254" r="11" />
-    <circle class="prot p3" cx="288" cy="238" r="11" />
+  <!-- near-infrared beam, straight from the upper left to the contact point -->
+  <g class="beam">
+    <line x1="40" y1="5" x2="124" y2="198" pathLength="100" stroke="url(#nir-grad)" stroke-width="22" stroke-linecap="round" opacity="0.35" />
+    <line x1="40" y1="5" x2="124" y2="198" pathLength="100" stroke="url(#nir-grad)" stroke-width="8" stroke-linecap="round" />
+  </g>
+  <!-- orange ripples at the contact point -->
+  <circle class="pulse" cx="124" cy="200" r="14" fill="none" stroke="var(--orange)" stroke-width="3" />
+  <circle class="pulse pulse2" cx="124" cy="200" r="14" fill="none" stroke="var(--orange)" stroke-width="2" />
+  <!-- proteins: two inside the cell, two facing outward on the membrane -->
+  <g class="prots">
+    <g class="prot p1"><circle cx="214" cy="238" r="10" fill="var(--green)" /></g>
+    <g class="prot p2"><circle cx="270" cy="252" r="10" fill="var(--green)" /></g>
+    <g class="prot p3"><line x1="348.1" y1="117.7" x2="355.7" y2="111.3" stroke="var(--green)" stroke-width="3" stroke-linecap="round" /><circle cx="362.6" cy="105.5" r="9" fill="var(--green)" /></g>
+    <g class="prot p4"><line x1="354.9" y1="273.4" x2="363.0" y2="279.2" stroke="var(--green)" stroke-width="3" stroke-linecap="round" /><circle cx="370.4" cy="284.3" r="9" fill="var(--green)" /></g>
   </g>
   <!-- mRNA strand: leaves the LNP, enters the cell -->
   <g transform="translate(97 200)">
