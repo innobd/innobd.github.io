@@ -1,29 +1,29 @@
 /* InnoBD Lab design tokens
-   Palette and type roles follow the look of anthropic.com (warm ivory paper,
-   near-black ink, clay-orange accent, serif body with sans headings), using
-   the colour values read from that site. Its own typefaces are proprietary,
-   so free look-alikes are used: Pretendard (sans) and Source Serif 4 /
-   Noto Serif KR (serif).
+   Paper  : warm cream, one step darker than before
+   Accent : Sookmyung Royal Blue (Pantone 287C) and Royal Light Blue (285C),
+            sampled from the university colour chart
+   Type   : Myriad Pro (Source Sans 3 as the web look-alike) for Latin,
+            KoPub Dotum (Light / Medium / Bold) for Korean, Pretendard as fallback
 */
 :root {
   color-scheme: light;
-  --paper: #faf9f5;          /* ivory light */
-  --paper-2: #f0eee6;        /* ivory medium */
-  --ink: #141413;            /* slate dark */
-  --ink-2: #3d3d3a;          /* slate medium */
-  --ink-3: #5e5d59;          /* slate light */
-  --line: rgba(20, 20, 19, 0.12);
-  --lipid: #c6613f;          /* accent (clay, deep) */
-  --lipid-soft: #f3e4dc;     /* light tint of the accent */
-  --payload: #6a9bcc;        /* sky */
-  --payload-soft: #e3ebf3;   /* light tint of sky */
-  --focus: #c6613f;
+  --paper: #f0eee6;
+  --paper-2: #e8e6dc;
+  --ink: #141413;
+  --ink-2: #3d3d3a;
+  --ink-3: #5e5d59;
+  --line: rgba(20, 20, 19, 0.14);
+  --lipid: #002f87;          /* Pantone 287C */
+  --lipid-soft: #d9e0ef;     /* light tint of 287C */
+  --payload: #0070ce;        /* Pantone 285C */
+  --payload-soft: #d3e5f5;   /* light tint of 285C */
+  --focus: #0070ce;
   --dark: #141413;
   --dark-text: #faf9f5;
-  --dark-muted: #b0aea5;     /* cloud medium */
+  --dark-muted: #b0aea5;
 
-  --font: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-  --font-serif: 'Source Serif 4', 'Noto Serif KR', Georgia, 'Times New Roman', serif;
+  --font: 'Myriad Pro', 'Source Sans 3', 'KoPub Dotum', 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  --font-serif: var(--font);
   --wrap: 1120px;
   --gutter: clamp(20px, 5vw, 56px);
   --radius: 12px;
@@ -54,10 +54,10 @@ a:hover { color: var(--lipid); }
 
 h1, h2, h3, h4 { margin: 0; font-family: var(--font); font-weight: 700; letter-spacing: -0.02em; line-height: 1.12; }
 h1 { font-size: clamp(2.2rem, 5.2vw, 3.55rem); line-height: 1.1; }
-h2 { font-family: var(--font-serif); font-weight: 500; font-size: clamp(1.6rem, 3vw, 2.25rem); line-height: 1.2; }
-h3 { font-weight: 600; font-size: 1.33rem; line-height: 1.3; letter-spacing: -0.01em; }
+h2 { font-weight: 700; font-size: clamp(1.6rem, 3vw, 2.25rem); line-height: 1.2; }
+h3 { font-weight: 700; font-size: 1.3rem; line-height: 1.3; letter-spacing: -0.01em; }
 p { margin: 0; }
-.lead { font-size: 1.33rem; line-height: 1.4; color: var(--ink-2); max-width: 38em; }
+.lead { font-size: 1.25rem; line-height: 1.5; color: var(--ink-2); max-width: 38em; }
 .muted { color: var(--ink-3); }
 .small { font-size: 0.92rem; }
 
@@ -87,7 +87,7 @@ p { margin: 0; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; letter-spacing: -0.01em; }
 .brand svg { width: 28px; height: 28px; }
 /* Logo PNG has black lettering and sits directly on the light header. */
-.brand-logo { height: 44px; width: auto; display: block; }
+.brand-logo { height: 34px; width: auto; display: block; }
 .nav { display: flex; align-items: center; gap: 4px; }
 .nav a { padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--ink-2); font-family: var(--font); font-size: 0.94rem; font-weight: 500; }
 .nav a:hover { color: var(--ink); background: var(--paper-2); }
@@ -110,18 +110,18 @@ p { margin: 0; }
 .home-carousel { position: relative; overflow: hidden; height: clamp(107px, 23vw, 307px); background: var(--paper-2); }
 .hc-track { display: flex; height: 100%; transition: transform 600ms ease; }
 .hc-slide { flex: 0 0 100%; position: relative; display: block; height: 100%; color: inherit; text-decoration: none; }
-/* Carousel band stays black (requested earlier). */
-.home-carousel { background: #000; }
-.hc-slide img { width: 100%; height: 100%; object-fit: contain; background: #000; display: block; }
-.hc-caption { position: absolute; inset: auto 0 0 0; padding: 20px 0 clamp(24px, 4vw, 44px); background: linear-gradient(0deg, rgba(0,0,0,0.62), rgba(0,0,0,0)); }
-.hc-headline { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); color: #fff; font-size: clamp(1.05rem, 2.4vw, 1.6rem); font-weight: 700; line-height: 1.35; }
-.hc-nav { position: absolute; top: 50%; translate: 0 -50%; width: 40px; height: 40px; border-radius: 50%; border: none; background: rgba(255,255,255,0.85); color: #1a1816; font-size: 1.3rem; line-height: 1; cursor: pointer; display: grid; place-items: center; transition: background 160ms ease; }
+/* Carousel band now uses the same cream as the page. */
+.home-carousel { background: var(--paper); }
+.hc-slide img { width: 100%; height: 100%; object-fit: contain; background: var(--paper); display: block; }
+.hc-caption { position: absolute; inset: auto 0 0 0; padding: 20px 0 clamp(24px, 4vw, 44px); background: linear-gradient(0deg, rgba(240,238,230,0.92), rgba(240,238,230,0)); }
+.hc-headline { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); color: var(--ink); font-size: clamp(1.05rem, 2.4vw, 1.6rem); font-weight: 700; line-height: 1.35; }
+.hc-nav { position: absolute; top: 50%; translate: 0 -50%; width: 40px; height: 40px; border-radius: 50%; border: none; background: rgba(255,255,255,0.9); color: var(--ink); box-shadow: 0 1px 5px rgba(20,20,19,0.25); font-size: 1.3rem; line-height: 1; cursor: pointer; display: grid; place-items: center; transition: background 160ms ease; }
 .hc-nav:hover { background: #fff; }
 .hc-prev { left: 16px; }
 .hc-next { right: 16px; }
 .hc-dots { position: absolute; left: 0; right: 0; bottom: 12px; display: flex; justify-content: center; gap: 8px; }
-.hc-dots button { width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.85); background: rgba(0,0,0,0.25); padding: 0; cursor: pointer; }
-.hc-dots button.active { background: #fff; border-color: #fff; width: 22px; border-radius: 999px; }
+.hc-dots button { width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid var(--lipid); background: transparent; padding: 0; cursor: pointer; }
+.hc-dots button.active { background: var(--lipid); border-color: var(--lipid); width: 22px; border-radius: 999px; }
 @media (max-width: 720px) { .hc-nav { display: none; } }
 
 /* hero */
@@ -156,7 +156,7 @@ p { margin: 0; }
 .rs-num { font-family: var(--font); width: 32px; height: 32px; border-radius: 50%; background: var(--lipid-soft); color: var(--lipid); font-weight: 700; display: grid; place-items: center; font-size: 0.95rem; }
 .rs-questions h3, .rs-approach h3 { margin: 4px 0 14px; font-size: 1.15rem; line-height: 1.5; }
 .rs-approach p { margin: 0; line-height: 1.85; color: var(--ink-2); }
-.rs-take { margin: 4px 0 0; padding-left: 14px; border-left: 3px solid var(--lipid); color: var(--ink); font-weight: 600; line-height: 1.7; }
+.rs-take { margin: 4px 0 0; padding-left: 14px; border-left: 3px solid var(--payload); color: var(--ink); font-weight: 600; line-height: 1.7; }
 .rs-refs { margin-top: 16px; font-size: 0.9rem; color: var(--ink-3); }
 .rs-refs-label { display: block; font-weight: 600; margin-bottom: 4px; }
 .rs-refs ul { list-style: none; margin: 0; padding: 0; }
