@@ -132,18 +132,64 @@ p { margin: 0; }
 .hero .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
 .hero .affil { margin-top: 26px; color: var(--ink-3); font-size: 0.85rem; }
 .hero .eyebrow { margin-bottom: 12px; }
-.particle { width: 100%; max-width: 300px; margin-left: auto; }
+.particle, .delivery { width: 100%; max-width: 300px; margin-left: auto; }
 @media (max-width: 820px) {
   .hero .wrap { grid-template-columns: 1fr; }
-  .particle { max-width: 200px; margin: 0 auto; order: -1; }
+  .particle, .delivery { max-width: 200px; margin: 0 auto; order: -1; }
 }
 
-/* particle draw-in: a single page-load moment */
+/* delivery animation (about 10 s loop): LNP arrives, light pulse opens the
+   membrane, mRNA enters, membrane closes, the cell makes protein. */
+.delivery .lnp, .delivery .mrna, .delivery .pulse, .delivery .prot { transform-box: fill-box; transform-origin: center; }
+.delivery .mrna { opacity: 0; }
+.delivery .lnp { opacity: 0; }
+.delivery .pulse { opacity: 0; }
+.delivery .prot { opacity: 0; transform: scale(0); }
 @media (prefers-reduced-motion: no-preference) {
-  .particle .lipid { opacity: 0; animation: pop 500ms cubic-bezier(.2,.8,.2,1) forwards; }
-  .particle .strand { stroke-dasharray: 900; stroke-dashoffset: 900; animation: draw 1600ms 400ms ease-out forwards; }
-  @keyframes pop { to { opacity: 1; } }
-  @keyframes draw { to { stroke-dashoffset: 0; } }
+  .delivery .lnp { animation: d-lnp 10s ease-in-out infinite; }
+  .delivery .pulse { animation: d-pulse 10s ease-out infinite; }
+  .delivery .patch { animation: d-patch 10s linear infinite; }
+  .delivery .mrna { animation: d-mrna 10s ease-in-out infinite; }
+  .delivery .prot { animation: d-prot 10s ease-out infinite; }
+  .delivery .p2 { animation-delay: 0.2s; }
+  .delivery .p3 { animation-delay: 0.4s; }
+}
+@keyframes d-lnp {
+  0% { opacity: 0; transform: translateX(-60px) scale(1); }
+  8% { opacity: 1; }
+  30% { opacity: 1; transform: translateX(0) scale(1); }
+  38% { opacity: 1; transform: translateX(0) scale(1); }
+  46% { opacity: 0; transform: translateX(0) scale(0.55); }
+  100% { opacity: 0; transform: translateX(-60px) scale(1); }
+}
+@keyframes d-pulse {
+  0%, 30% { opacity: 0; transform: scale(0.4); }
+  32% { opacity: 0.9; transform: scale(0.5); }
+  44% { opacity: 0; transform: scale(2.8); }
+  100% { opacity: 0; transform: scale(2.8); }
+}
+@keyframes d-patch {
+  0%, 30% { opacity: 1; }
+  32%, 54% { opacity: 0; }
+  60%, 100% { opacity: 1; }
+}
+@keyframes d-mrna {
+  0%, 40% { opacity: 0; transform: translate(0, 0); }
+  44% { opacity: 1; transform: translate(0, 0); }
+  62% { opacity: 1; transform: translate(155px, -26px); }
+  80% { opacity: 1; transform: translate(155px, -26px); }
+  88%, 100% { opacity: 0; transform: translate(155px, -26px); }
+}
+@keyframes d-prot {
+  0%, 62% { opacity: 0; transform: scale(0); }
+  68% { opacity: 1; transform: scale(1.25); }
+  72% { opacity: 1; transform: scale(1); }
+  90% { opacity: 1; transform: scale(1); }
+  97%, 100% { opacity: 0; transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .delivery .mrna { opacity: 1; transform: translate(155px, -26px); }
+  .delivery .prot { opacity: 1; transform: scale(1); }
 }
 
 /* research page */
@@ -320,4 +366,4 @@ html[lang="ko"] .hero h1 { max-width:none; white-space:pre; font-size:clamp(1.25
 .lead, .person, .ra-title, .ra-summary, .ra-detail { overflow-wrap:anywhere; }
 [id] { scroll-margin-top:90px; }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
-@media (max-width:820px) { .hero .particle { order:0; max-width:220px; } }
+@media (max-width:820px) { .hero .particle, .hero .delivery { order:0; max-width:220px; } }

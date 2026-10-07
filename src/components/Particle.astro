@@ -1,21 +1,35 @@
 ---
-// 히어로용 나노입자 일러스트. 32개의 지질(점)이 링을 이루고 안쪽에 mRNA 가닥이 그려집니다.
-const n = 32;
-const cx = 200, cy = 200, r = 156;
-const dots = Array.from({ length: n }, (_, i) => {
-  const a = (i / n) * Math.PI * 2;
-  return { x: cx + r * Math.cos(a), y: cy + r * Math.sin(a), delay: (i * 22) };
-});
+// Hero animation: a lipid nanoparticle (LNP) reaches a cell, a light pulse
+// briefly opens the membrane (photoporation), the mRNA slips in, the membrane
+// closes, and the cell makes protein. One loop is about 10 seconds. Colours come
+// from the site tokens (Pantone 287C / 285C). Reduced-motion visitors get the
+// final still frame.
 ---
-<svg class="particle" viewBox="0 0 400 400" role="img" aria-label="Lipid nanoparticle carrying an mRNA strand">
-  <circle cx={cx} cy={cy} r={r} fill="var(--ink)" opacity="0.1" />
-  <circle cx={cx} cy={cy} r={r - 26} fill="var(--lipid-soft)" opacity="0.55" />
-  {dots.map((d) => (
-    <g class="lipid" style={`animation-delay:${d.delay}ms`}>
-      <circle cx={d.x} cy={d.y} r="9" fill="var(--lipid)" />
-      <line x1={d.x} y1={d.y} x2={cx + (r - 24) * (d.x - cx) / r} y2={cy + (r - 24) * (d.y - cy) / r} stroke="var(--lipid)" stroke-width="2.5" stroke-linecap="round" opacity="0.8" />
+<svg class="delivery" viewBox="0 0 400 400" role="img" aria-label="Animation: a lipid nanoparticle delivers mRNA into a cell with a pulse of light, and the cell makes protein. 지질나노입자가 빛 자극으로 열린 세포막을 통해 mRNA를 전달하고, 세포가 단백질을 만드는 과정">
+  <!-- cell -->
+  <circle cx="250" cy="200" r="125" fill="var(--lipid-soft)" opacity="0.6" />
+  <path d="M132.54 157.25 A125 125 0 1 1 132.54 242.75" fill="none" stroke="var(--lipid)" stroke-width="6" stroke-linecap="round" />
+  <path class="patch" d="M132.54 242.75 A125 125 0 0 1 132.54 157.25" fill="none" stroke="var(--lipid)" stroke-width="6" stroke-linecap="round" />
+  <!-- light pulse at the membrane -->
+  <circle class="pulse" cx="125" cy="200" r="14" fill="none" stroke="var(--payload)" stroke-width="3" />
+  <!-- proteins made in the cell -->
+  <g class="prots" fill="var(--lipid)">
+    <circle class="prot p1" cx="222" cy="244" r="11" />
+    <circle class="prot p2" cx="256" cy="254" r="11" />
+    <circle class="prot p3" cx="288" cy="238" r="11" />
+  </g>
+  <!-- mRNA strand: leaves the LNP, enters the cell -->
+  <g transform="translate(97 200)">
+    <g class="mrna">
+      <path d="M-45 0 C-35 -18 -25 18 -15 0 S5 -18 15 0 S35 18 45 0" fill="none" stroke="var(--payload)" stroke-width="5" stroke-linecap="round" />
     </g>
-  ))}
-  <path class="strand" d="M92 208 C110 160 130 260 150 208 S190 160 210 208 S250 260 270 208 S300 160 310 200" fill="none" stroke="var(--payload)" stroke-width="7" stroke-linecap="round" />
-  <path class="strand" d="M110 232 C128 190 148 274 168 232 S208 190 228 232 S268 274 288 232" fill="none" stroke="var(--payload)" stroke-width="4" stroke-linecap="round" opacity="0.5" />
+  </g>
+  <!-- LNP -->
+  <g transform="translate(97 200)">
+    <g class="lnp">
+      <circle r="24" fill="#fff" opacity="0.85" stroke="var(--lipid)" stroke-width="3" />
+      <circle cx="24.00" cy="0.00" r="3.8" fill="var(--lipid)" /><circle cx="20.78" cy="12.00" r="3.8" fill="var(--lipid)" /><circle cx="12.00" cy="20.78" r="3.8" fill="var(--lipid)" /><circle cx="0.00" cy="24.00" r="3.8" fill="var(--lipid)" /><circle cx="-12.00" cy="20.78" r="3.8" fill="var(--lipid)" /><circle cx="-20.78" cy="12.00" r="3.8" fill="var(--lipid)" /><circle cx="-24.00" cy="0.00" r="3.8" fill="var(--lipid)" /><circle cx="-20.78" cy="-12.00" r="3.8" fill="var(--lipid)" /><circle cx="-12.00" cy="-20.78" r="3.8" fill="var(--lipid)" /><circle cx="-0.00" cy="-24.00" r="3.8" fill="var(--lipid)" /><circle cx="12.00" cy="-20.78" r="3.8" fill="var(--lipid)" /><circle cx="20.78" cy="-12.00" r="3.8" fill="var(--lipid)" />
+      <path d="M-12 0 C-8 -8 -4 8 0 0 S8 -8 12 0" fill="none" stroke="var(--payload)" stroke-width="2.5" stroke-linecap="round" />
+    </g>
+  </g>
 </svg>
