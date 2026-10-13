@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-10-12",
+    "datePrecision": "day",
+    "type": "news",
+    "text": {
+      "ko": "InnoBD, 제1회 Vaccination Day 개최",
+      "en": "InnoBD Holds Its First Vaccination Day"
+    },
+    "detail": {
+      "ko": "InnoBD Lab이 2026년 10월 12일 제1회 InnoBD 2026 Vaccination Day를 열었습니다. 연구실 구성원들은 함께 독감 백신을 맞고, 이어 다 같이 식사를 하며 시간을 보냈습니다. 이 행사는 과거 NBD에서 이어져 온 전통을 이어받은 것입니다. 지난해에는 연구실 구성원의 약 90%가 독감에 걸려 고생한 바 있습니다. 변준호 교수는 \"올해는 모두 무사히, 건강하게 이번 겨울을 나기를 바랍니다\"라며 바람을 전하였습니다.",
+      "en": "InnoBD Lab held its first InnoBD 2026 Vaccination Day on October 12, 2026. Lab members received flu shots together and then shared a meal. The event carries on a tradition from the lab's earlier days at NBD. Last year, about 90% of lab members came down with the flu. Prof. Junho Byun said, \"I hope everyone gets through this winter safely and in good health,\" sharing his wish for the lab."
+    },
+    "link": "",
+    "id": "2026-vaccination-day",
+    "images": [
+      "/images/news/2026-vaccination-day-1.jpg"
+    ]
+  },
+  {
     "date": "2026-09-28",
     "datePrecision": "day",
     "type": "news",
